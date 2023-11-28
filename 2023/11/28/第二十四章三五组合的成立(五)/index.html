@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第二十四章三五组合的成立(五) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第二十四章三五组合的成立(五)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　器武魂虽然不会改变魂师的身体外貌，但两名身材雄壮的大汉同时大吼出声，还是充满了强悍的压迫力。他们迈动着几乎同样的步伐，雷霆万钧一般朝着唐三和小舞的方向冲了过来。手中铁锤已经高高举起。<br> 　　小舞脚尖在地面轻点，身体轻飘飘的腾起，唐三右手在她脚尖上一托，小舞单脚点在唐三右肩上，做出一个金鸡独立的动作。<br> 　　两人在一起多年，配合极为默契，在登上唐三肩膀的同时，小舞已经完成了自己的兔武魂附体，敏锐的目光盯视着快速接近的对手，一旦对方出现破绽，那么，就是她凌空下扑发动柔技的时刻。<br> 　　蓝黑色的蓝银草奔涌而出，化为无数藤蔓迎着铁血组合的兄弟二人冲了上去。在级别相差不多的情况下，一旦被蓝银草缠绕住，对方就根本没有挣脱的机会。这就是控制系武魂的强悍之处。<br> 　　铁氏兄弟一点也不慌乱，看着数十根蓝银草迎面而至，两人手中的铁锤顿时挥舞起来。巨大的锤子在他们手中轻飘飘的仿若无物一般，竟然挥舞成了一道屏障。<br> 　　唐三通过观察发现，铁氏兄弟的锤法竟然和自己的乱披风锤法有些相像，只不过在节奏上没有乱披风锤法那么协调，发力也不如乱披风锤法那样猛烈，但速度上却要比自己的乱披风锤法更快。<br> 　　铁龙、铁虎身上的第一魂环同时亮了起来，当蓝银草一进入他们的锤子范围，想要突破而入发动缠绕技能的时候，立刻就被他们的锤子荡开，除了锤子本身的力量以外，还有一种特殊的震荡力将蓝银草高高激起。<br> 　　震荡，就是铁氏兄弟第一魂环技能。有效的阻止了蓝银草的控制。<br> 　　两人一左一右，挥舞着铁锤将自己的身体严密防护在内，同时快速逼进，眼看就要来到唐三和小舞面前了。<br> 　　“起。”唐三大喝一声，肩头耸动之间，已经将小舞的身体送入空中，朝铁氏兄弟背后跃去。他自己脚踏鬼影迷踪，从正面迎向了铁氏兄弟。双眸中紫光莹然，双手同时抬起。<br> 　　内力注入双手，白玉般的手掌几乎同时拍向铁氏兄弟，唐三自己脚下像抹了油一般急速前滑，双手一圈，并没有与那两柄铁锤硬碰，而是从侧面牵引，轻飘飘的按在了铁锤侧面，微微一送之间，令铁氏兄弟的联手出现了一丝缝隙，唐三也就利用这瞬间的机会从缝隙中飘然钻过。<br> 　　铁锤呼啸，吹拂着唐三身上的衣襟猎猎作响，却就是没有砸到他。<br> 　　控鹤擒龙用来控制暗器固然出色，作为内力的一种使用方法同样效果极大。唐三刚才所用的，正是其中四两拨千斤的奥妙。<br> 　　由于被控鹤擒龙引导下前扑，铁氏兄弟密集的防御顿时出现了一丝破绽，唐三的蓝银草可没有闲着，趁此机会就要突入。<br> 　　但铁氏兄弟不愧战斗经验丰富，飞快的转身，再次将蓝银草荡开。<br> 　　器武魂，就胜在一个器字上，它无法令宿主自身能力提升，但本身附带的能力却是极为强悍的。铁锤上的第一魂环效果震荡甚至不需要铁锤直接接触到蓝银草，只要蓝银草侵入铁锤范围一尺之内，立刻就会被荡开，无法完成缠绕效果。<br> 　　唐三从两人的联手钻过之时，也正是小舞从空中落下的时刻，她再次站在了唐三的肩膀上，动作和之前一模一样。<br> 　　“小三，结束他们吧。”小舞嘻嘻一笑。她和唐三的蓝银草武魂交手次数最多，也自然知道唐三这武魂中的奥妙所在。<br> 　　就在小舞开口的同时，唐三身上的第二魂环骤然闪亮。<br> 　　挥舞着锤子的铁氏兄弟身体同时一僵，一根根蓝黑色的藤蔓开始从他们身上生长而出。正是蓝银草第二技能，寄生。<br> 　　没错，他们的锤法确实将自己的身体防护的很严密，但还没有到泼水不入的境界，蓝银草武魂在唐三的控制下，不断在空中播撒着种子，尤其是在之前唐三用控鹤擒龙令铁氏兄弟短暂露出破绽的时候，更是悄然钻入。虽然寄生在他们身上的蓝银草种子并不是很多，但只要限制住他们短暂的时间，外面的蓝银草也自然能够完成缠绕技能。<br> 　　感受到寄生的蓝银草带来的麻痹，眼看着周围大量的蓝银草朝自己二人扑来。铁氏兄弟对望一眼，再次大吼出声。趁着身上寄生的蓝银草还没有完全限制住他们的行动，双手抡动锤子，快速旋转一周，身上的第二魂环同时亮起，两柄巨大的铁锤竟然脱手而出，分别砸向唐三和小舞。<br> 　　铁锤在空中带起刺耳的破空声，所过之处空气竟然都微微扭曲着，灰色光芒覆盖之下，两柄铁锤的体积骤然增加了一倍之多，哪怕还没到近前，已经能够感觉到其中附加的恐怖攻击力。<br> 　　铁氏兄弟，第二魂环技能，孤注一掷。<br> 　　唐三心中暗道不好，第一时间将小舞的身体托向空中，自己也脚踏鬼影迷踪飞快的向侧面闪开。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

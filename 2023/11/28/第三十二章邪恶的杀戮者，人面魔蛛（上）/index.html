@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第三十二章邪恶的杀戮者，人面魔蛛（上） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第三十二章邪恶的杀戮者，人面魔蛛（上）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　正在奥斯卡身边的宁荣荣从半昏迷状态中清醒过来，吃惊的道：“小奥，你在干什么？”<br> 　　宁荣荣的声音顿时引起了其他人的注意，赵无极也是聪明人，他立刻就意识到了不妙。可惜，他们终究还是晚了一步。<br> 　　唐三成为了第一个吃下蘑菇肠的人，六片虚幻般的翅膀飘然出现在他背后，在赵无极扑上来的一瞬间，带着他的身体升入空中。<br> 　　“对不起，赵老师。我必须要去找小舞，哪怕她已经死了，我也要找回她的尸体。”此时，众人终于看到了唐三那血红色的双眼。自然明白他心中已经悲愤到了极点。<br> 　　“七宝有名，二曰：。”宁荣荣清脆的声音响起，一道灿然彩光飘然落在唐三身上，令他背后六只虚幻的羽翼拍打度顿时变得快了起来。<br> 　　“小三，快去吧。我支持你。我加大了魂力输出，增效果应该能够在离开我魂力范围后维持一分钟的时间。一定找回小舞，她也是我的室友。”宁荣荣似乎根本没看见赵无极那像是要杀人的目光，大声朝着唐三说道。<br> 　　唐三深深的看了宁荣荣一眼，他并没有说出谢字，因为他不知道自己还有没有谢谢宁荣荣的机会，整个人已经在蘑菇肠附带的飞翔效果中急朝着泰坦巨猿消失的方向飞去。<br> 　　“你……，你们……”赵无极看着奥斯卡和宁荣荣，已经气得有些说不出话来。<br> 　　奥斯卡苦笑道：“赵老师，您也看到小三的眼睛了。如果我们不让他去，恐怕他靠走路的也要去追。我能理解他的心情。您要怪，就怪我吧。”<br> 　　赵无极怒道：“怪？怪什么怪。赶快给我弄出你那蘑菇肠来。既然去追，就大家一起去。死就死吧。一起死好了。谁不想去的就滚出星斗大森林。”<br> 　　赵无极的声音虽然愤怒，可听了他的话，每个人脸上却都流露出坚毅的神色，哪怕是胖子马红俊也坚定的点了点头。<br> 　　戴沐白拖着朱竹清的手大步走过来，简单的道：“奥斯卡，快。”<br> 　　自从他抱着朱竹清从坑里爬出来，就一直抓住她的手。小舞被抓走的时候他也看到了，他一直在想，如果那被抓走的不是小舞而是朱竹清，自己会怎么样。或许会比唐三更加激动吧。也许是危机感的缘故，他始终握着朱竹清冰冷的小手，不论朱竹清怎么挣扎，他也不肯放开。<br> 　　朱竹清也没有过多挣扎，此时，她脸上的冰冷已经不见了，偶尔看向戴沐白一眼，整个人都显得有些沉默。<br> 　　……泰坦巨猿在森林中急奔驰，整个星斗大森林的地形他似乎已经全部背了下来似的，不论前方有什么阻碍它都不会有丝毫减。也不会真的撞到。庞大的身体展现出惊人的灵活。每一次纵跃都能前进百米开外。<br> 　　星斗大森林内的魂兽虽然数量、种类众多，可凡是感受到它的气息，却无不退避三舍。谁敢阻挡这恐怖的森林之王前进的道路呢？<br> 　　唐三虽然有着奥斯卡的飞行蘑菇肠辅助，可以凭借凤尾鸡冠蛇的飞行度前进，但和眼前的泰坦猩猩相比，依旧是太慢了。更何况，泰坦猩猩前进并不是始终朝着一个方向。唐三根本没有追上的可能。<br> 　　如果此时史莱克学院的众人看到泰坦巨猿前进的样子一定会大为吃惊。因为，此时的小舞已经不是被它握在巨手之中，而是端坐在泰坦巨猿宽厚的肩膀上，泰坦巨猿奔行的度虽快，但却极其平稳，坐在他的肩上，小舞甚至感觉不到半分震荡。<br> 　　小舞脸上此时尽是担忧之色，不时朝着泰坦巨猿奔行的反方向看去。<br> 　　“二明，就在这里吧。别再走了。我要尽快赶回去。否则，他们会担心的。二明，你真不应该出来找我。”<br> 　　听了小舞的话，泰坦巨猿竟然神奇的停了下来，并且匍匐下身体，让小舞从自己的肩膀上落在地上。大头摇了摇，眼中竟然流露出无辜的神色。<br> 　　小舞喃喃的自语道：“小三受伤了，我被你抓走，他一定非常着急。小三，你可千万不要冲动啊，我马上就回去了。二明，下次你再感受到我的气息先远距离观察一下，千万不要贸然出手，否则的话，万一伤害到我的朋友就麻烦了。”<br> 　　小舞今天见到它也十分突兀，可那种情况下她根本不可能向眼前的泰坦巨猿解释，只能用特殊的方法一再告诉它不要伤人。但最后还是被泰坦巨猿带了出来。尽管小舞知道它是担心她，可是，现在这个局面却绝不是小舞愿意看到的。尤其是唐三的受伤更是令她心中大为担忧。<br> 　　泰坦巨猿就像能听懂小舞的话似的，灯笼大小的巨眼中光芒吞吐，神色间却异常温和。<br> 　　小舞抬头看向泰坦巨猿，“二明，大明还好么？”<br> 　　泰坦巨猿点了点头。<br> 　　小舞道：“那就好。我怕伙伴们担心，必须赶快回去。既然被你带出来了，索姓我就完成了自己的第三个魂环吧，也省的下次再找机会了。我现在就开始。你替我护法。对不起，二明，虽然我不会帮助他们猎杀魂兽，可是我也不能阻止他们。”<br> 　　泰坦巨猿二明摇了摇头，口中突然出一声沉闷的低吼。<br> 　　它的声音听上去不大，却足足传出千米，在此范围内的所有魂兽全部受到了最恐怖的惊吓，飞快的离开自己的领地向外面逃窜。<br> 　　小舞心中担忧唐三的状况，不敢耽误时间，直接在二明面前盘膝坐下。双手各捏兰花指，右手掌心向上，平放在自己大腿上，左手竖在胸前。口中开始出一连串奇异的声音。<br> 　　伴随着这奇异的声音，小舞的双眼渐渐变成了红色，两圈黄色魂环悄然出现，围绕着她的身体上下律动。同时，一个巨大的白色虚影在她背后渐渐成形，竟然正是她的武魂玉兔形态。<br> 　　淡淡的红光逐渐从小舞身上蔓延出来，随着时间的推移，红光变得越来越强盛起来，鲜红的光芒就像血液一般弥漫。<br> 　　泰坦巨猿二明匍匐在小舞身边，看着红光中的小舞，一双巨眼之中流露出了几分渴望的光芒。<br> 　　时间渐渐流逝，那强烈的红色光芒中渐渐透出一层紫芒，紫芒化为点点星光凝聚成型，赫然正是一圈圆环。<br> 　　紫环套下，降落在小舞身上。刚开始的时候，它还有些无法与另外两个光环协调在一起，但随着红光增强，紫环也渐渐变得平稳下来。赫然正是一个千年魂环。<br> 　　不用说别人，就算是唐三的老师，对武魂研究最为深刻的大师在这里，恐怕也无法明白小舞身上究竟生了什么事，更不会明白为什么她能够自己产生出魂环。<br> 　　随着第三魂环的出现，小舞的身体线条似乎变得更加和谐了，整个人看上去都显得大了一些，不论是胸前还是臀部，也似乎丰盈浑圆了几分，女姓特质也变得更加完美。<br> 　　只是脸上的稚气却在悄然减少。<br> 　　同时，她背后那玉兔虚影也在第三魂环出现之后变得清晰了许多。<br> 　　……扶住身边的一棵大树，唐三大口大口的喘息着。<br> 　　奥斯卡的飞行蘑菇肠只能持续飞行一分钟的时间，尽管有宁荣荣的武魂辅助，可唐三也只不过飞出了不到三千米的距离就降落下来。<br> 　　在整个飞行的过程中，唐三已经将自己的紫极魔瞳提升到极限，为的就是能够寻找到泰坦巨猿的身影。<br> 　　但是，一切事与愿违，他极尽目力，也没有现任何泰坦巨猿的踪影。<br> 　　唐三不甘心。他真的不甘心。在飞行的过程中，过往的种种不断在他脑海中闪现。<br> 　　活泼的小舞，她那神奇的柔技，认自己为兄长，默默的跟随，娇俏的样子，无不令唐三心中痛如刀割。<br> 　　唐三以前从不信这个世界上有神明，可他现在却信了，因为他在向神明祈祷，祈祷小舞能够奇迹的活下来。<br> 　　尽管不能再飞行，但唐三依旧没有放弃，他朝着自己感觉的方向拼尽全力前行着，希望能够找到蛛丝马迹。<br> 　　体内的魂力随着恢复香肠的帮助渐渐恢复着，但此时他的体力却已经有些透支。不得不停下来喘息一会儿。<br> 　　眼内的红色虽然减退了一些，但却丝毫无法缓解他沉重的心情。<br> 　　小舞，你一定还活着。一定。唐三不断这样告诉着自己。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

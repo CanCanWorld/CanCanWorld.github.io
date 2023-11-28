@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第四章异界唐三的第一件暗器(四) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第四章异界唐三的第一件暗器(四)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　唐三道：“有初级和中级，那么也就一定有高级了？”<br> 　　老杰克点了点头，眼中流露出几分羡慕的光芒，“高级魂师学院你就不用想了，那可不是随便谁都能进去的。在我们天斗帝国，一共也只有两所高级魂师学院，每年招收的学生数量加起来也不到一百人。那可是前程的摇篮。凡是从高级魂师学院毕业的学员，不论是国家还是武魂殿，都会抢着要，直接会被授予贵族的称号。”<br> 　　“贵族？有这么好的条件。”唐三惊讶的道。<br> 　　老杰克道：“那是当然。魂师可是最高贵的职业，高级魂师更是如此。那可都是人才，所以，我们平民想要一步登天，成为高级魂师显然是最好的捷径，只不过，出身平凡的平民，又有多少人能够拥有那么好的武魂呢？就算有，没有大家族那样的辅助，也很难从高级魂师学院毕业吧。”<br> 　　“毕业考试是自己的事，为什么需要别人辅助？”唐三有些不明白了。<br> 　　老杰克叹息一声，道：“这就是差距。穷人和富人，平民和贵族的差距。初级魂师学院毕业的要求很简单，只要武魂能够达到十级，在学院老师的带领下获得一个魂环，成功进阶到魂师称号就可以了。这并不困难，只要在觉醒时拥有武魂力的孩子都能做到。据说，魂士升魂师这十级魂力是最容易提升的。”<br> 　　“但到了中级魂师学院就不一样了，想要从这里毕业，武魂就必须要达到二十级，并且获得第二个魂环，获得大魂师称号才可以。十级到二十级，是很多魂师一生都无法达到的。而且，到了二十级以后，想要获得魂环，必须要依靠自己的力量去猎杀魂兽获得魂环。那可是极为危险的。如果出身于贵族家庭，有家族武士陪同，危险性自然要小的多。而像我们这样平民出身的魂师，却只能依靠自己了。”<br> 　　“高级魂师学院的毕业条件就更加苛刻，只有通过三十级的瓶颈，获得第三个魂环，从大魂师称号上升到魂尊称号才可以。据说，三十级是一道门槛，跨过去，就可以被称作强大的魂师，也是真正的贵族，跨不过去，可就难了。而且，三十级获得魂环好像还有什么限制，具体的，你在学院应该会学到。反正那些高级魂师学院的学员，真正能够毕业的数量似乎还不到三分之一。”<br> 　　听了老杰克的话，唐三对于斗罗大陆对于魂师的教导有了一些基础的印象。<br> 　　“杰克爷爷，您不是说过，魂师的称号有十个之多么？高级魂师学院毕业的学员才是魂尊，那后面的那些称号要怎样才能获得呢？”<br> 　　老杰克苦笑道：“我怎么知道。超越了魂尊的称号，那可都是大人物，像我们村子里出过的那位魂圣，当初就是由国家直接供养的。我听人说过，魂师的修炼，越到后面就越难，也越危险，真正能够达到封号斗罗那样顶级存在的，能有几个？甚至可以说，现在我们天斗帝国和星罗帝国有没有这样的存在我都不敢肯定。”<br> 　　老杰克对于魂师也只是有一些简单的了解而已，他说的都不详细，唐三明白，这些知识，自己也只能在学院中慢慢摸索了。尤其是关于魂兽、魂环之类的东西。<br> 　　从圣魂村到诺丁城并不远，两人走了半天的时间，中途简单吃了点干粮，下午的时候，已经可以看到远处的城墙了。<br> 　　尽管诺丁城并不算是什么大的城市，但因为距离天斗帝国边境很近，城墙建造的到也厚实。唐三和老杰克与过往的行人一样接受了检查后，就进入了诺丁城之中。<br> 　　“小三啊！待会爷爷把你送到学院就回去了。你一个人在学院里可要听老师的话，千万不要擅自离开学院。等到学期结束的时候，杰克爷爷再来接你。那时候也差不多要过年了。”<br> 　　唐三毕竟是第一次离开家，心中多少有些慌张，下意识的道：“杰克爷爷，您这么快就要走么？”<br> 　　老杰克苦笑道：“旅馆可不是我们这些穷人住的起的。你一定要争气，等爷爷下次看到你的时候，希望你已经成为了魂师，那样的话，我们圣魂村都会以你为荣。”<br> 　　诺丁初级魂师学院坐落在诺丁城西，老杰克向路人打听了几次，终于带着唐三来到了这里。<br> 　　远远的，他们已经看到一座高大的拱门，拱门宽达二十米，高也有十米开外，都是由坚硬的岩石修葺而成，下面有两扇铁栅门，黑黝黝的，唐三一眼就看出，那是由上好的精铁打造而成。<br> 　　透过铁栅，能够看到里面曲径通幽，一条大路直通内部，两旁尽是高大的树木。<br> 　　拱门正中，有四个大字，“诺丁学院。”<br> 　　仅仅从学院的大门就能看出魂师这个职业在斗罗大陆有多么重要，这还只是一个初级魂师学院而已。<br> 　　老杰克带着唐三刚刚走到大门前，立刻就被看门的青年拦了下来，“干什么的？这是你们这些乡下人能够来的地方么？”<br> 　　老杰克的穿着在圣魂村已经算是光鲜了，可到了诺丁城，却完全是一副乡下人的样子，门房看他的眼神多少带了几分不屑。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

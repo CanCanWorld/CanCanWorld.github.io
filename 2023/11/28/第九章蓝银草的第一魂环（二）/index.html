@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第九章蓝银草的第一魂环（二） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第九章蓝银草的第一魂环（二）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　这样也行？唐三有点想笑，但看着老师眼中那丝苦涩，却又不敢笑出声来。他能想象的到，拥有这样一个以放屁为攻击手段的武魂，在魂师之中是一件多么尴尬的事。而大师的性格是骄傲的，他心里又怎么会好受。<br> 　　“啰啰，啰啰，啰啰……”一阵急促的叫声突然响起，大师眼中的苦涩立刻被寒光所代替，一把拉住唐三的手。<br> 　　周围突然变得寂静起来，一丝沙沙的声音清晰的传入唐三耳中，隐约间，空气中似乎多了几分腥气，腥气并不浓重，甚至还带着淡淡的甜味和茶香。<br> 　　唐三鼻子动了动，下意识的脱口而出，“有毒物。”<br> 　　大师右手连挥，这一次，他将自己身上的两个光环全部套在了罗三炮身上，警惕的朝沙沙声传来的方向看去，“今晚竟然如此不平静。”<br> 　　沙沙声停了下来，唐三催动玄天功，将紫极魔瞳运转到极限，朝着那个方向看去，隐约间，他似乎看到了一个墨绿色的三角色蛇头在灌木丛中竖起，一双红宝石般的小眼睛正朝着他们这个方向看来。或许是慑于雄黄粉的作用，它并没有继续接近。<br> 　　“老师，在那里。”唐三朝着蛇头扬起的方向指去。此时大师已经来不及去想为什么唐三能够看到自己也看不到的地方。飞快的从手腕魂导器中取出一个火折子朝着那个方向扔了过去。<br> 　　火折迎风既燃，翻滚中照亮了那片区域，这次，大师也看到蛇头的存在了。口中倒吸一口凉气，“是曼陀罗蛇，怎么这种猛恶的家伙会在猎魂森林外围出现。希望是条十年的。”<br> 　　丝丝，丝丝，仿佛是被火折子激怒了，蛇头缓缓上扬，朝着罗三炮发出丝丝的声音。但雄黄粉的威慑力还在，它终究还是没有上前。<br> 　　大师沉声道：“曼陀罗蛇的毒性极强，不但有着麻痹的效果，而且对身体神经有很强的破坏性。是毒属性魂兽中最恐怖的存在之一。它的身体极其坚韧，普通刀剑难伤，只有嘴和眼睛才是弱点。但曼陀罗蛇对自己这两个位置保护的一向很好，速度又奇快无比。最可怕的是它的攻击性。遇到人类它几乎都会发动攻击。雄黄粉未必能够克制它太长时间，它在等待机会。”<br> 　　唐三并没有因为大师的介绍而感到恐惧，前世在巴蜀唐门，巴蜀的蛇种类极多，虽然没有这种曼陀罗蛇，但唐三却一点也不缺乏和蛇打交道的经验。从这条蛇尖头能看出其剧毒，而脖子处的粗壮也表现出它的弱点并不是在七寸处。就是不知道这种有魂力的蛇是怎样的攻击方式了。<br> 　　大师将唐三拉到自己背后，“小三，现在我教你一个理论。环多骨多，技力一波，环少骨少，撒腿就跑。这里的环指的是魂环，骨指的是魂骨。关于魂骨我以后会向你解释。也就是说，当你的魂环和魂骨数量明显超过对手时，那么，你就要凭借自己的魂技与魂力全力发动攻击，将敌人彻底击溃。而当你的魂环和魂骨明显少于对手时，那么，不要犹豫，立刻就跑。保存生命才是最为重要的。脸面永远不如小命重要。如果这条曼陀罗蛇是十年魂兽，那么我们还能拼一下，如果是百年的，立刻逃走。”<br> 　　“放屁如打雷，轰天裂地罗三炮。”交代完这些，大师立刻向罗三炮下令，发动了攻击。<br> 　　黄色光环再次闪亮，罗三炮在疯狂的吸气中弹身而起，他虽然吃了白萝卜，但之前在幽冥狼身上消耗的那一次攻击还没有恢复，此时也只有两次攻击的实力。<br> 　　雷霆般的轰鸣之中，罗三炮那超级雷震屁澎湃而出。尽管曼陀罗蛇的速度很快，但罗三炮的攻击是范围性的，它想要逃脱也不可能。<br> 　　只见一条巨大的蛇身从地面被掀飞，远远的被甩了出去。<br> 　　“快跑。”大师只是看了一眼那被掀起的曼陀罗蛇就没有任何想法了。曼陀罗蛇的修炼年头也和自己的身体大小有关。在进化到千年魂兽之前，每多一年修为，身体长度就会增加一厘米。而这条沙罗曼蛇被掀飞的身体长度绝对超过了三米，甚至已经接近到了四米，也就是说，它的修为已经有接近四百年。大师可不认为凭借自己二十九级大魂师的实力就能和这样一只魂兽对抗，更何况，他自己的武魂又并不算强大。<br> 　　呱呱，凄厉的声音传来，唐三一边被大师拉着向前跑，一边回头看去，之间那被罗三炮震飞的曼陀罗蛇竟然毫发无损，身体刚一落地，立刻一曲一弹，疾飞而来。它那鞭子般的身体每次与地面接触，都会立刻像弹簧一般弹起，速度奇快无比，不断朝着自己和大师的方向接近着。<br> 　　罗三炮跑的速度一点都不慢，紧跟在大师和唐三身边，一双大眼睛中已尽是惊慌之色。<br> 　　“放屁如烟雾，催眠沉睡罗三炮。”大师再放大招，罗三炮在空中一个盘旋，噗的一声，一蓬黄色气体从它那胖胖的臀部中喷出，弥漫在半空之中。<br> 　　大师的两个魂环，分别能够附加给罗三炮的技能就是雷震和催眠两种效果。此时已经完全用了出来。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

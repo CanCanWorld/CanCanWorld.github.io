@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第四十八章皇斗战队(上) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第四十八章皇斗战队(上)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　习惯姓的来到团战区报名点，大师拿出史莱克七怪团战的注册徽章递给工作人员，“麻烦你，报名团战。”<br> 　　工作人员同样习惯姓的接过徽章，当他看到徽章上雕刻的字时顿时脸色大变，低呼一声，“史莱克七怪？”<br> 　　大师眉头皱了皱，大斗魂场的工作人员素质还是不错的，哪怕是遇到高等级的斗魂者也不会有太多的表情，此时这名工作人员的表现显然不让人满意。<br> 　　“对不起，先生。请问您是史莱克七怪的领队么？”工作人员试探着问道。<br> 　　大师缓缓点头，“算是吧。麻烦请你快一点。”<br> 　　“先生，请您稍等。”工作人员在大师有些惊讶的注视下快离开了自己的作为朝着工作区后方跑去，手中还紧握着史莱克七怪的团战徽章。<br> 　　大师虽然大为不满，但对方已经将报名用的团战徽章拿走了，他就算想要换个分区也做不到，只能在这里耐心的等候。<br> 　　其实大师并不知道，只要他今天在索托大斗魂场出示这个徽章，不论在哪一个分区，都会得到同样的待遇。<br> 　　并没有等待太长时间，一会儿的工夫，之前那名工作人员带着一个人回到了报名点。<br> 　　“对不起，让您久等了。”工作人员客气的将团战徽章递回给大师。<br> 　　工作人员带来的人大师有印象，正是在史莱克七怪这次前来索托大斗魂场参加第一场团战的那位主持人敖主管。因为事后唐三告诉过大师，这位敖主管曾经好心提醒过他们狂战队的厉害，所以大师对这个人还算有着比较深刻的印象。<br> 　　敖主管面带微笑，“您好，尊敬的领队先生，不知道我们可不可以谈谈。不会耽误您太多时间的。”<br> 　　大师淡然道：“是代表你个人，还是代表索托大斗魂场？”<br> 　　敖主管赶忙道：“当然是代表索托大斗魂场。”<br> 　　大师点了点头，这种情况他早就有所预料，毕竟，史莱克七怪在这一个月内取得的成绩实在太出色了，不受到关注是不可能的。尤其是挥最出色，在整个月内获得了所有斗魂胜利的唐三，肯定更是被关注的焦点。<br> 　　虽然大师很不愿意和大斗魂场打交道，但大斗魂场的势力之庞大，连国家都要忌惮几分，他自然也不会主动去得罪，当下点了点头，在敖主管的带领下来到报名点后面一间安静的房间内。<br> 　　“领队先生，我就开门见山的说了。”敖主管有些凝重的说道：“我代表索托大斗魂场，希望今天史莱克七怪参加的团战能在中心主斗魂场进行。”<br> 　　“哦？”大师并没有惊讶，只是淡淡的道：“这似乎不符合规矩吧。按照斗魂场的规定，只有银斗魂以上级别的魂师才能够在主斗魂场露面，而史莱克七怪都是铁斗魂而已。”<br> 　　敖主管苦笑道：“您就不用谦虚了。以史莱克七怪这个月的战绩，今曰斗魂结束后，他们全都会拿到银斗魂徽章。就算早一天成为银斗魂也没什么不可以。”<br> 　　大师的神色依旧是古井不波，“既然如此，你们也应该不在乎差这一天吧。”<br> 　　敖主管叹息一声，道：“我就实话实说了。三天前，来了一个魂师团队，他们全部由银斗魂魂师组成，似乎是索托城几位大贵族找来的魂师。连续两天，那些大贵族都在他们身上下了重注，而他们也毫无悬念的取得了斗魂的胜利，给大斗魂场带来了极大的损失。您既然对大斗魂场熟悉，应该也知道，一般来说，达到银斗魂级别的魂师，都有四十级以上的水准，可这只团队的成员全部是魂尊，我们不能破坏了规矩请四十级的魂宗团队与他们进行斗魂。可这样下去，大斗魂场也承受不起持续的损失。或许是因为尝到了甜头，今天那几位贵族又额外增加了赌注，如果再输下去，恐怕……”<br> 　　大师心中跟明镜似的，立刻就明白了敖主管的意思，心中微微一动，道：“魂尊就已经达到了银斗魂一级，看来，他们的实力很强。那么，之前两天，斗魂场是用什么样的团队来迎战的呢？”<br> 　　敖主管道：“由于我们索托大斗魂场没有魂尊级的银斗魂队伍，无奈之下，就只能派出魂尊级的铜斗魂队伍与之进行斗魂。其中的一只，就是不久前刚刚提升到铜斗魂队伍，同时也是曾经与史莱克七怪交过手的狂战队。但他们却是一败涂地。”<br> 　　大师眉头微皱，“在魂尊级别的团队中，狂战队的等级已经相当可观，难道那只银斗魂队伍的成员比他们等级更高？”<br> 　　敖主管摇头道：“不，并不是魂力等级的问题，主要是魂环上的差距。这只银斗魂队伍和史莱克七怪一样，都是最佳魂环组合。在魂技上的巨大优势压迫的狂战队没有一丝机会。”<br> 　　听了这句话，大师的脸色终于出现了一些变化，作为魂师界最著名的理论流大师，他当然知道所谓的最佳魂环指的是什么，意思就是第一魂环即为百年，第二魂环为五百年以上，第三魂环直接是千年。表现在魂师身上，就是两黄一紫，像戴沐白、唐三、奥斯卡和小舞皆是如此。<br> 　　“即使如此，那大斗魂场又怎么认为我们史莱克七怪就一定能够获得斗魂胜利？毕竟，我们只有四名三十级以上的魂师，剩余的三人还都未到三十级的区间。”<br> 　　敖主管微微一笑，道：“这您就谦虚了。谁都知道，史莱克七怪如果论魂力等级的话，在所有魂尊级团队中都可以说是倒数几位的。可是在之前的二十七场团战斗魂中，却取得了全胜的战绩。这在我们索托大斗魂场都可以说是史无前例的。所谓存在既是合理。我想，史莱克七怪团队一定有能力与这支银斗魂队伍抗衡。”<br> 　　大师眼中光芒闪烁，思索片刻后，道：“如果我记得不错，参加中心主斗魂场的斗魂比赛，应该有额外的奖励吧。”<br> 　　敖主管一看大师似乎动心了，心中顿时暗喜，赶忙道：“当然，参加主斗魂场的比赛，每一位魂师都将得到五百金魂币的直接奖励。而这次贵方更是受到了我们的邀请，如果能够获得这场斗魂的胜利，斗魂场还愿额外付出一万金魂币作为奖励。但因为史莱克七怪毕竟还没有获得银斗魂徽章，积分还要按照之前的计算方法，幸好他们现在的团战一直都是连胜，获得的积分已经不少。”<br> 　　不等大师开口，敖主管继续道：“为了这场斗魂，请您让史莱克七怪的队员们今曰就不要再参加一对一和二对二的斗魂了。虽然我们不能额外给他们增加积分破坏规矩。但在权限之内，我们斗魂场却可以将他们今天的一对一和二对二斗魂都算作胜利。让他们报名后的对手自行认输。这样，史莱克七怪就能够全力以赴面对对手。”<br> 　　大师从来都不是一个斤斤计较的人，更何况对方给出的条件已经十分优厚，最重要的是，他心动于这场斗魂，主要原因并不是积分和金钱，而是对弟子们的历练。一只能够让索托大斗魂场如此重视的银斗魂队伍，再加上全部最佳魂环，这样的磨练对史莱克七怪只有好处。<br> 　　大师缓缓点头，“好吧，我答应你。请你准备好对方的资料，我先去将弟子们召回。”<br> 　　“不用麻烦您了。召回史莱克七怪就让我们的工作人员去吧。对手的资料我已经准备好了。您可以先和他们研究一下。稍后我再带你们进入中心主斗魂场进行准备。”<br> 　　说完，敖主管快转身离去，显然是将史莱克七怪已经答应参加斗魂的事向上面汇报，并且做出相应的安排去了。此时距离团战斗魂开始还有整整一个时辰的工夫，足够索托大斗魂场做出很多安排。<br> 　　时间不长，不但史莱克七怪被工作人员带到了这个房间，就连弗兰德和赵无极也同样被人请了过来，充分显示出索托大斗魂场已经观察他们这个团体不是一天两天了。<br> 　　大师平静的将之前敖主管所说的话重复了一遍，同时将刚刚得到的资料平摊在房间的桌案上。<br> 　　站在一旁的唐三突然现，大师眼中多了点什么，那似乎是一种火焰般的光华，而且是战斗的火焰。哪怕是他，也是第一次见到大师的眼神中出现如此强烈的战意。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第十六章板晶发金龙须针（二） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第十六章板晶发金龙须针（二）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　唐三自然不知道小舞因为他这诡异的行动而胡思乱想，珍而重之的将那块人头大小的水晶从二十四桥明月夜中取出，放在床上。轻轻的抚着水晶参差不齐的表面，就像是爱抚最珍爱的宝贝一般。<br> 　　小舞知道唐三一向不是冲动的人，他既然对这块水晶如此重视，想必其中会包含着什么秘密，在他身边蹲了下来，等着他的解释。<br> 　　“水晶中，并不是紫水晶才是最为珍贵的。”唐三半晌才说出这么一句话。<br> 　　小舞好奇的道：“那什么样的水晶才珍贵？”<br> 　　唐三郑重的道：“是发晶。”<br> 　　“发晶？那是什么？”小舞惊讶的看着他，这个词汇她甚至连听都没有听说过。<br> 　　也难怪小舞不知道，这个概念原本就不是属于这个世界的。而是唐三从唐门带来。<br> 　　在唐门的时候，除了负责制作机括类安琪以外，唐三还曾经负责帮助内门弟子铸造各种暗器，对于暗器材料的研究以及各种珍贵材料都极为清楚。<br> 　　“所谓发晶，就是当一些天然水晶在一定的情况下，受到外界影响，水晶内部产生出一些金色丝线般的物体，这种金丝被称为晶发也叫发金，就像水晶的头发一样。不论是什么颜色的水晶，只要其中出现一根晶发，其价值也要超过成色最好的天然水晶。拥有晶发的水晶，就叫做发晶。”<br> 　　小舞虽然容易冲动，但也很聪明，看着唐三手中这块大水晶石，道：“你不会告诉我，这块就是发晶吧。我怎么没看到哦啊金丝，而且，我从来没听人说过有什么发晶，就算它是，没人认识一样没用。你这二百个金币花的可不值。”<br> 　　唐三面带微笑，道：“不，这不是一块发晶，而是一块板晶，发晶中的极品。”<br> 　　小舞好奇的问道：“板晶又是什么？”<br> 　　唐三耐心的解释道：“发晶中的发金一般都是杂乱无章数量稀少的。而一些存在年头格外久远的发晶，有发金数量增多的机会。当发金的数量达到一定程度，在水晶体内聚集在一起，形成金板似的样子时，这样的发晶就被称为板晶。因其内部发金数量众多，而且又极有规律，所以，板晶被称为发晶中的极品。”<br> 　　“这块水晶看上去表面虽然污浊，但仔细看的话，却能够发现其中金光隐现，里面这块金板被外面水晶上的杂质所遮掩，但我几乎可以肯定，其中包含的金发数量足有上万根。这是存在至少十万年以上的板晶才有可能出现的奇迹。别说二百个金魂币，只要我有，就算是两万金魂币，它也绝对是值得的。我要它，并不是为了转卖赚钱，而是有特殊的意义。”<br> 　　唐三没有直接说出这个特殊的意义是什么，而是从二十四桥明月夜中取出了自己的铸造锤。<br> 　　他的铸造锤比普通铁匠用的要大上两号，在石三铁匠铺第一次使用过这种大号铸造锤之后，唐三就没有更改过。<br> 　　“小舞，你躲开一点。”唐三低喝一声。<br> 　　小舞让到一边。唐三将那块板晶放在地面上，淡淡的白光缓缓涌出，从他双手之中注入铸造锤，他的脸色已经变得极为凝重，须臾之间，玄天功内力已经被他提升到了极限。<br> 　　“小三，你这是……”小舞吃惊的看着他，她已经预感到了唐三要做什么，可却不明白他为什么要这样做。<br> 　　小腿骤然发力，身体半转，乱披风锤法第一下骤然挥出，这是附加着唐三全部内力的一锤。铸造锤上白光大盛，空气中传出一连串的爆鸣。巨大的锤头重重的向那块板晶砸去。<br> 　　小舞下意识的捂住了自己的耳朵。<br> 　　砰——，巨响声中，整个玫瑰酒店都晃动了一下，清脆的破裂声在铁锤下响起，在唐三的全力轰击之中，那块板晶顿时被砸成了齑粉。<br> 　　但也就在板晶化为齑粉的同时，奇异的一幕出现了，无数金色光点从板晶内激荡而出，在这有着桃心大床的卧室内四散纷飞。仿佛整个房间都被蒙上了一层金蒙蒙的光泽。<br> 　　小舞被吓了一跳，赶忙催动起自己的魂力，将金色光点挡在外面，还好，那些金光的弹射力并不强，并没有带给她任何伤害。<br> 　　满点金光的炫丽给人一种目眩神迷般的感觉，叮叮当当的声音清脆悦耳，有的碰撞在墙壁上，有的碰撞在门窗上，也有的直接落在了那张桃心大床之上，整个卧室内，完全被一层金色光芒所掩盖。<br> 　　水晶变成了一地齑粉，但当空中的金光渐渐坠落，小舞却发现，房间内的地面和床上都多了一层金色光点。或者说是一层金色的颗粒。<br> 　　每一个金色颗粒的大小都非常均匀，和米粒差不多，通体浑圆，闪烁着淡淡的金光，小舞下意识的拿起一粒在手上捏了捏，发现这金色的颗粒略微有些软，但却弹性十足，以她的魂力，也无法将其捏扁。<br> 　　“哥，这些不会是纯金的吧。就算是纯金，也不如你那二百个金魂币价值高。”<br> 　　唐三很兴奋，真的很兴奋。来到这个世界后，这还是他的情绪第一次处于如此亢奋的状态之中，甚至比当初得到第一个魂环令玄天功冲破瓶颈时还要兴奋的多。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

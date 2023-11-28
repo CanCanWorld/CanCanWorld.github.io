@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第二章废武魂与先天满魂力（四） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第二章废武魂与先天满魂力（四）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　“好吧。”试一下魂力也不会浪费太多时间。一边说着，他将蓝水晶球递到了唐三面前。<br> 　　按照之前素云涛教过的方法，唐三控制着把自己的蓝银草收回体内，他发现，这并不难，只要自己按照对玄天功控制的那样，将功力收回，就可以做到了。同时，他还发现，蓝银草出现的时候，似乎也是自己的玄天功涌出，仿佛那蓝色的小草就是由玄天功凝聚而成似的。<br> 　　手掌刚一贴上蓝水晶球，唐三的身体就剧烈的颤抖了一下，他吃惊的发现，那颗看上去很漂亮的蓝水晶球竟然拥有着巨大的吸力，自己的内力仿佛找到了宣泄口一般汹涌而出。他想要挣脱，但却怎么也无法逃开那股强势的吸力。<br> 　　同样吃惊的还有素云涛，正在他以为这在圣魂村的最后一次魂力测试只是走个形势的时候，突然，手中的蓝水晶球亮了起来，夺目的蓝光从开始的一点瞬间蔓延，眨眼的工夫，这颗水晶球就像是璀璨的宝石一般闪闪发光。淡淡的蓝色光晕外露，说不出的动人。<br> 　　按照传统的测试，只要水晶球出现一点感应，哪怕是一丝光芒，就证明被测试者是有魂力存在的，而眼前蓝水晶球中闪耀着如此夺目的光芒，就只有一个解释。<br> 　　“天啊，竟然是先天满魂力。”青光再次从素云涛身上释放，水晶球将唐三的手掌弹开，此时，他再看眼前这个男孩儿的目光已经变得截然不同。仿佛像是在看一个怪物似的。<br> 　　唐三自然也发现了自己和其他孩子们测试的情况不同，疑惑的问道：“叔叔，什么是先天满魂力？”<br> 　　素云涛呆滞的看着他，下意识的解释道：“每个人在武魂觉醒的时候，除了武魂的形态决定它是否强大以外，魂力的多少也是至关重要的。大多数人在武魂觉醒的时候是没有魂力的，就像之前这几个孩子。他们注定一生无法成为魂师。而只要有魂力出现，哪怕是只有一丝，都可以通过冥想进行修炼，而在武魂觉醒的时候，魂力的多少至关重要，决定了魂师修炼起步的高低，魂力先天越高，后天修炼的速度也就越快，同时，因为起步高，也自然要领先于他人。所谓先天满魂力，就是在武魂觉醒的时候，先天所能达到的最高魂力。”<br> 　　“最高魂力？”唐三看着素云涛，心念电转，他不知道自己魂力是怎么样，但可以肯定的是，那负责检测的蓝水晶球吸取的是自己的玄天功内力。难道说，自己的内力在这个世界就变成了魂力？<br> 　　或许是因为唐三的先天满魂力给素云涛带来了不小的冲击，不厌其烦的解释道：“我们的武魂等级是这样的，每十级是一个称号。只要是武魂觉醒后，就自动可以被称为魂士。当然，只是一级魂士。按照武魂力的强弱，来区分等级。所谓的先天满魂力，就是在觉醒之后，魂力能够达到先天最高的十级程度。我还从未遇到过先天满魂力的人，当初我觉醒的时候，也不过是二级魂力而已。”<br> 　　唐三此时已经回过神来，好不容易找到一个真正的魂师，他自然不会放弃，赶忙问出自己心中的疑惑，“武魂力先天就只能到十级么？不能再高了？”<br> 　　素云涛全身青光收敛，收回了自己的武魂附体，“当然不能。魂师的实力提升可不是那么容易的。每跨跃一个称号，不只是武魂力要达到前一个称号的巅峰，同时还需要得到一个魂环。没有魂环，就算你再努力修炼，也不可能进入下一个称号。就比如像你现在这样，因为已经达到了先天满魂力，所以，你的魂力想要继续提升，就不只是冥想，而是必须要先得到一个魂环，进入下一个层次之后，才能继续修炼。”<br> 　　唐三恍然道：“魂环，就是你刚才身上的光环么？你二十六级，所以有两个魂环。”<br> 　　素云涛点了点头，道：“正是如此。你的情况很特殊，先天满魂力可是百年难得一见的天才。可惜，真是太可惜了。居然是个废武魂。哪怕你的武魂只是一件农具，也要比废武魂蓝银草强的多。那样的话，我也能……”<br> 　　他没有再说下去，但唐三也隐约明白了他的意思，只是他此时心中蒙着的一层面纱却仿佛被揭开了一般。<br> 　　唐三一直就是一个善于思考的人，前一世如此，这一世依旧如此。按照素云涛所说，如果魂力真的与自己的内力是相通的。那么，来到这个世界后，修炼出来的内力就成为了魂力，而自己的玄天功之所以无法进入第二重境界，就是因为那所谓的魂环。也就是说，自己想要再有提高，必须要像魂师那样得到魂环才行了。可魂环是什么呢？<br> 　　唐三正想继续问下去，素云涛却已经拿起自己的包裹向外面走去。<br> 　　“老杰克。”<br> 　　门开，老杰克一脸紧张的迎上了素云涛，“大师，怎么样。今年我们村子里的孩子有没有能够成为魂师的可能？”<br> 　　素云涛看了看他，叹息一声，道：“有到是有一个，只是可惜了。”<br> 　　杰克眼中流露出惊疑不定的神色，试探着问道：“大师，那究竟是……”<br> 　　素云涛道：“今年这八个孩子里，只有一个拥有魂力的，而且还是先天满魂力，可惜的是，他的武魂是蓝银草。你明白了？”<br> 　　“蓝银草？先天满魂力？天啊。”杰克脸上失望的表情甚至比素云涛还要严重的多。他也做了这么多年村长，自然明白先天满魂力代表着什么样的意义。可这先天满魂力出现在蓝银草武魂上，却实在是……<br> 　　“大师，蓝银草就真的没有办法修炼了么？”杰克皱眉问道。<br> 　　素云涛能感受到老杰克的心情，反而没有开始时那样骄傲了，在老杰克肩膀上拍了拍，道：“也不是完全不能修炼。只是，你认为蓝银草随着武魂的提升，会进化成什么样子呢？废武魂终究是废武魂。哪怕成为了魂师，恐怕也是个废魂师。这先天满魂力实在是可惜了。好了，我先走了，还要到下一个村子去。”<br> 　　素云涛终究没等唐三再继续问下去，就离开了村子，没有了素云涛，唐三只能跑到杰克面前，问出自己最急切想要知道的问题，“杰克爷爷，什么是魂环？怎样才能获得魂环？”<br> 　　老杰克似乎还在琢磨着素云涛的话，下意识的回答道：“我也不知道什么是魂环，想要得到魂环，似乎是要猎杀魂兽吧。那是很危险的事，只有魂师才会去进行。”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

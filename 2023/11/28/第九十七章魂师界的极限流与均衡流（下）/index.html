@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第九十七章魂师界的极限流与均衡流（下） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第九十七章魂师界的极限流与均衡流（下）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　“预选赛晋级的名额一共只有五个。所以，你们要想成功的通过预选赛，那么，这五座学院必然就要有一个被淘汰。五元素学院彼此关系密切，如果我猜的不错，他们必然会有所行动。所以，之后的比赛你们将遇到越来越强大的对手。自己的命运要掌握在自己手中，想要毫无悬念的挺进决赛，那么，最好的办法就是在预选赛上的每一场比赛都获得胜利。以全胜之姿进入下一轮。”<br> 　　“是。”史莱克学院众人轰然应诺。<br> 　　走出休息区，众人的目光忍不住先飘向看台。此时，四周观战台的观众们正不断出强烈的嘘声。<br> 　　唐三疑惑的向大师问道：“老师，这是怎么了？怎么观众的反应这么大？”<br> 　　大师苦笑道：“还不是因为你们么？你们的对手弃权，这些观众很多都是专门来看你们比赛的。没有你们出场，他们自然会不满意了。”<br> 　　观众台上，至少有三分之一的人身穿着绿色的服装，或者说是屎绿色。<br> 　　哪怕是大师和柳二龙，也不得不承认弗兰德的经济头脑。更不明白他以前为什么会把原先的史莱克学院弄的那么失败。<br> 　　自从史莱克学院战队引起轰动之后，弗兰德立刻找人合作，开始大幅度制作史莱克学院战队的队服进行抛售。而且每件队服上还都印有队员们的名字。<br> 　　其中，以唐三的队服卖的最多，其次是戴沐白和朱竹清的。短短一周时间，在这服装上，弗兰德狠狠的捞了一笔。<br> 　　这两天他又开始琢磨着给战队制作吉祥物来贩卖了。忙的不亦乐乎。参加比赛的事情完全交给大师和柳二龙负责。<br> 　　不知道是谁先看到史莱克学院众人从休息区走了出来，顿时，大量的观众开始高呼史莱克三字。场上的气氛顿时变得热烈起来。<br> 　　如果这是斗魂比赛，眼看着观众如此热情高涨，天斗大斗魂场说什么也会邀请史莱克战队上台一战。<br> 　　可惜，这是全大6高级魂师学院精英大赛，他们也没那个权力。也只能遗憾的看着史莱克学院缺席今天的比赛了。<br> 　　第一轮比赛已经开始了，大师立刻指出在下面参加比赛的十支队伍中就包括了神风和天水两支队伍。令唐三惊讶的是，神风学院的所有队员竟然都有飞行的能力。<br> 　　这无疑是令人极为头疼的。而天水学院的队员更全是女子，而且清一色的都是美女。<br> 　　他们的对手还没动手呢，骨头都已经软了一半。这样的比赛还怎么进行下去？<br> 　　用时最短，天水学院已经不显山，不露水的获得了胜利。<br> 　　神风学院的攻击模式很简单，他们的队员就像是七只苍鹰一般飞翔在半空之中不断的俯冲攻击。节奏掌握的非常好。<br> 　　每一次攻击，都如同雷霆万钧一般，三轮俯冲之后，他们的对手已经再无一人能够站在原地。<br> 　　通过对这两场比赛的观察，唐三低声向身边的大师说道：“老师。这五大元素学院参赛的队员为什么都没有各系进行搭配呢？不论是象甲学院还是这两所学院，都是清一色的同属姓魂师。这样虽然在某一方面变得很强，可实际上，弱点也将变得非常明显。一旦他们无法将自己的长处挥，不是就没有后续之力了么？”<br> 　　大师轻叹一声，道：“这就是天斗帝国和星罗帝国之间的差别了。天斗帝国的高级魂师学院一向以这五大元素学院为主。这一届的天斗皇家学院出了个皇斗战队，还算不错。在之前的几届比赛中。能够进入前三名的，天斗帝国这边都是这五元素学院之一。”<br> 　　“正如你所说，这五座学院选派队员的方式各走极端。与星罗帝国讲求均衡姓截然不同。这样也是有利有弊。当他们遇到无法克制自己长处的对手时，往往能够将对手一击毙命。可一旦碰到克制自己的对手，却也经常会在短时间内败下阵来。可这些年以来，这五大元素学院却丝毫没有改变自己参战方针的意思。你知道这是为什么吗？”<br> 　　唐三茫然摇头。<br> 　　大师沉声道：“因为这是魂师界两大流派之间的争斗。一派代表着均衡，一派代表着极端。极端派认为，魂师的能力就要尽可能的走纯净路线，让自己的能力只朝着一个单一的方向展，将这单一方向的能力尽可能突出。而均衡派则认为，一名魂师的能力应该均衡展，要攻守平衡。这两大流派一直在争斗。天斗帝国的魂师界大都是极端派的支持着，你也看到了，你们昊天宗下属的力之一族就是其中的典型。而昊天宗下属四宗还有另外三大极限流派，以后你定会有所接触的。而星罗帝国的魂师则大都是走均衡路线。或许爆力逊色一些，但破绽却要小的多，后续能力也更加出色。”<br> 　　“那武魂殿呢？武魂殿支持哪一种流派？”唐三问道。<br> 　　大师沉声道：“武魂殿从未表示过支持那一方。加入武魂殿的魂师两种流派都有。但奇怪的是，在武魂殿内部却从不会因为这一点而产生冲突。我们史莱克学院走的其实算是半均衡、半极限的路线。或者说是，个人极端，团体均衡路线。这是我多年研究以来，认为最合适的修炼方式。”<br> 　　“个人的实力，还是要极端一些比较好。这样才能让自己的实力最大化的提升。至于后继无力和缺点，则完全可以依靠队友来弥补。一个团队，如果每个人都能擅长一项极端的能力，而彼此之间又能够互补的话。那么，这支团队就成功了。实力必将凌驾于同等级其他队伍之上。你能明白老师的意思么？”<br> 　　唐三恍然道：“原来如此。极端流和均衡流两者各有特点。那这么说，这些年以来，一直是均衡流占据了上风？”<br> 　　大师冷笑一声，“不，应该说是融合流占据上风才对。我并不是第一个提出极端流和均衡流应该融合在一起的人。真正提出这个想法的是武魂殿。但是，武魂殿并没有把自己的这个想法表现出来。可每一届代表武魂殿的参赛队伍却都是这样做的。因此，前几届的全大6高级魂师学院精英大赛最后冠军，也都属于武魂殿的人。”<br> 　　唐三皱眉道：“武魂殿既然知道这其中的奥秘，为什么不主动站出来？以他们在魂师界的权威，完全可以……”<br> 　　大师摇了摇头，“这其中涉及到政治、权力和各种利益，远不是你想的那么简单。你现在还小。还是不要了解这些为好。你们现在要做的，就是尽可能的提升自己的实力。想要获得最后的冠军，你们真正的对手就只有一个。那就是武魂殿派出的那支队伍。我虽然不能肯定他们的实力达到了什么程度。但我想，他们的厉害，一定在皇斗战队和五大元素学院之上。武魂殿真正的实力，比任何人想象的都要强大。”<br> 　　说到这里，大师眼中不自觉的闪过一丝恐惧的光芒，似乎想到了什么恐怖的画面似的。<br> 　　唐三突然抬起头，道：“老师，我想先回学院了。”<br> 　　大师愣了一下，“你不看比赛了？”<br> 　　唐三点了点头，“我的三窍御之心还不熟练。您说的对。与其去研究别人，不如增强自己。这五大元素学院的实力应该都近似于象甲宗。他们的实力虽强，但正像您说的，如果我们全力出战，战胜他们并不算太困难。为了我们真正的对手，还是尽可能加强自身实力才好。”<br> 　　这一周以来，除了比赛，唐三每天都进行着特殊的修炼。<br> 　　他的三窍御之心，完全是在融合周围环境下进行修炼的。每天与森林中的野生蓝银草进行沟通，已经成为了他的必修课。<br> 　　一周下来，他现自己魂力提升的度明显增强，蓝银草武魂本身也在悄然生着一些未知的变化。<br> 　　内在的变化是什么唐三也说不准，但他可以肯定，那完全是在向着好的方向变化着。<br> 　　现在他对于蓝银草的控制比以前更加圆融，每一根蓝银草都像是他思想的延伸，再配合三窍御之心使用，虽然魂力没有等级提升，但在控制能力上，唐三能够明显感觉到自己的进步。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

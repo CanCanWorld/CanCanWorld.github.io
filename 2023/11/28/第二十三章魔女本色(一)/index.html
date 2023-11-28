@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第二十三章魔女本色(一) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第二十三章魔女本色(一)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　“请宗主恕罪，史莱克学院内有至少一位魂圣和数名魂帝级别的强者，属下无能，无法进入探查。不过，您交代的信我已经给了史莱克学院的老师，肯定会落在他们院长手中。”<br> 　　中年人脸上流露出一丝微笑，“弗兰德啊弗兰德，你还真是个有理想的人。我到要看看，你能把我的女儿教育成什么样子。或许，也只有离开家，那个小魔女才会懂事些吧。好了，你下去吧。”<br> 　　“是，宗主。”青年人快步后退而去。<br> 　　一个苍劲有力的声音在大厅内响起，声音仿佛是从四面八方而来，震的大厅簌簌作响，“风致，你就这么放心让荣荣一个人在外面么？难道那史莱克学院教的能比我们教的更好？不行，我要去把荣荣接回来。她在外面我可不放心。”<br> 　　随着声音的出现，一名须发皆白，但面庞却如同婴儿般细嫩的老者从后堂走了出来，大刺刺的在宗主宁风致旁的一张椅子上坐了下来。<br> 　　宁风致面露无奈之色，“剑叔，就冲您和龙叔，我也不能让这丫头留在宗内了。你们实在太宠爱她了，这丫头在家里已经没法管教。让她到外面受受教育或许会有些变化。”<br> 　　剑叔不满的道：“谁说我们娇惯荣荣了。你只看到了荣荣平时喜欢玩闹的一面，并没看到她乖巧的一面。你儿子不少，女儿却只有这么一个。你还真舍得。”<br> 　　宁风致断然道：“剑叔，这次不管怎么说，我都不会去找她，您和龙叔也都不能去。荣荣的安全您完全不需要担心。那座史莱克学院的院长，就是当初黄金铁三角中的第一尖锋。他不可能不认得我们七宝琉璃宗的武魂。有他保护，荣荣不会有事的。”<br> 　　剑叔怒气冲冲的哼了一声，“荣荣有事我就拿你是问。身上有点发紧了，我找老骨龙去活动活动筋骨。”<br> 　　别说在七宝琉璃宗，哪怕是在整个斗罗大陆敢向宁风致这么说话的，也没几个人。而眼前这个老人显然是其中之一。宁风致表面看去虽然是四十多岁的样子，可实际上，他的年龄早已经超过六十岁。宁荣荣是他最小的一个孩子，也是唯一的女儿。<br> 　　……<br> 　　夜幕降临，史莱克学院院长，四眼猫鹰弗兰德正站在大操场上，看着眼前的全部七名学员。<br> 　　戴沐白、唐三、小舞、马红俊以及一脸冰冷却整齐利落的朱竹清都已经做好了晚上上课的准备，一个个精神抖擞。<br> 　　不过，弗兰德的注意力并没有在他们身上，而是看着另外两个学员。<br> 　　“奥斯卡，你们跑完二十圈了？”弗兰德的目光给人一种锐利的感觉，令人不敢与他对视。<br> 　　不知道为什么，今天这一天唐三都没有看到学院的其他老师出现，包括赵无极在内。似乎整个学院里只有他们七个学员和这位院长大人。<br> 　　奥斯卡咳嗽一声，点了点头，道：“院长，我跑完了。”<br> 　　弗兰德冷哼一声，“我问的是你们，不是你。”<br> 　　奥斯卡扭头看向宁荣荣，宁荣荣也正在看着他，一双漂亮的大眼睛中满是无辜的神色。<br> 　　奥斯卡一咬牙，点了点头，道：“是的，我们都跑完了。”<br> 　　弗兰德笑了，如果让唐三来评价他的笑容，那么，用阴险二字再合适不过。<br> 　　“很好，奥斯卡，没想到你很有友爱精神。你过来。”弗兰德指了指自己面前的位置。<br> 　　奥斯卡脸上流露出一丝苦笑，但他却没有再去看宁荣荣，大步走到弗兰德面前站定。<br> 　　弗兰德右手缓缓抬起，轻飘飘的拍在奥斯卡的肩膀上，“你的友爱精神我很欣赏，既然如此，你就再去跑二十圈，让我看看你的友爱究竟有多深。不跑完，不用吃饭。我已经封住了你的魂力，不用妄图解除。去吧。”<br> 　　奥斯卡没有说什么，只是默默的点了点头，转身就向外面跑去。<br> 　　弗兰德的目光转向戴沐白、唐三等人，“你们是不是不明白我为什么要这么做？为什么要让他继续去跑？”<br> 　　戴沐白和马红俊很熟悉弗兰德的脾气，并没有吭声，朱竹清生性冰冷，只是淡淡的看着他。而唐三和小舞却下意识的点了点头。他们确实不明白弗兰德为什么要这么做。<br> 　　弗兰德脸上依旧挂着那令人有些不寒而栗的笑容，“因为他说谎。尽管他是为了友爱或者是其他什么原因才说谎的，但依旧是说谎了。你们都还是孩子，谎言是最不好的品德。我希望你们明白。”<br> 　　说着，他的目光从唐三五人身上转到一脸无辜之色，看上去楚楚可怜的宁荣荣，“告诉我，你有没有完成我早晨布置的课程？”<br> 　　宁荣荣老实的摇了摇头，道：“我没有。距离太长，我又饿，坚持不下来。”<br> 　　弗兰德微微一笑，道：“所以，你就一个人跑去了索托城，并且去大吃了一顿，还在索托城的商业街转了转，刚刚才回来找到奥斯卡，对不对？”<br> 　　宁荣荣瞪大了她那双漂亮的眼睛，“你监视我？”<br> 　　弗兰德的脸色顿时冷了下来，“身为院长，我要对学院的每一名学员负责。如果说奥斯卡说谎是因为不忍心让你受罚，还情有可原的话。那么，你犯下的错误就是罪无可恕。擅自离开学院，不遵从学院安排，让学长替你说谎。任何一条都不是一名优秀魂师应该犯下的错误。如果这是在战场上，你的结果只有一个，那就是军法处置，一死而已。”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

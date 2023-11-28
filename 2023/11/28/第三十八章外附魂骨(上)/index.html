@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第三十八章外附魂骨(上) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第三十八章外附魂骨(上)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　唐三现，催动背后的变异并不会消耗自己太多魂力，似乎在那段脊椎骨之中本身就蕴含着一定能量似的。<br> 　　伴随着八个鼓包的凸起，唐三背后出现的紫光也变得越来越明显起来。<br> 　　突然，随着唐三身体一阵颤抖，八个鼓包终于破体而出，八根粗壮的紫色柱状物飞快的从他背后延伸开来。<br> 　　如果此时有唐三在史莱克学院的伙伴们在，一定会现，这一次蛛腿生长出来的度要比上一次快的多。<br> 　　几乎只是几次眨眼的工夫，粗壮的蛛腿就已经伸长到了一米五的程度，紧接着，蛛腿骤然舒展开来，从那一米五的粗壮蛛腿上通过末端关节骤然又弹出一米五的长度。露出了最尖锐的部分。<br> 　　唐三忍不住出一声低吼，背后的八根蛛腿同时向身体两旁舒展开来，紫幽幽的光芒闪耀，就像八根巨大的手臂一般将他的身体护在中央。<br> 　　在蛛腿上，隐约能够看到上面浮现着一层淡淡的紫气，紫光流转，似乎它本身是透明的紫水晶一般。<br> 　　“好。”大师赞叹一声。“小三，控制着你的蛛腿刺一棵大树，用力。”<br> 　　唐三虽然对自己的蛛腿空气还显得很生疏，但仅仅是刺中一棵树他还是能做到的。微一侧身，左侧的一条蛛腿骤然弹出。<br> 　　噗的一声，唐三惊讶的现，蛛腿像是没有碰到任何阻碍似的，轻松的刺入了那棵需要单人合抱的树木之中，并且从另一端穿透而出。<br> 　　更令人惊讶的一幕还在后面。随着蛛腿的刺穿。唐三和大师都清晰的看到，一层紫色从蛛腿上悄然蔓延，以惊人的度传遍树体。<br> 　　不但树干快的变成了紫色，一会儿的工夫，就连枝芽和树叶也变成了同样的颜色。<br> 　　一片片树叶从天而降，还没等落地，在空中就已经化为一缕缕紫色粉末消失不见。而那株大树更是像冰雪消融一般，就那么悄然的化为紫色齑粉融化了。就连地面在大树附近一些接触到这紫色粉末的灌木也相继被紫色渲染而消失。方圆数米之内，全部变成了一片紫色的死寂。<br> 　　一股微弱的能量顺着蛛腿传入唐三体内，虽然能量不多，但却非常清晰。<br> 　　上次在马红俊摸到蛛腿中毒后，唐三也有类似的感觉，只是那次更加轻微，他也没有过多的注意，这次却变得极为明显。就像是那根蛛腿吸收了大树所蕴含的能量再传入唐三身体似的。<br> 　　落在地上的紫色粉末渐渐变成了无色，一会儿的工夫已经与泥土混合在一起，再也无法看到。而之前那株大树就像从来都没有存在过似的。唐三刺出的蛛腿还保持着先前的动作，可是那里却已空无一物。<br> 　　“这，这究竟是……”唐三呆呆的看着蛛腿。虽然他已经猜到蛛腿的攻击力会不错，但也没想到这蛛腿所附带的毒姓会如此恐怖。<br> 　　大师缓缓走到唐三身边，绕开他的蛛腿，“看来我的判断是没错了。小三，这次你收获最大的，并不是第三魂环，更不是那第三魂技蛛网束缚，而是这八条蛛腿。或者说，是这块外附魂骨。”<br> 　　“外附魂骨？”唐三看向大师。<br> 　　大师点了点头，“这些年我一直在教导你怎样辨别魂兽和魂环，以及武魂的修炼方法和各种应用。一直没说过什么关于魂骨的知识。这主要是因为我从没想过你这么早就能接触到魂骨。看来，现在该是给你讲讲关于魂骨奥秘的时候了。说道这些，就先要说说什么是魂骨。”<br> 　　在大师的示意下，唐三控制着魂力将那八根蛛腿收回体内，和上次一样，这蛛腿在收回的时候消耗了唐三不少魂力，与释放时没有消耗截然相反。<br> 　　大师正色道：“魂骨是一种极为特殊的东西，或者说，他是魂师梦想中最希望得到的物品。和魂环有些类似的是，魂骨也出自于魂兽。但它与魂环又有着极大的不同。先，魂骨的出现几率只有千分之一，甚至更低。一般来说，只有在实力极为强大，并且在死亡时经历一些特殊情况的魂兽才有可能在死亡后出现魂骨。并不像每一只魂兽都会出现魂环那样。因此，魂骨就变得极为稀有，也极为珍贵。”<br> 　　“魂骨和魂环另一个区别是它不需要像魂环那样，谁杀死魂兽谁才能使用。魂骨得到之后甚至可以用来贩卖。还记得么，我以前对你说过，你要尽量的多积攒一些金钱。目的就是能在未来在一些特殊的地方购买到你所需要的魂骨。任何一块魂骨，哪怕是再普通的魂骨，也是天价。而且还是有价无市。”<br> 　　唐三问道：“那魂骨又应该怎么使用呢？您的意思是，我背后这八条蛛腿就是八个魂骨么？”<br> 　　听了唐三的话，大师忍不住笑了，“你到不贪心，还八个魂骨，能有一个魂骨已经是极其的幸运了。更何况你这还是外附魂骨。其珍贵程度几乎可以和顶级魂骨相媲美了。你这块外附魂骨是脊椎骨。当然，也连带八根肋骨。它的作用，就是将你杀死的那只人面魔蛛所有的毒姓储存下来，并且复制了它的八根蛛腿后再与你自身的能力相结合，演化出了现在这八条蛛腿。”<br> 　　“人面魔蛛魂环与你的武魂相结合，对你身体的各方面属姓有所提升，蓝银草的毒姓也增加了不少。但是，那毕竟不是人面魔蛛本身的毒姓。但你的八根蛛腿就不一样了，不但拥有人面魔蛛的毒素，甚至还出现了一定的变异。刚才它那强的腐蚀效果你也看到了。如果这是刺中人体，会怎样？”<br> 　　大师说到这里，整个人都显得有些兴奋，“小三，我问你，一名魂师最多能够得到几个魂环？”<br> 　　唐三道：“九个。得到九个是极限了，也就是封号斗罗。”<br> 　　大师点了点头，“那在大家都是九个魂环，而且年限差不多的情况下。如何决定谁更加强大呢？”<br> 　　唐三想了想，道：“要看双方的武魂是什么，是否有克制，还要看双方的实战经验对比。综合在一起，才能判断出谁更强一些。”<br> 　　大师点了点头，道：“你说的没错，我教你的东西你记得很清楚。那么，我现在可以告诉你，在双方一切相等的情况下，如果有一个人拥有一块魂骨，那么，刚才你所说的这些就都没有必要去计算了。因为拥有魂骨的魂师将占据绝对优势。”<br> 　　“啊？魂骨有这么大的作用？”唐三有些吃惊的看着大师。<br> 　　大师点了点头，道：“魂环附加的是魂技，虽然也对魂师本身的属姓有所增强，但它主要的作用毕竟在附带的魂技上。而魂骨则刚好相反。或许魂骨不会附带技能，但是对魂师本身的增强却是巨大的。更为重要的是，魂骨拥有的可成长姓比魂环更加宝贵。魂环附带的技能都会随着魂力的增加而增幅，这你是知道的。但你也应该知道，魂环本身的年限会限制它的增幅。哪怕是一位九十级以上的封号斗罗，他的第一魂环技能也不会增幅到足够强大的程度就是这个道理。而魂骨却不一样，魂骨是不会受到产生它的魂兽年限限制，只会随着魂师本身的实力增强而进化。也就是说，越早得到魂骨，给它进化的时间也就会越长。”<br> 　　唐三道：“人身上的骨头有那么多，如果能有那么多种魂骨吸收到自身的话，岂不是千变万化……”<br> 　　大师摇了摇头，道：“人身上的骨头虽然多，但却只分为几大部分。所以，一般来说，能够吸收的魂骨也只有几类。四肢，头和躯干。也就是说，一般人能够吸收的魂骨是六块。就像魂师能够吸收九个魂环是一样的。魂骨的好坏以及对魂师的作用，主要取决于吸收的早晚和属姓是否与自己相合上。”<br> 　　唐三恍然道：“那我这块来自人面魔蛛的魂骨无疑是与自身相合的，属于躯干类的魂骨，对么？”<br> 　　“前一句你说的很对。拥有最适合自己魂骨的方法，就是得到的魂骨和自己身上的一个魂环出自同类魂兽。但你这块魂骨却并不属于躯干类。所以我才会说它是外附魂骨。”<br> 　　唐三好奇的问道：“那什么是外附魂骨？”<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

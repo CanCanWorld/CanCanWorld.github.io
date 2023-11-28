@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>『史莱克七怪』资料汇总 | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>『史莱克七怪』资料汇总</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　【最新总结，由书友汇总】<br> 　　为方便大家查找史莱克七怪的资料，特把书中出现的一些内容列出来。<br> 　　姓名：唐三（千手修罗）<br> 　　性别：男<br> 　　等级：80级魂斗罗控制系<br> 　　唐门外门弟子，因偷学内门武技负罪明志跳崖，穿越至斗罗大陆<br> 　　昊天宗直系弟子<br> 　　【武魂】：昊天锤，暂时没有魂环。<br> 　　魂技：乱披风（昊天宗官方魂技）九九归一、黑龙升天，自创魂技：乱披风之舞昊天宗本门绝学昊天九绝<br> 　　蓝银皇（先为普通蓝银草，在凝结第五魂环时由蓝银王觉醒）7个魂环，2黄1紫2黑2红<br> 　　第一魂技：缠绕<br> 　　第二魂技：寄生<br> 　　第三魂技：蛛网束缚<br> 　　第四魂技：蓝银囚笼变异魂技：蓝银突刺<br> 　　第五魂技：蓝银霸王枪<br> 　　第六魂技：虚无和爆杀八段摔<br> 　　第七魂技：蓝银真身<br> 　　【魂骨】：外附魂骨，八蛛矛（击杀人面魔蛛兽获得，可进化）<br> 　　技能：吞噬，毒<br> 　　头部精神凝聚之智慧头骨（武魂殿奖励魂骨之一）与瀚海乾坤罩融合<br> 　　（技能：紫级神光和瀚海乾坤罩的所有技能）<br> 　　右腿魂骨（唐三老妈遗物）。<br> 　　技能：飞翔；野火烧不尽，春风吹又生<br> 　　左臂魂骨（小舞献祭所得）<br> 　　技能：无敌，瞬移<br> 　　另：魂骨套装技能（十万魂环和万年人面蜘蛛增幅）<br> 　　效果：四魂骨相连，形成盔甲。能力不明，每次使用耗费1&#x2F;3魂力。<br> 　　右腿魂骨技能之2：恢复加强，另外：魂骨套装技能效果：并不稳定；唐三奇经八脉全通；外附魂骨，八蛛矛技能之3：无视地形<br> 　　【领域】：杀神领域（杀戮之都百战胜，地狱之路勇闯得）<br> 　　效果：1增加气势，削弱对方实力<br> 　　2杀戮突击：杀神领域以直线方向释放，锁定一个目标后，速度提升百分之百，攻击力提升百分之三十。<br> 　　3.杀神领域进化技能：修罗地狱毁灭领域内地一切。杀气在修罗地狱中会真地变成实质，变成恐怖地攻击（修罗地狱进化后产生地技能——修罗旋圆杀阵。）<br> 　　蓝银领域（蓝银皇觉醒，天赋领域现）<br> 　　效果：：1隔绝外界不良影响和声音<br> 　　2控制领域范围内的所有蓝银草使用技能，现在只能使用缠绕（蓝银领域进化技能蓝银范围缠绕）3领域探查。以领域为媒，在领域范围内配合精神力探查周围的信息<br> 　　4:森罗万象<br>附带效果，同化、压制。同化技能指的是同化周围一切植物，以蓝银领域点燃它们的生命火焰化为己用，植物越多的地方，森罗万象的威力就越大。。压制技能会将你们的武魂属性金部压制百分之十，包括魂力释放也会降低百分之十。在领域中停留的时间越长，压制的效果也会随之增强.(蓝银领域与八蛛矛进化后自行融合出来的技能<br>森罗万象的第三技能是利用同化技能把生命力逐渐抽取注入到植物之中。而八蛛矛的加入，令它多了远程吞噬效果。)<br> 　　【绝学】：暗器现已研制出的有：<br> 　　1追魂夺命阎王帖<br> 　　2子母追魂胆<br> 　　3龙须针<br> 　　4含沙射影<br> 　　5诸葛神弩<br> 　　6飞天神爪<br> 　　7箭类：背箭，袖箭等等<br> 　　未研制出来的有：<br> 　　1佛怒唐莲（唐门失传的三大机括类暗器排名第一<br>制作最困难的地方是火yao的配方<br>前世个人研究已制造）<br> 　　2暴雨梨花针（唐门失传的三大机括类暗器排名第二<br>是对材料要求最为苛刻的一种）<br> 　　3孔雀翎（唐门失传的三大机括类暗器排名第三<br>对制造要求最高，工艺最难的一种）<br> 　　暗器手法，现已使用的手法有：<br> 　　1蝠翼轮回<br> 　　2流星锤<br> 　　3凤引九雏<br> 　　4一石二鸟<br> 　　5一千零一夜<br> 　　6天女散花<br> 　　内功心法—玄天功（唐门正牌内功心法，和异世的魂力相结合，随着武魂等级的突破而突破）：生生不息，雄浑无边<br> 　　轻身之法—鬼影迷踪（类似于凌波微步的神奇步法，让人琢磨不透）:虚影重重，善于躲避<br> 　　练手之法—玄玉手（唐门配合用毒的手法）：百毒不侵，坚如磐石<br> 　　练眼之法—紫极魔瞳（紫极魔瞳分为纵观、入微、芥子、浩瀚四个级别）：远观千里，细视入微<br> 　　擒拿之法—控鹤擒龙：二两拨千金，卸力，化攻击于无形。<br> 　　【奇遇】：八角玄冰草+烈火杏娇疏同时服用，然后才能在冰火两仪眼中淬炼金身，后来才服的望穿秋水露<br> 　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br> 　　姓名：戴沐白（邪眸白虎）<br> 　　性别：男<br> 　　等级：78级魂圣强攻系<br> 　　星罗帝国三皇子<br> 　　【武魂】：白虎7个魂环2黄2紫3黑<br> 　　第一魂技：白虎护身障<br> 　　第二魂技：白虎烈光波<br> 　　第三魂技：白虎金刚罩<br> 　　第四魂技：白虎流星雨<br> 　　第五魂技：白虎魔神变<br> 　　第六魂技：白虎破灭击<br> 　　第七魂技：白虎真身<br> 　　【魂骨】：嗜血狂化之飓风右腿魂骨技能：嗜血<br> 　　【领域】：未知<br> 　　【绝学】：小三的暗器基本都有与朱竹青的武魂融合技—幽冥白虎<br> 　　【奇遇】：服用仙草奇“茸通天菊”<br> 　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br> 　　姓名：奥斯卡（香肠专卖）<br> 　　性别：男<br> 　　等级：75级魂圣食物系<br> 　　弗莱德院长从小收留的孤儿<br> 　　【武魂】：香肠7个魂环2黄2紫3黑<br> 　　第一魂技：恢复大香肠<br> 　　第二魂技：解毒小腊肠<br> 　　第三魂技：急速飞行蘑菇肠<br> 　　第四魂技：亢奋粉红肠<br> 　　第五魂技：超越极限墨绿肠<br> 　　第六魂技：复制镜像肠<br> 　　第七魂技：坚挺金苍蝇<br> 　　【魂骨】：头部魂骨（镜像兽）<br> 　　【领域】：未知<br> 　　【绝学】：同上<br> 　　【奇遇】：服用仙草“八瓣仙兰”<br> 　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br> 　　姓名：马红俊（邪火凤凰）<br> 　　性别：男<br> 　　等级：76级魂圣强攻系<br> 　　具有变异顶级武魂<br> 　　【武魂】：邪火凤凰7个魂环2黄2紫3黑<br> 　　第一魂技：凤凰火线<br> 　　第二魂技：浴火凤凰<br> 　　第三魂技：凤翼天翔<br> 　　第四魂技：凤凰啸天击<br> 　　第五魂技：凤凰流星雨<br> 　　第六魂技：凤凰穿云击（神赐魂环）<br> 　　第七魂技：七首火凤凰<br> 　　【魂骨】：爆裂焚烧之火焰右臂魂骨技能：内蕴爆发<br> 　　【领域】：火凤凰领域（由第七魂环进化而来）<br> 　　【绝学】：同上<br> 　　【奇遇】：服用仙草“鸡冠凤凰葵”<br> 　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br> 　　姓名：小舞（柔骨魅兔）<br> 　　性别：女<br> 　　等级：魂力不详<br>身体抗性大幅提升<br>水战能力大幅度提升强攻系<br> 　　10W年魂兽化为人行现已经把灵魂等献祭给小三，成为一个无魂的兔子服用“水晶血龙参”以化人形拥有神器八宝如意软甲<br> 　　【武魂】：柔骨兔5个魂环2黄2紫1黑<br> 　　第一魂技：腰弓<br> 　　第二魂技：魅惑<br> 　　第三魂技：瞬移<br> 　　第四魂技：无敌金身<br> 　　第五魂技：柔骨锁<br> 　　第六魂技：<br> 　　【魂骨】：未知<br> 　　【领域】：已知（不知什么名字）<br> 　　【绝学】：10W年魂兽所具有的能力和同上<br> 　　【奇遇】：服用仙草“相思断肠红”和“水晶血龙参”<br> 　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br> 　　姓名：宁荣荣（七宝琉璃）<br> 　　性别：女<br> 　　等级：76魂圣辅助系<br> 　　七宝琉璃宗下任宗主，七宝琉璃进化为九宝琉璃<br> 　　【武魂】：九宝琉璃7个魂环4紫3黑<br> 　　第一魂技：力量增幅<br> 　　第二魂技：敏捷增幅<br> 　　第三魂技：魂力增幅<br> 　　第四魂技：防御增幅<br> 　　第五魂技：攻击增幅<br> 　　第六魂技：属性增幅<br> 　　第七魂技：九宝真身<br> 　　【魂骨】：幻境智慧魂骨魂骨技能：幻之空间<br> 　　【领域】：未知<br> 　　【绝学】：同上<br> 　　【奇遇】：服用仙草“绮罗郁金香”<br> 　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br> 　　姓名：朱竹青（幽冥灵猫）<br> 　　性别：女敏攻系<br> 　　等级：77级魂圣7个魂环2黄2紫3黑<br> 　　星罗帝国某个大家族的直系<br> 　　【武魂】：幽冥灵猫<br> 　　第一魂技：幽冥突刺<br> 　　第二魂技：幽冥百爪<br> 　　第三魂技：幽冥斩<br> 　　第四魂技：幽冥影分身<br> 　　第五魂技：<br> 　　第六魂技：幽冥附体<br> 　　第七魂技：灵猫真身<br> 　　【魂骨】：急速前行之追风左腿<br> 　　【领域】：未知<br> 　　【绝学】：同上与戴沐白的武魂融合技—幽冥白虎<br> 　　【奇遇】：服用仙草“水仙玉肌骨”<br> 　　最后奇怪还有一个“七位一体融合技”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

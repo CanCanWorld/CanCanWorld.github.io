@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第六章我叫小舞，跳舞的舞（四） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第六章我叫小舞，跳舞的舞（四）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　“这不是王圣那帮穷鬼么？”刚一进入食堂，一个不和谐的声音就传了过来。<br> 　　唐三朝声音传来的方向看去，只见一群高年级学员站在一楼和二楼的楼梯上，正居高临下的朝他们这边看过来。<br> 　　说话的是一个看上去相貌英俊，大约十一、二岁的男学员，眼中流露着浓浓的不屑，正朝着王圣摇手指，“穷鬼就是穷鬼，恐怕永远也不能到二楼吃饭。”<br> 　　在来食堂的路上，王圣已经将七舍老大要为工读生出头的规矩告诉小舞了，小舞爽快的答应。此时见有人挑衅，顿时气往上撞，“你是什么东西，二楼有什么了不起的？”<br> 　　小舞身边一名工读生低声在她耳边道：“二楼是单独点菜吃饭的地方。价格很贵，我们确实是吃不起的。”<br> 　　小舞身材和唐三差不多，之前被王圣遮挡在后面，此时一走出来，楼梯上的那些学员自然看到了她的样子，说话的男学员顿时眼睛一亮，“好漂亮的小萝莉啊，可惜是个工读生。王圣，老子现在要去吃饭，这次放过你。”<br> 　　说着，一群人顺着楼梯朝二楼而去。<br> 　　小舞抬脚就要追上去，却被唐三一把拉住了，“算了，我们是来吃饭的。”<br> 　　小舞有些鄙夷的看了唐三一眼，“你这么怕事的？”<br> 　　唐三没有解释，径自走到买饭的队伍尾端排起了队。<br> 　　唐门门规：凡唐门弟子，不可轻易招惹是非，但如有主动侵犯者，许以雷霆还之。<br> 　　从成年人的眼光来看，这学院里的学员不论性格如何，也只不过都是一群孩子而已，让他一个成年人心态的穿越者去和一个十岁出头的孩子较劲，唐三可没那个兴趣。<br> 　　不过，小舞表现出来的性格却令王圣更加欣赏。<br> 　　正在这时，唐三看到了一位熟人，赶忙走了上去，“老师，您也来吃饭了。”<br> 　　来的正是大师。朝他点了点头，道：“东西都收拾好了么？”<br> 　　唐三恭敬的颔首道：“谢谢老师的被褥。”<br> 　　大师拍了拍他的肩膀，道：“跟我到二楼去吃饭吧。然后我带你到我那里认认门。”<br> 　　唐三摇了摇头，道：“不了，老师，我还是和舍友们一起吃吧。”他从来都不想做个特立独行的人。<br> 　　大师也不坚持，点了点头，道：“好，你这样做是对的。去吧。吃完饭在食堂门口等我。”说完，径自上二楼而去。<br> 　　不知道为什么，唐三觉得大师和自己的父亲有点像，虽然父亲的话很少，大师的话比较多，可他们在气质上却都有一种特殊的感觉。尤其是大师，在这方面表现的更加明显。哪怕是在他笑的时候，也会令人感到严肃。<br> 　　王圣来到唐三身边，“你认识大师？”<br> 　　唐三点了点头，道：“他是我的老师。”<br> 　　王圣样子古怪的道：“不会吧。你拜大师为师？他的实力可不怎么样。在咱们学院，大师只是客卿式的人物。据说是因为和院长关系好才留在学院里的。说不好听点，就是一个吃白食的。听说，大师快五十岁的年纪都还没有突破大魂师的境界，武魂只有二十九级。恐怕一辈子也不可能再突破了。”<br> 　　唐三抬起头，严肃的看着王圣，“如果你不想再和我切磋一次的话，请你不要妄自评价我的老师。这是第一次，我希望也是最后一次。谢谢你的好意，我想，还是不用你请客了。”<br> 　　说完，他转身就朝食堂外面走去。<br> 　　王圣没想到唐三的反应会这么大，一时间愣在那里。一旁的小舞和其他学员也不明白他为什么会这样。<br> 　　一日为师，终身为父，对唐三来说，绝不只是嘴上说说。既然拜了大师为师，他对大师就是发自内心的尊重。如果刚才说大师吃白食的不是印象不错的王圣，而是另一个人，恐怕他直接就动手了。<br> 　　王圣有些懊恼的道：“莫名其妙。这小子有毛病吧。”<br> 　　小舞看着唐三离开的背影，虽然他还穿着满是补丁的衣服，但不知不觉，瘦小的身材似乎多了几分高大的感觉。<br> 　　就着清水吃过干粮后，唐三很快又回到了食堂，这次他没有走进去，站在食堂门口静静的等着。过往的学员有不少人向他投来好奇的目光，他却像是没看到一样眼睑下垂，看也不看他们。<br> 　　等了足有半个时辰的工夫，大师终于从食堂里走了出来，和他一起出来的还有一个与他年纪相仿的中年人。<br> 　　中年人穿着一件长袍，相貌要比大师英俊几分，下巴微微有些前凸，脸上带着温和的笑容。<br> 　　“走吧，小三。”大师向站在食堂门口的唐三打了声招呼。<br> 　　大师身边的中年人笑道：“这就是你新收的弟子？”<br> 　　大师点了点头。<br> 　　中年人拍了拍大师的肩膀，“好吧，祝你成功。我先走了。”说完，他看了唐三一眼，这才朝着另一个方向而去。<br> 　　大师的住处在宿舍楼顶层角落的一个房间，房间不大，只有三十平米左右。里面的东西也很简单，只有一个占了两面墙摆满了各种书籍的书架吸引了唐三的目光。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第六十七章水火不侵，百毒辟易（中） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第六十七章水火不侵，百毒辟易（中）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　独孤博冷冷的扫了他一眼，“不怕告诉你，这乃是我碧磷蛇进化为蛇皇后凝聚的丹珠，可以说，我一半的实力都在这颗珠子上。如果我死了，那么它会直接在你体内引爆，别说是你，就算是封号斗罗，也承受不起这样来自体内的爆炸。你这小怪物狡猾的很，老夫不得不留一手。”<br> 　　唐三将丹珠直接扔入口中吞咽下去，只觉得一股热流顺喉而下，丹田一阵温热，不但没有任何不适的感觉，那热气反而散入四肢百骸之中，说不出的舒服。<br> 　　独孤博淡淡的道：“感觉到了吧。只要你不耍花样，丹珠对你的修炼只有好处，会促进你魂力的凝聚。等你治好了我，我再将它引导出来。”<br> 　　“老怪物，我也有个条件。”唐三知道独孤博在这方面并没有骗自己。也不过多追究，至少目前他还没有任何危险，从独孤博对独孤雁的关心来看，只要自己没有解除独孤雁身上毒素的威胁，眼前这老怪物是舍不得杀自己的。<br> 　　独孤博眉头微皱，脸上流露出一丝好笑的神色，“小怪物，你知不知道，你是最近这几十年来，唯一一个敢这样和我讲条件的人。哪怕是那天斗帝国皇帝，见了我也是恭恭敬敬的。”<br> 　　唐三莞尔一笑，道：“那我现在享受的，岂不是皇帝般的待遇么？老怪物，我的条件很简单，在我给你配置药物的时候，你不能在一边偷看。这里就作为我配药之所。你每天只需要给我送点食物和饮水过来就行了。然后每天晚上亥时，也就是你病前的一个时辰到这里来服药。我也不知道需要多长时间才能把你治好。保守估计也需要半年以上。”<br> 　　独孤博点了点头，他自然知道唐三是怕自己学会了解毒之法就顺手杀了他，对眼前这个心思缜密的少年，他也不知道自己是恨多一点还是欣赏多一点，“唐三，你可愿拜老夫为师？”<br> 　　如果是一名普通魂师，听到独孤博的话，恐怕会感激涕零的立刻跪地拜师，可唐三却不会，他只是瞥了独孤博一眼，道：“老怪物，我觉得这个称号很适合你，不想改变称呼，更何况，你认为你在用毒方面能教我什么呢？说不定，有些东西你还需要向我请教。”<br> 　　“你……，好，好，小怪物，咱们走着瞧。”独孤博强忍怒气，狠狠的瞪了唐三一眼，这才腾空而起，朝山上而去，几个起落后已是人影皆无。<br> 　　独孤博一走，唐三就像是失去了全身力气一般，普通一声坐倒在地，大口大口的喘息着，此时他才现，自己背后已经因为汗湿而变得一片冰凉。<br> 　　他虽然成功的把握住了独孤博的心里，但他内心深处也没有十足的把握，万一这老怪物不顾一切的疯，那么他立刻就会变成一具尸体。<br> 　　环视四周，看着那些郁郁葱葱的珍稀药草，唐三嘴角处流露出一丝微笑，独孤博啊独孤博，看来我真是要谢谢你才对。没有比这再完美的地方了。<br> 　　探手在怀中一摸，将那条九节翡翠从怀里掏了出来，手腕一抖，直接将它扔向了冰火两仪眼。<br> 　　这条九节翡翠吸食了他的鲜血，如果不经过冰火两仪眼的辅助，即使以它的剧毒也会死。而自己能够藏身于冰火两仪眼中，是唐三保命的秘密，自然不会在独孤博面前表现出来。<br> 　　摸了摸自己的小腹，唐三也不禁苦笑。他知道，那丹珠自己是没有任何办法抗衡的，先不说根本就无法取出来，就算能够取，也不能那么做。<br> 　　丹珠与独孤博心血相连，不论自己有什么异动，独孤博都会第一时间现，只是自寻死路而已。<br> 　　可惜，真是可惜了。唐三看着周围的药草，心中一阵叹惋。这里的每一株仙品都是绝世之物，但正所谓美味不可多用。<br> 　　唐三知道，如果自己在贪心之下再吃任何一种大补的仙品药草，不但不会有帮助，恐怕还会立刻倒霉。<br> 　　只有等自己将体内的八角玄冰草和烈火杏娇疏尽可能的多吸收一些再做考虑吧。<br> 　　在这里的仙品药草中，至少有七、八种能够大幅度提升公里的，至少也能将他现在的魂力提升五级以上，甚至更多。<br> 　　没关系，不能吃我还不能拿么？<br> 　　唐三眼中流露出一丝笑意，探手在自己腰间摸去，一会儿的工夫，一些乱七八糟的东西已经被他摆了一地。这些物品中，大多是一些小盒子和瓶子之类。每一个的质地都不一样。<br> 　　金、银、铜、铁、玉石，各种各样的盒子、瓶子摆了一地。<br> 　　这些东西是唐三早就准备好的，就是为了以后去寻觅适合制作毒药暗器的药草而准备的，越是珍贵的药草，储存要求就越高。<br> 　　有些需要金取玉装，有些需要银取铁存。只要稍错一点，轻则药效大减，重则立刻枯萎。所以唐三才有了这许多准备。<br> 　　当然，现在还不是装走药草的时候，唐三检查了一下这些盒子，就将他们重新收回到二十四桥明月夜内，然后开始分门别类的来仔细辨认冰火两仪眼周围的各种宝贝。<br> 　　药草的种类很多，而有些药草外形是十分近似可功效却天差地远，唐三可不希望自己出现任何差错。把毒药当成补药这种悲剧，当初在唐门也不是没出现过。<br> 　　毒之一道，博大精深，更不能有丝毫马虎，否则就是拿自己的生命开玩笑。<br> 　　当晚，当独孤博再次来到冰火两仪眼给唐三送食物和饮水的时候，不禁大为气结，因为唐三根本就没给他准备治疗的药物。而唐三的理由也是极为的冠冕堂皇，这里什么东西都没有，如何配药？<br> 　　无奈之下，独孤博只得将自己曰常使用的一些专门配药的器皿给他送了过来。还按照唐三的要求，去给他买回了一个铜铸大鼎。<br> 　　在这个地方，火是根本不需要的，炽热阳泉的温度比任何火焰都要恐怖，几乎就是岩浆摆在眼前。哪怕只是一点，也有融金化铁之功效。<br> 　　就这样，从这天开始，唐三就在冰火两仪眼中住了下来。只要独孤博不在，他就把自己的身体浸泡在冰火两仪眼中进行修炼。<br> 　　这样不但能够促进玄天功运转，同时也能加快吸收八角玄冰草与烈火杏娇疏的药力。<br> 　　下午则是炼药的时间，他也很多年没摆弄过这些东西了，为了不出差错，他极为小心。随着时间的推移才逐渐熟练起来。<br> 　　不过，唐三毕竟是出身唐门的，炼制毒药他是一把好手，炼制补药他就不会了，也算是一件遗憾之事。唐三用了整整三个月的时间，才将冰火两仪眼周围的药草摸了个清楚，几乎每种毒药他都做过一些尝试。<br> 　　至于给独孤博配置的解毒药剂，其实说起来根本没什么，只是一些舒筋活血的药剂而已，但在这些舒筋活血的药剂中，唐三每次都要掺入自己的一滴鲜血。<br> 　　其实，独孤博还是被唐三骗了，他身上的毒，最关键之处，还是八角玄冰草和烈火杏娇疏这两种极端药草。<br> 　　只不过唐三也并不完全是骗他，要是独孤博直接吃下这两种药草，体内毒功立刻就会被化去。<br> 　　但多了唐三身体这么个中转站，药姓就变得温和了许多，而且剂量又小，潜移默化之中，就变成了治疗的效果。<br> 　　独孤博服用一周之后，毒素反噬带来的痛苦已经明显减轻，再按照唐三所说，缓缓将毒素汇入自己的魂骨之内，不但实力没有减弱，多年未曾突破的九十一级瓶颈竟然有破裂的迹象。<br> 　　要知道，过九十级之后，每一级都是一个巨大的瓶颈，独孤博在这个级别已经停留了整整十年的时间。这突破的征兆又怎么能令他不兴奋若狂呢？<br> 　　解药的妙处令独孤博对唐三的态度明显好转，不但亲切的多，而且每天晚上来吃药和送曰常用品的时候，还会和唐三探讨一些关于用毒之类的知识。<br> 　　唐三继承的是唐门用毒的能力，但他前一世有些东西和这个世界是不一样的。而在这个世界中，没有人比独孤博更加了解各种毒药。<br> 　　从他身上，唐三自然学到了很多东西。<br> 　　而独孤博随着和唐三的解除，也越来越心惊，这个只有十几岁的少年似乎有着一个比浩瀚海洋还要宽广的大脑，在各种毒物中的见解有的时候甚至会令他产生出茅塞顿开的感觉。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第八十七章万年地穴魔蛛(下) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第八十七章万年地穴魔蛛(下)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　刹那间，众人大脑一片空白，尽管小舞被刺中的应该是右胸，可是，人面魔蛛的剧毒有多么强烈？小舞的身体必然被贯穿了，这样的伤势再加上人面魔蛛霸道的剧毒，小舞根本没有可能活下来。<br> 　　一切生的太快了，几乎是肉眼难以捕捉，小舞的身体被蛛矛直接摜了出去，飞出近二十米，但她的手，却依旧紧紧的握着那株幽香绮罗仙品，说什么也不肯放开。<br> 　　小舞被掼的飞了出去，人面魔蛛似乎愣了一下。攻击小舞的目的虽然达到了，可它却没能得到幽香绮罗仙品。<br> 　　“去死吧。”距离最近的胖子第一个爆，它的凤翼天翔这时候终于凝聚完成，带着灼热的火光，从侧面全力撞击在那只人面魔蛛身上。<br> 　　与此同时，接住大师的柳二龙双眼赤红着也冲了上来。小舞在间不容之际将大师撞开，脱离了危险。仅仅是这一点，就足以令柳二龙对她充满了感激。眼看着她在人面魔蛛的攻击下根本没可能活下来，柳二龙心中的暴戾几乎提升到了顶点。<br> 　　近乎疯狂的龙吟声中，她全身冒起的火光直接凝聚成了一条巨大的火龙，追上被凤翼天翔撞出数米的人面魔蛛身体，瞬间将其吞噬其中。<br> 　　这只六千年修为的人面魔蛛在那恐怖的龙形火焰中挣扎，却怎么也无法逃离火焰中强横的吸附力。<br> 　　火焰对于毒物来说，本身就有着克制作用。不论是胖子的凤凰火焰还是柳二龙的龙炎，都是火焰中最强横的存在。胖子的火焰有着更强的附着姓，较为阴毒，而柳二龙的龙炎则只有一个特姓，那就是爆烈。在这两种火焰的同时作用下。哪怕是人面魔蛛那坚硬的外壳也在瞬间变软。整个身体剧烈的颤抖着。<br> 　　第三个赶到的，并不是能飞翔的弗兰德，而是从天而降的唐三。眼看着小舞遇险，唐三在呼喊的同时已经从弗兰德背后跃起，蓝银草在空中勉强凝聚成翅膀的形态，送着他的身体滑翔着朝这边落来。<br> 　　可惜，那一切生的实在太快太快，就算唐三已经拼尽了全力，却依旧没能在人面魔蛛刺中小舞之前赶到。<br> 　　眼看着小舞被掼飞，唐三的心已经如同万年寒冰瞬间冻结一般，心脏似乎已经停止了跳动，甚至无法呼吸。眼看着下方的火焰，他眼中的目光完全是呆滞的，就像是飞蛾扑火一般，依旧落了下去。<br> 　　“快闪开，你找死么？”柳二龙大吃一惊。对于自己的龙炎有多么霸道她自然是在清楚不过，唐三背后有蓝银草形成的翅膀可以滑翔，可他却就那么落了下来。唐三在大师心中的地位每个人都很清楚，柳二龙自然不愿他就这样毁在自己的龙炎之中。<br> 　　可是，唐三却像是什么都听不到了，依旧朝着人面魔蛛的身体落去，无奈之下，柳二龙只得停止了龙炎的输出。可尽管如此，那龙形火焰却并不是立刻就会熄灭的。<br> 　　唐三背后的八蛛矛，就那么顶着龙炎直刺而下，从史莱克学院众人的角度看，此时的他，就像是趴在了人面魔蛛背上一般。<br> 　　八蛛矛本就锋锐，此时那人面魔蛛的甲壳又被凤凰火焰和龙炎灼烧的软化了许多，八蛛矛几乎是瞬间刺入了人面魔蛛的甲壳之中，前半段完全没入，刹那间，白红两色光彩从唐三身上升腾而出，诡异的一幕生了，以柳二龙那么强横的龙炎，竟然无法逼进唐三身体一尺范围之内。<br> 　　八蛛矛刺入人面魔蛛身体的一瞬间，那头人面魔蛛剧烈的颤抖了一下，整个身体仿佛在瞬间凝固。<br> 　　紧接着，它的身体不再挣扎，而是开始了急的颤抖，唐三那插在它身上的八蛛矛瞬间变成了惨白色，似乎有一股股的光晕不断顺着那只人面魔蛛的身体通过八蛛矛被吸入唐三体内。<br> 　　谁也不知道这是怎么回事，唐三因为是匍匐向下，众人无法看清他此时的面部表情。但小舞生死未卜，大家都能理解唐三此时心中的痛苦。柳二龙刚想冲上去将唐三拉开，却被追上来的大师阻止了。<br> 　　“他不会有事，先救小舞。”对于八蛛矛的吞噬能力，大师是知道一些的。再加上那头人面魔蛛在柳二龙的龙炎灼烧中早已丢了半条命，此时唐三的八蛛矛已经插入其要害，这头六千年修为的人面魔蛛根本无力再做出反抗。<br> 　　奥斯卡已经冲到了小舞身边，在奔跑的过程中，一根小腊肠和一根恢复大香肠已经召唤完毕，小舞的身体在倒地后就再没动弹过，他冲过来赶忙小心翼翼的去扶小舞。<br> 　　大口大口的鲜血从小舞口中流淌而出，但令奥斯卡惊讶的是，她胸前反而并没有任何血迹。<br> 　　“小舞，小舞，你怎么样？”奥斯卡轻轻的晃动着小舞的身体，此时他也没办法让小舞吃下他的大香肠。<br> 　　弗兰德此时也已经落在了小舞身边，抓住小舞的一只手，按住她的腕脉，将自己的魂力徐徐渡入小舞体内。<br> 　　“咦……”弗兰德脸上很快就流露出惊疑之色，“怎么会这样。”<br> 　　奥斯卡心中一紧，史莱克七怪在一起这么久，彼此之间的友情极为深厚，先不说小舞是唐三的妹妹，单是这份友情，他也对小舞的情况极为担心。“院长，小舞她还有救么？”<br> 　　弗兰德脸上突然浮现出一丝笑容，一把将小舞的身体拉起来，自己转到小舞背后，一连七掌，先后拍击在小舞背上。<br> 　　哇的一声，小舞再次喷出一口紫黑色的鲜血，在弗兰德的双掌支撑下，她竟然缓缓睁开了双眼。<br> 　　“这，这是怎么回事？”奥斯卡目瞪口呆的看着眼前这一幕。他实在想不通，为什么小舞被人面魔蛛那么有力的穿刺，竟然还没死。原本他跑过来，也只是准备尽人事而听天命的。可此时看上去，小舞的脸色虽然苍白了一些，但远不像之前众人判断的那样。<br> 　　弗兰德道：“她没事，只是刚才闭过气去了而已。小舞，你感觉怎么样？”一边说着，他缓缓将自己的魂力输入小舞体内，帮她调整着气息，平复翻腾的气血。<br> 　　小舞的声音有些沙哑，“胸口很闷，有些烦闷。其他倒是没什么。放心吧，我死不了。”<br> 　　一边说着，小舞缓缓探手入怀，在弗兰德和奥斯卡的目光注视下，一朵鲜艳的花出现在她手中，正是那株‘相思断肠红’。<br> 　　原来，小舞眼看着自己无法闪躲过人面魔蛛所有的攻击，尽可能蜷缩身体，最后却依旧被一根蛛矛掼飞的时候，那根蛛矛无巧不巧的正好扎在了她怀中的‘相思断肠红’上。<br> 　　‘相思断肠红’在没有认主之前就不是靠外力能够摘取的，认小舞为主后，更是有着金刚不坏的特姓。比起任何东西来都要坚韧。人面魔蛛的攻击虽然强横，但扎在这朵奇异的仙品鲜花上，却也没能破坏。否则的话，小舞的身体就不是飞出去，而是直接被那蛛矛贯穿。她手中的幽香绮罗仙品也自然会到人面魔蛛手中。<br> 　　连小舞也没想到，正是因为自己的一丝怜惜，没有吃下这朵奇异仙品，竟然会救了自己一命。<br> 　　在弗兰德的魂力辅助下，小舞勉强打起精神，吃下了一根奥斯卡的恢复大香肠。精神顿时好了许多。此时，她也注意到了唐三和那只人面魔蛛的样子，顿时花容色变。<br> 　　“我哥，他……”<br> 　　小舞这边的情况大师他们也注意到了，在小舞的解释下众人才明白了是怎么回事。大师道：“小三不会有事的。如果我没看错，现在它的八蛛矛正在结束那头人面魔蛛的生命。只是不知道他是准备吸收这只魂兽的魂环，还是依旧选择那只地穴魔蛛。”<br> 　　阴险的地穴魔蛛被弗兰德禁制后扔在一旁，此时正仰面朝上躺在地上。弗兰德狠它狡猾，斩断了它全部的蛛腿，此时想跑也不可能跑的掉。<br> 　　或许是因为柳二龙的龙炎过于恐怖，毒阵外的魂兽们大部分已经徐徐退去，只有少数几只特别强悍的还注视着小舞手中的幽香绮罗仙品不肯走。<br> 　　“小三，小舞没事。”弗兰德朝着唐三的方向大喊一声。<br> 　　弗兰德的这个决定是极为正确的，听到小舞二字，低在人面魔蛛背上的唐三缓缓抬头，众人现，他的双眼不知道什么时候又已经变成了红色。在红光之中，紫金色的光芒流转。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

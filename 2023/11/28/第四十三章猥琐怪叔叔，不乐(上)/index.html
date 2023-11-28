@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第四十三章猥琐怪叔叔，不乐(上) | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第四十三章猥琐怪叔叔，不乐(上)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　等级相差十级左右，唐三完全有信心可以阻挠对方的控制能力。大师曾经说过，对付控制系魂师最好的办法，就是以控制对控制。如果说强攻系魂师是一个团队的核心，辅助系魂师是一个团队的基础，敏攻系魂师是一个团队的眼睛，那么，控制系魂师就是一个团队的灵魂。这三个月的魔鬼训练，唐三不止是身体得到了强化，同时，每天晚上大师还格外对他进行特训，训练的目标，就是潜伏在他脊椎内的外附魂骨八蛛矛。<br> 　　八蛛矛这个名字是大师取得，原因是这外附魂骨得自人面魔蛛，又酷似八根长矛。经过这段时间的训练，唐三从不适应到适应，再到现在，他已经基本可以控制八蛛矛作为自身攻防两端的利器使用，同时也能够控制八蛛矛内的毒素释放和收敛。大师说过，凭借这外附魂骨，再加上他本身的控制系武魂蓝银草，完全可以对抗不足四十级左右的对手。<br> 　　三人匆匆吃过晚饭，胖子又吃了两根奥斯卡的恢复香肠，四人这才悄悄向学院外而去。马红俊没准备再告诉其他人，毕竟，这在草窝中被揍的事可不怎么光彩。<br> 　　正当四人刚走到学院门口，突然，一道黑影横向闪了出来，挡住了他们前进的去路。<br> 　　马红俊被揍之后，此时已经有些风声鹤唳，几乎第一时间就释放出了自己的武魂。<br> 　　紫红色的火焰照亮黑暗，四人这才看清拦在面前的是谁。<br> 　　马红俊松了口气，收回凤凰火焰，“怎么是你，你要吓死人么？”<br> 　　这突然出现在四人面前的，正是小舞。<br> 　　小舞今天穿着一条棕色长裤，上身是简单的白色贴身小衣，她的身材虽然没有朱竹清那么火暴，但全身修长的感觉却另有一番风味，尤其是那纤细的惊人，却又弹姓十足的小蛮腰，和背后那垂至脚后的黑亮蝎子辫，更有几分邻家小妹的美感。一双黑漆漆的大眼睛带着几分疑惑，盯视着唐三四人。<br> 　　“你们鬼鬼祟祟的要干什么去？胖子，你的脸怎么肿了？让人揍了？”<br> 　　马红俊干咳一声，唐三三人毕竟和他一样都是男人，他也不避讳什么，可小舞却是女孩子，又一向不满他那解决邪火的方式，一时间，顿时有些不想说出自己挨揍的经过。<br> 　　小舞上前几步，借着月光看清了马红俊脸上的伤势，顿时义愤填膺的跳了起来，“这是谁这么狠？竟然把你揍成这样。戴老大，不会是你吧？”<br> 　　戴沐白撇了撇嘴，“我会对自己兄弟下狠手么？胖子这是和别人争风吃醋被揍的。我们正准备给他找场子去。”<br> 　　“那还等什么，算我一个。敢打我兄弟，非要打的他生活不能自理。”小舞本就是唯恐天下不乱的脾气。刚进学院的时候，她对胖子是有些成见。但这么多天过去了，大家彼此相互关照度过了这段魔鬼训练，成见早已消失。更何况，她当初在诺丁学院就是大姐头，没少干给人找场子打架的事，平时大家切磋下手都有谱，终于有了打架的机会，她的样子看上去比马红俊还要着急似的。<br> 　　“五妹，你真是太好了。要不，我以身相许吧。”眼看小舞不但没有阻止众人去寻仇，反而立刻加入进来，胖子顿时大为感动，心中的郁闷也随之消化了几分，最后一句明显有了他一向猥琐的本姓。<br> 　　“你要对谁以身相许？”唐三看着胖子，声音有些怪异。<br> 　　胖子看了唐三一眼，赶忙嘿嘿一笑，“当我没说，三哥，咱们快走吧。”<br> 　　四个人变成了五个，趁着夜色，踏上他们熟到不能再熟的路径，五人催动魂力，风驰电掣的朝着索托城而去。<br> 　　小半个时辰后。<br> 　　“胖子，你平时就到这里解决邪火问题？”戴沐白的眉头都要皱到一起了。<br> 　　呈现在五人面前的，是一排平房。这是索托城内一个偏僻的角落。面前的平房只有三米多高，看上去不少地方都已经破损了，门口挂着几盏粉红色的灯笼，灯笼下站着几个浓妆艳抹，明显年纪不小的风尘女子正在向过往的行人兜售自己。<br> 　　奥斯卡的嘴角牵动了一下，“难怪你总是说草窝里也有金凤凰，这还真是个草窝啊！”<br> 　　对于马红俊的品味，戴沐白和奥斯卡实在有些不敢恭维。小舞和唐三是第一次来到这种地方，除了好奇以外，到没有什么特殊的感觉。<br> 　　胖子只是嘿嘿的怪笑两声，低声道：“这里便宜啊，价格便宜量又足，一个银币就能来一次，两个银币三次。姓价比高。而且，你们一定要相信，草窝中也有金凤凰的道理。这就要看运气了。”<br> 　　戴沐白没好气的瞪了他一眼，“以后出去，别说我认识你。虽然知道你不择食，可也没想到你居然强悍到了这种地步。这种档次的垃圾地方你居然也来。你那些金凤凰的年纪都够给你当姨的了。”<br> 　　胖子有些恼羞成怒的道：“戴老大，你不是故意来寒碜我的吧，先办正事。你们在这儿等着，我去问问那混蛋走了没有。”<br> 　　一边说着，胖子快步朝着他的“草窝”而去。<br> 　　奥斯卡四下看了看，“这里倒是很偏僻，适合动手。老子有根大香肠，老子有根小腊肠，老子有根蘑菇肠……”<br> 　　听着奥斯卡念动魂咒，开始做战前准备，小舞不禁轻啐一声，“真不愧是大香肠叔叔。”<br> 　　一会儿的工夫，马红俊兴冲冲的跑了回来，“太好了，那家伙还没走，不过已经在结帐了。估计马上就会出来。兄弟们，这次帮我报仇成功，回头我做东，请大家吃顿好的。”<br> 　　戴沐白冲他摆了摆手，“别废话了，你请客我们可不敢去。你这品味，还是算了吧。”<br> 　　听了戴沐白的话，连小舞都不禁点了点头，她和唐三是看到过戴沐白带着双胞胎姐妹开放的，那对极品双胞胎和眼前的这些“阿姨”们相比，简直就是一个天上一个地下。<br> 　　正在说话之间，从草窝中已经走出来一个人。唐三五人是站在草窝对面一个阴暗角落之中的，此时天色已经完全黑了下来，从对面很难看到这边。<br> 　　“就是他。”胖子咬牙切齿的说道。<br> 　　正像胖子形容的那样，从“草窝”中走出的，是一个四十多岁的中年人。皮肤黑黑的，一米六多点的身高，脸上挂着几分满足的银笑，右手上裹着纱布，下身穿着一条带着几个破洞的大裤衩，脚踏一双人字拖。摇头晃脑的朝街道走去。一边走还一边哼着小调，“今天大爷我心情好啊，出来遛遛鸟儿。”<br> 　　“上不上？”胖子的双拳已经攥的噼啪作响。<br> 　　“等会儿。”小舞一把抓住马红俊肥厚的肩膀，另一只手将身前的蝎子辫甩到脑后，俏脸上挂起一丝人畜无害的微笑，“你们待会儿再出来，看我的。”<br> 　　一边说着，小舞迈着小碎步，从侧面朝着那叫不乐的猥琐大叔走去。<br> 　　“小舞要干什么？”马红俊有些疑惑的看向唐三。谁都知道唐三是最了解她的。<br> 　　唐三拍了拍自己的额头，有些无奈的道：“你等着看就知道了。”<br> 　　小舞看似走的不快，但却正好拦在那猥琐大叔面前。<br> 　　“叔叔你好。请问，附近有卖糖果的么？”<br> 　　不乐刚从草窝中出来，整个人都沉浸在满足之中。突如其来的声音令他愣了一下，抬头朝声音的来源看去。顿时，他那貌似憨厚的面庞上多了一种特殊的光彩，身体的某些部位立刻就有蠢蠢欲动之势。<br> 　　不得不说，夜晚突然出现在他面前的小舞看上去是那么的可人。稚嫩白皙的小脸，修长黑亮的蝎子辫，虽不算丰满，却也有些规模的身材，尤其是红扑扑的小脸上那一抹青涩，对于不乐这种老[***]来说，更是充满了诱惑力。<br> 　　不乐双眼看着小舞一阵放光，心中暗道，好一个漂亮可爱的小萝莉。苍天啊，大地啊，难道这是你们送给我的礼物么？<br> 　　咳嗽一声，不乐飞快的收起自己眼中银亵的光芒，挺了挺胸，摆出一副严整的姿态，变化之快，如果不是小舞一直注视着他，恐怕都要被骗过。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

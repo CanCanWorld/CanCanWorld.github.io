@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>第九十九章又是一块魂骨（上） | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第九十九章又是一块魂骨（上）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　从七十二级魂圣时年所化的毒液中，唐三看到了一块闪耀着七彩光芒的魂骨。<br> 　　这块魂骨的出现，令唐三心中一阵恐惧。他又怎么能不恐惧呢？<br> 　　如果之前时年使用了这块魂骨的威力，就算不使用武魂，也绝不是自己所能抵挡的。双方之间的实力差距本就巨大，再加上这样一块魂骨的存在。<br> 　　唐三知道，自己是幸运的，如果不是幸运女神的眷顾，或许自己现在已经变成了一具尸体。<br> 　　时年实在太小看唐三了，以他七十二级的实力，也根本不可能想到对唐三使用魂骨。他对唐三直接用出了自己的第七魂技梦魇，已是相当的谨慎。<br> 　　如果不是唐三拥有窥破一切迷幻类魂技的紫级魔瞳，如果没有那霸道绝杀的阎王帖，如果不是时年没有全力以赴。<br> 　　这些如果哪怕只有一个实现，那么死的就将是唐三。<br> 　　唐三身上的衣服已经被冷汗浸透了，他从旁边掰下一根树枝，小心翼翼的将那块魂骨挑了出来，当魂骨成功被挑出的时候，他手中的树枝也已经被腐蚀殆尽。<br> 　　从二十四桥明月夜中取出随时都储备的清水对那块魂骨进行反复冲洗。<br> 　　令唐三意外的是，这块看上去十分炫丽的魂骨上并没有沾染什么毒液，就算是清水与其接触，也是一瞬间就会滑落，不会在其上留下任何水珠。<br> 　　不愧是魂兽中万不存一的至宝。休息片刻后，唐三的玄天功恢复了几分，功运右手，以玄玉手将那块魂骨捡了起来。<br> 　　魂骨一入手，立刻就传来一股极为奇异的感觉，仿佛它本身就是属于自己的一部份似的，尤其是当唐三用左手碰触到这块魂骨的时候，其中蕴含的特殊能量更是像要钻入自己左臂中一般。<br> 　　唐三相信，只要自己稍微用玄天功进行引导，立刻就会和这块魂骨融为一体。<br> 　　对于魂师来说，还有什么能比魂骨更具有吸引力的东西呢？哪怕唐三两世为人，此时也不禁激动的心跳加快。连握着魂骨的手也在微微颤抖着。<br> 　　内心之中，一个声音不断的催促着他赶快与这块魂骨融为一体，以免夜长梦多。<br> 　　一旦完成融合，唐三就将成为拥有两块魂骨的魂师，多一块魂骨，就相当于多一个保命或者是歼敌的强力技能。虽然唐三看不出这块魂骨会赋予自己什么样的能力，但他可以肯定，这块魂骨必非凡品。或者说，任何一块魂骨，都不可能平凡。<br> 　　魂骨作为魂兽死亡后可能掉落的特殊物品。唐三在当初听大师仔细讲述过它的用途和获得困难程度后，联系自己上一世的认知。<br> 　　他隐约猜到，这魂骨的存在，就相当于是自己前一世佛教中的舍利子。只不过魂骨是魂兽的舍利子而已。<br> 　　修为越高的魂兽，出产魂骨的几率也就越大。但只有十万年魂兽出产魂骨的可能姓才是百分之百。这也是为什么十万年魂兽的魂环始终处于大6珍奇榜位的重要原因。<br> 　　如果能够在拥有足够承受能力的时候裂杀一只十万年魂兽，不但可以得到无比强大的十万年魂环。<br> 　　同时也立刻能够获得一块十万年魂兽掉落的魂骨。<br> 　　可惜，十万年魂兽的存在实在太少太少。在整个魂师界的历史上也没出现过几次。<br> 　　唐三接连深吸两口气，勉强将自己融合这块魂骨的心思压下去，一咬牙，这才将其放入道了自己的如意百宝囊之中。<br> 　　他当然不是不舍的吸收这块魂骨，之所以没有贸然吸收，还是因为大师对他的教导。<br> 　　魂骨固然是极品宝物。<br> 　　但和魂环一样，不同魂骨对于不同魂师的作用绝不相同。魂骨虽然在魂师死亡后会掉落，但只要魂师的生命还存在，它就无法更换。<br> 　　也就是说，魂师一旦对某块魂骨进行了融合，那么，这块魂骨就会像魂环一样跟随他一生。<br> 　　在这方面，魂骨甚至比魂环更加霸道。魂环还有一种方法可以从身上解除，那需要以永远无法再获得该魂环为代价。<br> 　　比如，一位九环的封号斗罗，如果放弃自己身上的一个魂环，那么，他永远也不可能再获得第九个魂环，只能是八环魂斗罗而已。<br> 　　因此，放弃魂环也只是理论上存在而已。而魂骨的掉落却只有一种情况，就是魂师死亡。否则的话，绝对无法放弃。<br> 　　当初大师在教导唐三的时候就对他说过，魂骨虽然好，但更要选择适合自己的，如果摸不清魂骨的作用，不要急于融入，否则的话，就有可能浪费自己身上六个魂骨之一的位置。<br> 　　大师在这方面的知识当然不会有错，但魂骨对于魂师的吸引力实在太大太大。如果不是唐三心志沉稳坚毅的话，恐怕在认出魂骨的时候，还是会与它融合。<br> 　　就算再差的魂骨，也依旧有一定作用的。有总比没有好。<br> 　　别说是普通魂师，就算是封号斗罗也未必就全能拥有魂骨。<br> 　　更不用说集齐六块魂骨了。<br> 　　阎王帖的毒素虽然霸道，但在毒素释放之后，离开血液就会失去它原本的作用，所以唐三不需要担心时年所化的黑水会对周边环境产生过大的影响。<br> 　　休息片刻，唐三也不敢在此地久留，谁能说除了时年之外，不会有其他苍晖学院的人来对他不利呢？体力恢复了几分后，唐三立刻离开了树林，为了自身安全着想，他不得不催动紫极魔瞳，出了树林之后一边极尽目力观察着四周，一边小心翼翼的返回天斗城。<br> 　　幸好，从树林到天斗城的距离并不远，进入城市之后，唐三强忍着体内魂力的空虚感快返回史莱克学院。<br> 　　还没走到学院门口，唐三就已经看到了站在那里，正焦急等待着的小舞。<br> 　　“哥——”看到唐三，小舞眼中泪水夺眶而出，飞也似的扑了过来。<br> 　　在出现不祥预感之后，史莱克学院众人快返回学院，当他们现唐三果然不在的时候，小舞顿时陷入了恐慌之中，众人纷纷外出寻找，只让小舞留在这里等待。<br> 　　终于等到了唐三回来，小舞在极度激动的情况下冲势极快，如果是正常状态，唐三自然能够接得住她，可现在唐三却正处于虚弱之中，小舞冲势一时收不住，当她撞入唐三怀中的时候，两人顿时同时朝地面倒去。<br> 　　幸好，小舞的柔韧姓和反应都很快，就在两人即将倒地的时候，她一只手在地面上一撑，虽然没能阻止两人倒地的趋势，但也大幅减缓了冲力。<br> 　　充满馨香的娇躯冲入自己怀中，唐三只觉得一阵天旋地转，但那同样安心的情绪却也袭上心头，下意识的，他将扑倒在自己身上的小舞紧紧的搂在怀中。这一刻，他内心之中同样充满了火热和恐惧。<br> 　　虽然他利用阎王帖成功击杀了时年，但为了不被时年现异常，他也完全承受了时年那第七魂技梦魇带来的幻境，尽管紫极魔瞳成为了真实之眼，可那幻境中产生的恐惧却并没有完全离去，搂住小舞，唐三脑海中不可遏止的浮现出当时小舞被那猥琐大叔猥亵的画面，对他来说，几乎没有什么比这更加恐惧。<br> 　　紧搂小舞，他甚至想要将她融入自己的体内，好好的呵护。<br> 　　小舞也明显感觉到了唐三情绪上的变化，单是他那火热的气息已经灼烧的小舞心跳加，但她内心的恐惧却比唐三来的还要强烈。等待的时间并不算长，可每一秒钟都是那样的煎熬，她不知道如果唐三真的出了事自己会怎么样。<br> 　　这短暂的分离，令他们都深刻的感受到了彼此在心中的重要。<br> 　　唐三的意识渐渐模糊了，但他的双手却始终紧搂小舞，直到所有意识失去的那一刻也没有改变。<br> 　　阎王帖需要消耗的内力比他想象中还要大，不论是精神还是内力，唐三的消耗都已经到了一个极度危险的边缘。<br> 　　此时再见小舞，回到学院门前，他内心紧绷的弦终于放松，身体再也承受不住双重疲倦带来的打击，立刻进入了自我保护的昏迷状态。<br> 　　不知道过了多长时间，当唐三徐徐从昏迷中清醒过来的时候，他现自己已经躺在了宿舍的床上。<br> 　　意识渐渐回魂，体内虚弱的感觉已经好了许多，内力在身体机能的自行调整下已经恢复了一些，鼻端缓缓吸气，催动着内力在经脉内盘旋一周，唐三这才睁开了双眼。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
