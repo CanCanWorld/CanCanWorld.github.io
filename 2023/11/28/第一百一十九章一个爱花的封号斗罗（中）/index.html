@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　同样陷入了胶着状态。这两名蒙面魂圣似乎就是针对柳二龙和弗兰德的。他们的武魂虽然未必能克制住史莱克学院这两大强者，但拖延他们绝无问题。<br> 　　到了魂圣这个层面的战斗，双方可以使用的魂技数量都很多，想要击溃一个等级相差不多的对手绝不是那么容易的。<br> 　　黑衣蒙面魂斗罗的目光直接落在了唐三身上，双眼之中的光芒顿时变的阴鹫起来。口中出一声长啸，腾空而起，直奔史莱克学院这十一名学员扑来。<br> 　　而那两名魂王则根本没有移动，将攻击完全让给了他。<br> 　　金色的光芒从黑衣蒙面斗罗身上爆而出，双臂在空中震荡之间，已经化为了一双金色羽翼，更加庞大的金色光影浮现在他背后，身上的衣服被金色的羽毛所代替，露出了武魂真容。<br> 　　竟然是一只金色的大鹰。<br> 　　翅膀成型的同时，他的双臂已经从翅膀处脱离开来，化为两只尖锐的鹰爪。同时身体也开始急剧收缩变化，与他背后的金鹰幻象越来越像。<br> 　　史莱克七怪的脸色都变了，空中强大的压力虽然还不足以令他们崩溃，但是这名魂斗罗在一上来就用出了第七魂技武魂真身，显然是打算战决。<br> 　　跑？面对一名飞行魂师，想跑谈何容易。就算有奥斯卡的飞行蘑菇肠辅助也决不可能。<br> 　　八个魂环是那样的明亮，三黄两紫三黑。相当不错的魂环搭配。<br> 　　虽然不是最佳，但也足以令人吃惊了。<br> 　　第七魂环黑光缭绕在金色的身躯之上，看上去是那样的恐怖、强力。在这个时候，史莱克七怪都已经失去了侥幸心理。他们想做的，能做的，都只有全力去拼。<br> 　　没有人能救他们，能够救他们的就只有自己。<br> 　　魂环的光芒同时在史莱克七怪七人身上闪亮。<br> 　　唐三向泰隆四人挥了挥手，示意他们赶快离开这里。这四个人毕竟不是史莱克七怪一体的，面对魂斗罗，他们的存在与否已经并不重要。与其在这里白白送命，还不如逃离。<br> 　　令人奇怪的是，那两名魂王并没有阻止四人撤离。只是四人也没有远去。都凝聚着自己的魂力。<br> 　　“欺负小孩子算什么本事。好久不见啊，鹰兄。”苍老的声音响起，一股柔和的气息覆盖在史莱克七怪身上。武魂真身带来的压力顿时一轻。七人如释重负的朝着声音响起的方向看去。<br> 　　一名身材瘦长的老人不知道什么时候已经站在距离他们不愿的地方，长度过四米的拐杖握在他手中看上去轻松如意。此时正仰头看着空中显露出武魂真身的金鹰，脸上流露着凝重之色。<br> 　　在他身上，同样是八个魂环闪耀着。<br> 　　这个老人史莱克七怪竟然都人士，正是当初他们去获得第三魂环时遇到的龙公孟蜀。<br> 　　当时，龙公蛇婆给他们带来了不小的麻烦，如果不是应对得当，麻烦就大了。唐三是用自己的实力征服了对手。只是没想到竟然会在这里遇到了他。<br> 　　此时唐三彩记起，孟依然也在这次的参赛队伍之中，异兽学院战队。史莱克学院与异兽学院比赛的时候，唐三因为受伤并没有参加。他早就将孟依然的事情给忘了。此时却再见龙公。<br> 　　空中的金鹰瞳孔一阵收缩，“孟蜀，这里的事你最好别管。”<br> 　　龙公淡然一笑，“是你们来找麻烦，并不是我。我的孙女也在这次参赛的学员之中，你认为，我会不顾她的安危么？没想到，鹰兄竟然也成了盗匪，真是可喜可贺啊！”他的言语中充满了讽刺的意味。<br> 　　现在谁都看得出，眼前这些黑衣人绝不是什么盗匪，盗匪要是都能有魂斗罗坐镇，那这天下岂不是要大乱了么？<br> 　　金鹰冷哼一声，“孟蜀，你真的要和我们做对么？想想后果吧。这不是你能参与的。”<br> 　　龙公眼中厉光一闪，“你当我是吓大的么？洛尔迪亚拉，别人怕你，我可不怕。有本事先收拾了我这老头子。不然的话，今天你也别想随便离开。”<br> 　　金鹰目光流转，鹰的视力无疑是极为锐利的，他在战场上立刻就找到了同样挥舞着拐杖的另一个人。蛇婆朝天香。<br> 　　已经达到了魂圣境界的蛇婆此时正以一己之力抵挡住两名五十多级的魂王攻击，感受到空中递来的目光，她也冷冷的回敬了对方。<br> 　　洛尔迪亚拉心中暗想，如果龙公、蛇婆都只有一个，在属姓相克的情况下他绝对可以一战。他的武魂对这两个老人都有克制作用。<br> 　　可是，当龙公蛇婆在一起的时候，却不是他所能对抗的了。他们之间的武魂融合技龙蛇合击早已经达到了出神入化的程度，连封号斗罗都能抗衡，更何况是他了。<br> 　　一声尖锐的鸣叫从金鹰洛尔迪亚拉口中出，刺耳的鸣叫破空传出。<br> 　　龙公孟蜀脸色微微一变，“你还有同伙？”<br> 　　洛尔迪亚拉冷笑一声，“孟蜀，我劝你还是赶快带着蛇婆离开这里。你的孙女我们绝不会伤害。要是还不走，等下你想走也走不了了。我只是个跑腿的而已。”<br> 　　龙公脸色恢复了正常，但心中却掀起了一片惊涛骇浪，他当然知道这洛尔迪亚拉是从何而来，但他却一直没有说出对方的身份，就是留了一线，否则一旦说明，必然是不死不休的局面。<br> 　　眼看着洛尔迪亚拉一副泰然自若的样子，他心中已经萌生了几分退意。<br> 　　他之所以出现，只是看不惯一个魂斗罗欺负一群魂宗小孩子，但他本身和史莱克学院又没什么关系，自然犯不着卖命。<br> 　　“洛尔迪亚拉，你真是越活越回去了。这么简单的场面你也搞不定么？”阴柔的声音远远传来，他叫着洛尔迪亚拉名字的时候似乎还在远处，可当他说完最后一个字的时候，人影却已经悄然出现在众人面前。<br> 　　依旧是一个蒙面人，看不出年纪，从他的声音中也无从辨别。只是他穿的并不是黑衣，而是一身白衣蒙面。<br> 　　这个人一出现，唐三他们反而没有什么感觉，孟蜀却闷哼一声，快的退后一步。脸上神色大变。<br> 　　“老头子。”蛇婆朝天香飞快的赶了过来，一只手还拉着自己的孙女。夫妻二人气势凝聚为一股，这才堪堪抵挡住那股无形的压力。<br> 　　白衣人出一声妖异的笑声，“原来是老朋友了，难怪洛尔迪亚拉搞不定。好久不见啊，盖世龙蛇伉俪。你们胆子不小啊，居然让本座不得不出场。”<br> 　　龙公的脸色变的极为凝重，“你竟然也来了。”<br> 　　白衣人用他那几位阴柔的声音说道：“看到我也出现，还不快滚。你应该明白我们对这件事的重视。”<br> 　　“好。”龙公答应的出奇痛快，带着蛇婆转身就走，竟然没有片刻停留。<br> 　　孟依然惊讶的看着自己的爷爷，刚想说什么，却被孟蜀凌厉的目光止住了。她再看唐三时，眼中已经充满了歉然。盖世龙蛇夫妻带着孟依然，几个起落就已经到了远处消失不见。<br> 　　白衣人目光转向空中的金鹰，有些不耐的道：“还不赶快收拾了他们，还要我动手不成？”<br> 　　“是，大人。”庞大的压力再次弥漫在史莱克七怪身上。<br> 　　令史莱克七怪惊骇欲绝的是，一股特殊的气息带着淡淡香气从那白衣人身上弥漫而出，顷刻之间蔓延到他们身上时，七人的身体竟然再也无法行动，更无法使用自己的魂力。<br> 　　吓走盖世龙蛇，证明着什么？呼喝魂斗罗，意味着什么？种种迹象都表明了这名白衣人的实力。<br> 　　就在那金鹰即将扑下，夺走史莱克七怪姓命的时候，一层金红色的光芒突然从小舞身上冒了出来。七人身上再次一轻，同时恢复了行动的能力。<br> 　　戴沐白和马红俊几乎同时厉喝一声，第三魂技同时动。白虎金刚变、凤翼天翔。<br> 　　唐三一个蛛网束缚甩了出去，直奔金鹰而去，奥斯卡飞快的制造着他的香肠，宁荣荣手上的九宝琉璃塔三道光芒同时射出，三窍御之心动，分别给戴沐白和马红俊增幅了攻击，给唐三增幅了魂力。<br> 　　史莱克七怪配合的默契程度连那白衣人都不禁愣了一下。<br> 　　“等一下。”白衣人右手轻挥，一股澎湃的能量波动令空气剧烈的扭曲了一下，他身上九个魂环一闪即隐，在那庞大的魂力作用下，原本下扑的金鹰竟然被震的飞了起来。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

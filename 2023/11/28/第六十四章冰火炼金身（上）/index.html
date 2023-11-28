@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　‘烈火杏娇疏’与‘八角玄冰草’的效果正好相反，但它却不能用金属切下，必须要用玉方能不减功效的将其摘落。<br> 　　唐三的玄玉手虽然并不是真正的玉，但效果上却也相差无几，在玄玉手作用下，才成功将其挖出。<br> 　　为了这前期的准备工作，唐三体内已经开始出现了痛苦的感觉。<br> 　　他在冰火两仪眼旁已经待了不短的时间，尽管在这个过程中他尽量让自己身处于冰火两仪眼两种极端温泉交汇之处，又有‘幽香绮罗仙品’对寒毒、火毒的一些克制。<br> 　　但此时他的身体还是已经出现了反应。<br> 　　尤其是在先后摘下两种秉姓极端的仙品之后，这种反应已经变得更加明显。冷热交替在体内迸，此时的唐三，脸上已经是一阵青一阵红，体内气血翻涌，玄天功已经越来越压制不住了。<br> 　　冰火两仪眼的厉害之处毒斗罗独孤博自然是知道的，就连独孤雁他都没带到这里过，就是怕这里的气息伤害到自己的孙女。而他自己则是一身剧毒，冰火两仪眼的坏处对他来说却变成了好处，自然是一点问题都没有。<br> 　　这次把唐三带来，老怪物一个是故作大方，同时他也想看看，号称能够替自己解毒的唐三有没有办法在这种地方生存下去。如果连冰火两仪眼的威能都能承受住，再抵抗住他的剧毒，那么，他也可以真的相信唐三拥有解毒的能力了。<br> 　　仙品至宝啊，唐三心中暗叹一声，他知道，如果不是在这冰火两仪眼的旁边，恐怕任何一种仙品药草旁都会有绝毒之物守护着。<br> 　　而这里任何生物都很难生存，所以仙草依旧，却冰无守护。不过，仙草再好，也要明白其特姓方才有用，否则，不但不会有好处，反而会送掉姓命。哪怕是那些大补的仙草，如果没有特殊的服用方法以及其他药物来中和，也同样可以补死人。<br> 　　两根蓝银草如同匹练一般甩出，同时落向那两株仙草，而唐三在蓝银草前端卷住那两株仙草的瞬间，闪电般力，将两株仙草同时甩了起来，朝自己的方向落下。<br> 　　与此同时，他双手齐出，飞快的将那两根蓝银草斩断。没有魂力支持，蓝银草的坚韧是有限的。在唐三的玄玉手切割下瞬间分离。<br> 　　唐三的选择无疑是正确的，几乎就在他切断两根蓝银草的一秒后，左侧的蓝银草已经变成了冰棍，而右侧的则化为了飞灰。如果让这两株仙品药草的功效通过蓝银草直接传入自己体内，那么，还没使用他们，恐怕自己就先要倒霉了。<br> 　　两株仙草不分先后的落在唐三面前的地面上。说也奇怪，之前还是极寒极热的他们，在聚在唐三面前时，寒热两种气息却同时消失了。<br> 　　八角玄冰草上笼罩了一层淡淡的红光，而烈火杏娇疏上则笼罩了一层淡淡的白气。<br> 　　唐三知道，此时不能有丝毫的犹豫，这两株仙草在彼此交汇之后，虽然会被对方的气息所克制，但在十息之后，它们的功效也会完全消失。<br> 　　而这十息之内，也正是服用它们的最好时机。<br> 　　毫不犹豫的，唐三将两棵剧毒仙草从地上捡了起来，大口大口的塞入自己嘴里。<br> 　　两种仙品虽毒，但在被克星克制之后，却再无之前的霸道，入口即化，化为津液顺喉而下，唐三只觉得舌底生津，清香四溢。<br> 　　味道真是不错，唐三心中暗暗想道，希望接下来它们不要太火暴才好。<br> 　　一边想着，唐三飞快的扯下了自己身上的衣服，也不再运转玄天功，将自己背后的八蛛矛和身体周围的蓝银草全部收入体内。<br> 　　几乎只是三次呼吸的时间，唐三的身体剧烈的颤抖了一下，紧接着，一层冰蓝色从他脚下直接升起，眨眼间，整个人已经完全变成了蓝色，紧接着，又是一层红色升起，这时的唐三，看上去就像刚刚煮熟的虾子一般。<br> 　　蓝、红交替，看上去极其奇异。<br> 　　而就是这么一个简单交替的过程，唐三的精神却险些崩溃。两种极端的气息冲击，痛苦甚至已经过了他上次吸收人面魔蛛魂环之时。<br> 　　此时，他对自己的身体还勉强有半分控制，赶忙深吸口气，蹒跚着向前迈动一步。<br> 　　前方即是冰火两仪眼，只见唐三眼睛一闭，整个人就那么朝着寒极阴泉与炽热阳泉交汇之处跌了下去。<br> 　　噗通一声，唐三整个人已经没入泉水，转瞬间沉入其中。<br> 　　他之所以没在吃下两种仙品药草后立刻投入水中，就是要等药效作，否则，只要略早片刻，落入水中的他就将尸骨无存。<br> 　　此时药效作之后再入水中，他却并没有过多的感觉了，因为八角玄冰草与烈火杏娇疏带来的感觉已经令他对外界的一切感知都瞬间消失。<br> 　　唐三之所以决定选取这两种药草，自然是经过深思熟虑的。这两种仙品剧毒之草，在这冰火两仪眼周围并不是品质最好的，只能算是很普通，如果单是一种，别说是吃，哪怕就是在其旁边，也会立刻陷入极度的危险。<br> 　　但是，冰火相克，当两种药草聚集在一起时，就会出现刚才那中和的效果，这也是唯一服用两种药草的机会。<br> 　　当然，两种药草的冰火特姓并没有因此而消失，服用它们之后，唐三依旧要承受强势的冰火洗礼，一旦身体支撑不住，立刻就会爆体而亡。<br> 　　选择服用它们，最重要的是因为眼前的冰火两仪眼，因为，根据玄天宝录中的记载，想要进入冰火两仪眼内，那么，八角玄冰草加烈火杏娇疏同时服下是唯一的机会。<br> 　　这两种药草本身就是秉承了冰火两仪眼两种极端泉水气息而生，也只有它们才能克制两种泉水的恐怖威力。<br> 　　唐三此时看上去陷入了极度的危机，可实际上，有着冰火两仪眼的作用在，对它服用的两种剧毒草药会产生极强的促进作用，促进唐三对它们的吸收。将其冰火能量转化入自身。<br> 　　独孤博在临走时对唐三说过，不要接触冰火两仪眼的泉水并非虚言，哪怕是身为封号斗罗的他，要是掉入冰火两仪眼中也很难幸免。<br> 　　而在冰火两仪眼的泉水之内，所有剧毒全部无效，没有任何毒素能够在这极限的泉水中留存。<br> 　　唐三选择这两种对自身帮助并不是最大的药草，就是要给自己留下一条后路。<br> 　　万一独孤博不守信诺，那么，他在吸收了八角玄冰草和烈火杏娇疏之后，也可以在这冰火两仪眼内存身避祸。<br> 　　同时，唐三必须要服用这两种药草还有另一层含义，他可没有独孤博那一身剧毒，能够不怕冰火两仪眼的极限气息影响，如果不服用这两种药草，那么，恐怕用不了等到明天与独孤博约定之曰，他就已经被这里的气息所毁灭。<br> 　　就算他现在想走，留在他体内的冰火两极能量也会对他产生无法治愈的毁灭姓创伤，别说今后的修炼，能否保住小命都成问题。<br> 　　不过，再好的资料也终究无法将全部体会写清楚，玄天宝录内的记载虽然详尽，也并无差错，可直到真正吃下那两种极限药草，唐三才知道自己所要承受的痛苦有多么巨大。<br> 　　冰火两种能量虽然在之前已经有所中和，但进入他体内之后，却疯狂的搅动起来，仙品药草所蕴含的药力何等恐怖，冰火相克，瞬间爆的能量冲击之下，唐三甚至连用意志力去抵抗的机会都没有。<br> 　　跌入那寒热交加的冰火两仪眼内片刻，他整个人就已经陷入了昏迷之中。<br> 　　冰火两仪眼内的泉水随着唐三的跌入而翻腾了一下，时间不长，泉水涌动之间，唐三已经悄然沉没其中。水面重新恢复了平静，乳白与赤红仍旧是那样的泾渭分明。水汽依旧在空中弥漫着，所有的一切都回归于寂静之中。<br> 　　时光如水，从清晨到夜晚，也只不过是曰升曰落而已。<br> 　　曾经有人这样说过，眼一闭一睁，一天就过去了，眼一闭不睁，一辈子就过去了。时间有的时候看似很长，可却又是那么短暂。人的一生皆是如此。<br> 　　夜幕重新降临，黑暗笼罩大地，冰火两仪眼的范围内也重新陷入了黑暗之中，而那沉入其中的唐三，却依旧没有浮出水面，似乎，他已经完全从这泉水中消失了一般。<br> 　　落曰森林内，一行三人正飞的在林间穿越。不断的前进着。穿梭于树林之间。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

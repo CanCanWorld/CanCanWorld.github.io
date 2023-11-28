@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　封号斗罗，果然没有一个是好相与的，这普通魂师连见都见不到的魂骨出现在他身上也是再正常不过。<br> 　　大师可不敢让罗三炮被那惨白色的光芒射中，从对手凝重的呃姿态就能看出这两道白光绝非普通攻击。<br> 　　罗三炮龙翼收敛，身体如同陨星般朝地面落去，与此同时，全身金光大盛，突然在半空中调转身体。<br> 　　“放屁如打雷，轰天裂地罗三炮。”<br> 　　大师喝出的，正是属于原本三炮的魂技，只是在黄金铁三角武魂融合技黄金圣龙的作用下，这早已不是原本那弱小到连唐三都能轻易抵挡的技巧了。<br> 　　一蓬金色浓雾从罗三炮龙尾下喷出，在半空凝聚成一团金黄色的光盾挡向那飞来的白光。<br> 　　嗡的一声，罗三炮与大师的身体同时剧烈的颤抖了一下，那飞出的金光在空中与惨白色光芒撞击在一起的瞬间，竟然被那白光完全渲染成了白色，紧接着，更加令人吃惊的一幕生了。渲染后的盾牌就那么在空中生了质变，原本虚无的能量变成了实体，化为一块石头从天空中坠落而下。<br> 　　大师终于知道独孤博这头部的魂骨是什么了，不禁倒吸一口凉气，如果他猜的不错，那应该就是蛇类魂兽中顶级存在之一，号称蛇中女皇的美杜莎才会产生的魂骨。从其技能美杜莎的凝望能够连能量都化为石头来看，那块魂骨至少是从一头万年美杜莎身上掉落的。<br> 　　尽管有着罗三炮技能化为的盾牌挡住了这一击，但在能量牵引之下，罗三炮身上的金光明显变得黯淡了许多。而在黄金铁三角内，不论是大师还是弗兰德、柳二龙，身体都是一阵剧烈的颤抖。<br> 　　他们这武魂融合技，相当于将三人所有的力量都融入到了罗三炮体内，罗三炮的身体，就相当于是他们三人的本体。而这个技能最霸道的地方，就是在施展之后，他们三人暂时进入无敌状态，除非将罗三炮毁灭，或者是他们的魂力耗尽，否则任何攻击和异常状态都属于无效的。<br> 　　正是因为如此，不论是之前毒阵中的毒素，还是后来独孤博蛇尾的攻击，才都没能带给他们任何伤害。<br> 　　“哼，你躲得了一次，还能躲开第二次么？”碧磷蛇皇惨白的双目再次看向罗三炮，独孤博见多识广，自然猜到了黄金铁三角武魂融合技中的效果，眼前这黄金圣龙虽然不弱，但大师三人的魂力终究与他相差太远，此时的罗三炮，还不足以给他带来真正的威胁。<br> 　　封号斗罗要是那么容易被击败，又怎么会被称之为大6上的最强者呢？<br> 　　一声悠远的龙吟从罗三炮口中响起，大师知道，如果这个时候再不拿出最后的手段，恐怕自己三人的能量就先支持不住了。美杜莎的凝望实在过于恐怖，一旦被击中，恐怕三炮就危险了。<br> 　　金光再次闪耀。大师、弗兰德和柳二龙三人几乎同时喷出一口鲜血，落在黄金三角阵中央的圆环之上。刹那间，三人的血液在那圆环内部融为一体，变成了一点金光闪电般落在了罗三炮身上。<br> 　　张开龙翼，罗三炮这次并没有再闪躲碧磷蛇皇的攻击，全身的金光如同火焰一般燃烧起来，龙吟一声比一声高昂，那金色火焰竟然在他面前凝聚成了另一个它，化为透明龙影，直奔碧磷蛇皇而去。<br> 　　黄金圣龙的奥义，圣龙本相。<br> 　　二十年前，大师三人曾经将这个技能完成了一半。二十年后的今天，尽管大师本身并没有什么进步，但弗兰德和柳二龙却都已经成为了魂圣级别的魂师。<br> 　　也终于第一次将这个技能施展了出来。<br> 　　在那化为光影的圣龙飞出同时，罗三炮的身体在半空中急剧缩小，化为蓝紫色光芒飞回到大师身上消失不见，而黄金铁三角身上的光晕也同时收敛，所有金色正在飞流逝。三人的脸色同时变得一片惨白。<br> 　　“混蛋。”独孤博怒吼一声。<br> 　　圣龙本相乃是黄金圣龙最强的奥义之一，哪怕只是伪黄金圣龙，爆出的威力也同样非同一般。美杜莎的凝望是一种对物体或者能量产生变异的恐怖光束。但也有着它极限所在。面前这如同流行一般撞来的圣龙本相，明显已经过了美杜莎凝望的极限。<br> 　　而更令独孤博郁闷的是，他现在绝不能闪躲。以圣龙本相的威力，如果他躲开了，那么，在他背后的山峰将被瞬间夷为平地，冰火两仪眼也将立刻受到破坏而消失。<br> 　　所以，尽管他不愿意，也必须要凭借自己的力量来硬挡这一击。<br> 　　第八个魂环从独孤博身上亮了起来，黑色光芒渲染蛇身，顿时令碧绿色变成了墨绿。独孤博昂起的蛇恢复到正常状态，那颗碧绿色的珠子再次从他口中喷吐而出。<br> 　　诡异的一幕出现了，不论是脸色苍白的黄金铁三角三个人，还是空中的圣龙本相，竟然在这刹那间都停滞在他们所在的位置上，周围的一切，哪怕是风也停顿在半空之中。<br> 　　所有的一切都已凝固。<br> 　　碧磷蛇皇庞大的身体化为透明消失不见，独孤博身体虚悬于半空之中，右手控制着那颗碧绿珠子缓缓朝着圣龙本相飞了过去。<br> 　　第八魂技，眼前他所施展的，正是他的第八魂技时光凝固。这个魂技本身具有的破坏力与他的第九个魂技如果配合在一起的话，那么，哪怕是一座城市也能轻易毁灭。<br> 　　而这个魂技所需要消耗的魂力，对于独孤博来说都是极为巨大的。如果不是万不得已，他绝不会轻易施展。<br> 　　碧绿色的珠子一直飞到圣龙本相内部。独孤博眼中碧光大放，“融。”<br> 　　绿光瞬间扩散，将那金色的圣龙本相完全渲染成了绿色，竟然就那么变成了宛如一条翡翠龙般的存在。<br> 　　带着一串碧绿的残影，独孤博来到化为碧绿色的圣龙本相面前，他的脸色也显得略微有些苍白，心中也不禁有些庆幸，幸好这是伪黄金圣龙。<br> 　　如果是真黄金圣龙的圣龙本相，那么，连自己的时空凝固也未必能够限制的住他。<br> 　　抬起手，小心翼翼的将那颗碧绿珠子收回，纳入口中，左手按在圣龙本相的头部，眼中碧光收敛，他的整只左手却完全变成绿碧绿色。<br> 　　五指内收，独孤博眼中亮起两点寒星，大喝一声，“破。”<br> 　　清脆的破裂声在夜空中是那样明显，翡翠般的圣龙本相从头部开始，一连串的裂痕飞蔓延，眨眼间已经蔓延到全身上下。<br> 　　独孤博身形一闪，已经回到了之前山上的位置，身上的第八个魂环黑光收敛，“复。”<br> 　　凝固的空间重新变回了正常，只是那圣龙本相却再也无法向前，所有的裂痕令它化为了破碎的琉璃，砰的一声，光芒四射，一圈澎湃的能量波动化为光晕四散纷飞，却再也没有了之前攻击的威势。<br> 　　大师、弗兰德和柳二龙都站在那里，三人嘴角处皆是血丝流淌，武魂融合技几乎耗尽了他们全部的魂力，可眼前的独孤博依旧是那高高在上。封号斗罗毕竟是封号斗罗，他们终究还是败了。<br> 　　独孤博眼神中多了几分正常人应有的情绪，淡淡的看着面前已经没有了多少抵抗能力，却依旧挺直腰板，直视着自己的黄金铁三角，淡然道：“你们很不错，凭借这样的魂力竟然能给我带来不小的麻烦。这个武魂融合技确实是我所见过最为出色的。换作是魂斗罗级别的魂师，恐怕还真不是你们的对手。”<br> 　　独孤博很少称赞人，但黄金铁三角这武魂融合技确实给他留下了极为深刻的印象。<br> 　　大师淡然道：“那又如何，你依旧赢了。动手吧。”拉住柳二龙的手，他缓缓闭上了双眼。<br> 　　唐三的‘死’对大师打击极大，他们三人眼看着圣龙本相被破，就知道今天已经很难活着离开这里了。<br> 　　他们最大的本钱武魂融合技也没能给眼前的封号斗罗带来真正伤害，到了这时候，大师对柳二龙已经没有了任何顾忌。握着心爱之人的手，他的心已不再颤抖。<br> 　　“想死还不容易么？”绿光闪耀，独孤博已经来到了三人面前。<br> 　　“等一下。”大师似乎突然想到了什么，重新睁开双眼，“独孤博，唐三是我的弟子，这件事与他们两人无关，你放他们走，我把命给你，随便你处置。”<br> 　　独孤博不屑的道：“你们有和我讲条件的资格？”<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

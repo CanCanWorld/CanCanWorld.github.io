@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　唐三跃起，他没有父亲那样浑厚的婚礼，但他自己却有很多办法，飞天神爪射出，在空中略一借力就已经追上了父亲的身影。<br> 　　瀑布一直被昊天锤反卷过一半的距离，唐昊仅存的左手在瀑布后石壁上一按，一块看上去严丝合缝的岩石竟然就那么凹陷进去，现出了一道门户。<br> 　　身形一闪，他已经钻了进去。<br> 　　唐三从未想到过瀑布后居然还有这样的地方，但他此时心中已经被父亲断肢带来的剧痛所充满，没有多想，直接跟了进去。<br> 　　或许是因为外面瀑布的原因，洞穴内很湿润，洞高三米左右，宽约两米，一直向内延伸。里面很黑。唐昊从自己的魂导器中摸出一块淡金色的宝石，将周围照亮。<br> 　　看着父亲在前面单腿弹跳着前进，唐三的泪忍不住又流了出来。此时此刻，父亲的背影看上去是那样的孤独、寂寞。<br> 　　回想起过往的种种，他突然深切的体会到这些年以来父亲所承受的巨大痛苦。<br> 　　走到最里面，周围的一切却亮了起来，抬头向上看去，一个石孔出现在洞壁顶端，而这里，却是一个只有十平米左右的石室。<br> 　　石室内没有任何摆设，空荡荡的，但就在上方石孔的正下方，却有着一个小土包，土包上，一株纤细的蓝银草迎风飘动。那蓝银草看上去比普通的草叶要长一些，最为奇特的是草叶上带着的金色细纹。<br> 　　“小三，过来，跪下。”唐昊指了指自己身边，独腿弯曲，就那么坐了下来。<br> 　　唐三的心剧烈的跳动了一下，上前几步，如父亲所言跪倒在那株蓝银草面前。<br> 　　抬起手，唐昊的神情突然变得出奇温柔，极其轻柔的抚摸了一下那带有淡金色细纹的蓝银草草叶，“阿银，我带着儿子来看你了。我们的儿子现在已经长大了，他继承了你的美，比我更加出色。你看到了么？我们的儿子来了。”<br> 　　唐三的心震撼了，呆呆的注视着面前那似乎在轻微摆动，散着柔和气息的蓝银草，他的心剧烈的颤抖起来。不受控制的，武魂蓝银草悄然释放，就从他身下散出，顷刻间爬满了整个石室。<br> 　　唐三的蓝银领域也就在这种情况下悄然开启，柔和的魂力波动弥漫在这寂静的空间之中。<br> 　　那株蓝银草摆动的更加剧烈了几分，受到蓝银领域的感染，它似乎在悄然生长着，草叶上的金线仿佛活了一般，轻微律动中，金光水波般荡漾起来。<br> 　　唐昊也有些呆了，看着那蓝银草在肉眼可辨的度生长着，喃喃的自语着，“我，我怎么没想到。阿银、阿银，难道，你真的能活过来么？阿银。”<br> 　　唐昊流泪了，一代昊天斗罗，此时脸上竟然充满了泪水，单手颤抖着抚摸着那草叶，任由泪水滴落在那片泥土之中。<br> 　　唐三的目光依旧是呆滞的，在这一刻，他终于明白了为什么自己的蓝银草会那样的与众不同。就像自己爱上了小舞那样，自己的父亲爱上的，竟然也是一位十万年魂兽。难怪，难怪父亲对十万年魂兽的一切是那样的了解，比大师知道的还要多。<br> 　　原来，自己身上，竟然流淌着一半十万年魂兽的血脉……唐三也颤抖着伸出了手，毫不收敛的将自身魂力全部注入在那正在不断释放中的蓝银领域之中。令这整座石室完全变成了一片澄澈的蓝色。<br> 　　那株蓝银草，原本草叶约有一尺长，此时却已经渐渐生长到了两尺，但也只是两尺，就不在继续生长了。<br> 　　唐三的手，也抚摸到了那株蓝银草的草叶上。就在这时，奇异的一幕出现了，那株蓝银草中，两根最长的草叶竟然缓慢的动了起来，一根缠绕上了唐昊的手，一根则缠绕在了唐三的手指上。<br> 　　极其柔和的精神波动悄然出现，比普通的蓝银草要强烈的多，它似乎在传递着最亲切的思绪。<br> 　　“妈妈……”唐三再也忍耐不住，匍匐在地，痛哭失声。尽管他曾经不属于这个世界，但是，当他真正感受到母亲的气息时，内心的激动又怎能抑制？<br> 　　唐昊的嘴唇在颤抖着，但他眼中的兴奋和欣喜却已二十年没有出现过。他怎么也想不到，面前的蓝银草居然会在儿子的气息中加生长。<br> 　　这生长的过程，已经过了以往二十年的总和啊！<br> 　　感受着那卷住自己手掌的蓝银草叶，唐昊突然觉得自己很幸福，他那颗死寂的心，也渐渐的变得活络了几分。<br> 　　就在这样的气氛下，唐昊、唐三两父子不知过去了多久。直到唐三的魂力再无法维持蓝银领域，从他身上释放出的蓝银草也缓缓退去时，他们才渐渐的清醒过来。<br> 　　那株奇异的蓝银草轻轻的摆动着，唐昊此时的目光已经变得有些呆滞，坐在那里，脸上居然带着几分傻笑。<br> 　　“爸——”因为哭泣，唐三的声音已经变得有些沙哑，轻声呼唤着父亲。<br> 　　唐昊从呆滞中惊醒过来，看看面前的蓝银草，再看看唐三，“你明白了吧。”<br> 　　唐三默默点头。<br> 　　眼中带着几分迷惘，唐昊似乎看到了以往的种种，开始了他那故事的讲述：<br> 　　“小时候，我就像你一样出色。昊天宗直系子弟中，我与大哥，是最出色的两个人。而我们又是上一代宗主的儿子，凭借着出众的天赋和刻苦修炼，很快，我们就成为了昊天宗新一代的领军者。外界称我们为昊天双星。”<br> 　　“大哥比我大十五岁，对我的照顾和关怀更是无微不至。从小到大，我对兄长的感情甚至比对父亲还要深。我的一身本领几乎都是在兄长的教导下修炼的。”<br> 　　“论天赋，我比大哥要强。当我二十岁的时候，就已经被誉为年青一代的第一人。也正是那年，父亲奖励给我了第一块魂骨。宗门传承的魂骨。而大哥是在三十岁那年才获此殊荣的。”<br> 　　“我们昊天宗一向以实力为先，父亲的身体不好，早年受过重创，已经一天不如一天了，为了在未来撑起昊天宗，我和大哥都没有结婚，每天都在刻苦努力的修炼中度过。一直到我三十岁，突破了七十级魂力的时候，我的修为已经渐渐追赶上了大哥。那时，他是七十八级魂力。尽管和宗门的长老们还有差距，但那时候的我们，却已经相当强大。”<br> 　　“你爷爷或许是知道自己的身体越来越差了，他命令我和大哥外出历练十年，也正是在那时，我得到了宗门第二块魂骨，而大哥却没有，我们昊天宗的传承魂骨，一共就只有三块，父亲将第二块给了我，就相当于定我为下一任宗主的继承人，他评价大哥是沉稳有余、进取不足。但几十年没有离开过宗门，如果不见识见识外面的世界，他又怎么能放心将宗门交给我们呢？于是，我和大哥离开了昊天宗，进入了斗罗大6的花花世界。对于父亲的偏爱，大哥却没有过半句怨言。”<br> 　　“凭借着过人的实力和昊天宗的威名，很快，我们就在魂师界闯出了一片属于自己的天地。虽然我们都还没突破八十级，但在那时候，就已经被誉为昊天宗一门双斗罗。以我们当时的年纪，谁都知道最后我和大哥一定会走到封号斗罗的级别。”<br> 　　“在外出历练的第五年，我们认识了你的妈妈。她叫阿银，蓝银草的银。”说到这里，唐昊脸上温柔重现，仿佛看到了当初第一次见到阿银时的景象。<br> 　　“我和大哥都是潜心修炼了几十年的人，哪怕是我，在那个时候也已经三十五岁。见到你妈妈，我们几乎同时被她所吸引。你知道么？你妈妈不只是美，更重要的是她身上散的那股清新气息。她是纯净的没有半分杂质的仙子。虽然只是第一次见到她，但我的心却已经被她俘虏了。”<br> 　　“大哥也同样喜欢上了阿银。机缘巧合之下，我们三人结伴同行。阿银很温柔，对我们都很好。在一次危机之后，我们决定结拜为兄妹，她那时候报出的年龄最小，所以排行第三。我们既叫她阿银，也会叫她小三。你的名字，就是由此而来。”<br> 　　脸上的笑容变得更加浓郁，唐昊目光痴痴的看着面前那株蓝银草，“之后的几年，是我一生中最快乐的曰子。三年时间过去了，我们三人几乎走遍了大6每一个角落，彼此的情谊也更加深厚。长兄如父，大哥虽然和我一样深深的爱上了如同精灵一般的阿银，可他还是选择了退出。在一天夜晚，他悄悄的离开了我们，独自返回昊天宗而去。那天晚上，阿银和我说了许多许多。她也一直在犹豫，犹豫着要如何做。也正是在那天晚上，她告诉了我她的身份。她并不是人类，而是即将进入成熟期的十万年魂兽蓝银皇。”<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　小舞哼了一声，“比速度么，我还怕你不成。”弹身而起，朝着唐三就扑了过来。<br> 　　唐三微微一笑，这次他可算是有了充分的准备，如果再让小舞轻易的摔出去，那他这些年就真的白练了。<br> 　　眼中闪过一层淡淡的紫意，紫极魔瞳下意识已经用了出来。在紫极魔瞳的作用下，小舞的动作在他眼中明显变得慢了起来。脚踏迷踪，一个滑步已经平移出两米，正好躲开小舞的扑击，哪怕是她的发辫和长腿也不可能够到两米之外。<br> 　　小舞明显一愣，她本身就是以敏捷见长的，唐三的速度看上去不快，但却正好能够躲闪开她的扑击。而对于她来说，最擅长的柔技首先要接触到对手的身体才能用的出来。这次唐三却根本没有给她那样的机会。<br> 　　小舞自然不会甘心，一个兔翻身，速度再增几分，张牙舞爪的追向唐三。<br> 　　唐三深吸口气，玄天功下行，运入双腿之中，脚踏鬼影迷踪，就在这操场空地上和小舞周旋起来。<br> 　　鬼影迷踪极为神妙，看上去唐三的动作并不快，但每一步踏出都暗含至理，不论小舞的速度多么快，从什么方向扑过来，他总能在最恰当的时候迈向最合适的方向，不给小舞近身的机会。<br> 　　这其实才是唐门真正的功夫，唐门的武者不是必要怎么会和敌人比拼正面武技，暗器才是他们最擅长的，凭借着轻功配合暗器，是唐门弟子的杀手锏。<br> 　　两人一追一躲，一会儿的工夫已经跑遍了半个操场。小舞已经开始有些气喘了，可却怎么也追不上唐三。<br> 　　“喂，你这是耍赖。”追不上，小舞索性不追了，气鼓鼓的站在那里，双手叉腰。大眼睛瞪着唐三，“我们是切磋，不是捉迷藏，你这样躲来躲去的算什么，有本事向我攻击啊！”<br> 　　唐三微微一笑，“好，那你小心了。”一边说着，随手从操场边拣起几块石头握入掌心，“打你左肩。”一枚石头已经飞了出去。<br> 　　小舞哼了一声，身体一晃向右闪开。<br> 　　“打你右肩、左小腿、右小腿。”三枚石头同时从唐三手中飞出。<br> 　　第一枚石头确实是打向小舞左肩的，此时她眼看着三颗石头似乎是朝着一个方向飞出来的，心中暗想，这家伙肯定在骗我。不退反进，骤然加速，朝着唐三扑来，同时双手挡在胸前，不过是石子而已，打落就是了。<br> 　　但是，令小舞吃惊的一幕发生了，眼看着石头就要到面前能够拍落，那三颗石子却突然分开，划出三道弧线飞向不同方向。<br> 　　距离如此之近，想再做反应已经来不及了。<br> 　　“哎呦，哎呦。”三颗石子所落之处，正好是打在小舞右肩、左小腿和右小腿上。<br> 　　唐三虽然并没有将玄天功注入到石子之中，但迎面被打上，小舞还是觉得一阵生疼。<br> 　　“你，你敢用石头打我。”<br> 　　小舞并不知道，这是唐三来到这个世界上，第一次真正意义面对对手使用暗器。他所用的，是玄天宝录中暗器百解里的劳燕分飞手法。看上去简单，但其中包含的巧劲却极为精妙。暗器百解中的手法，因为受到玄天功的制约，到现在唐三也不过是勉强能用两、三种而已，这劳燕分飞正是其中最为熟练的。<br> 　　“就允许你摔我，就不许我用石子么？这次可是你输了。”<br> 　　“不算，不算，再来过……”小舞深信，只要自己有了准备，绝不会被唐三再打中了。<br> 　　“小舞，你还要啊！那就来吧……”<br> 　　切磋在继续，而且继续了很长时间。至于结果嘛，当唐三第二天一早和大师离开诺丁初级魂师学院的时候，嘴里还在念叨着，还是打移动靶爽啊！<br> 　　而当晚，两人的同床也并没有发生什么故事，毕竟，他们切磋的实在太累了。<br> 　　清晨，当大多数诺丁学院的师生还在睡梦中时，一高一矮两个人已经走出了学院大门。<br> 　　“老师，我们要去什么地方找魂兽？”<br> 　　这从学院走出的，正是大师和唐三师徒二人。<br> 　　“我们要去诺丁城东北四百里处的猎魂森林。那里是帝国圈养魂兽的地方。肯定可以找到适合你的。”大师今天穿了一身劲装，看上去增添了几分英气，只是他那僵硬的面庞却依旧给人一种不和谐的感觉。<br> 　　“圈养？魂兽也能圈养么？老师，你给我讲讲魂兽的知识吧。”<br> 　　大师点了点头，道：“高等魂兽自然是不能圈养的，但低等的却可以。魂兽这种生物就是拥有魂力的野兽。存在的年头越长，实力也就越强。所以，一般来说，我们按照年限将魂兽分成五个级别。十年魂兽、百年魂兽、千年魂兽、万年魂兽和十万年魂兽。其含义顾名思义，修炼十年以上的魂兽，就是十年魂兽，以此类推。魂环的区分和魂兽是一样的。不同年限的魂环十分好认，从颜色就能看出来。其中，十年魂兽的魂环是白色，百年的是黄色，千年魂兽的魂环是紫色，万年魂兽是黑色，而十万年魂兽的魂环则是红色。由国家固定圈养，供魂师们猎杀的魂兽，大都是十年和百年的。少有千年魂兽出现。”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

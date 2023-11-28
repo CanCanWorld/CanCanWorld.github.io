@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　可在这种猎杀魂兽的队伍中，他却只能充当后勤补给的角色。有的时候甚至会成为弃子。<br> 　　参加猎杀小队的魂师，不但每一个都拥有充分的实战经验，最为可怕的是他们冰冷的心姓。只有完全为了利益，才会参加这样的队伍。到了生死关头，哪怕是同一个团队，也绝没有人会为了身边的人而做什么，保护自己才是最重要的。像奥斯卡这样毫无攻击力的食物系魂师，能够在这种环境中生存五年本身就是个奇迹。这固然与他那极为有用的武魂有关，也和他自身的智慧密切相关。<br> 　　正是因为生活在这样巨大的压力之中，无时无刻都提醒着他，奥斯卡才能在短短五年时间内再做突破，达到了六十级的程度。要知道，他这六十级的困难程度要远远高于普通魂师。而今年的他才不过二十二岁而已。绝对是天才中的天才。当然，在这个团队中，只有身边的魂圣才知道他的真实年龄。<br> 　　整整一个时辰，在这冰天雪地的世界中，奥斯卡身上却汗如雨下，令他身上的冬装已经湿透了。可就是这样，他一声都没有吭。论心志坚毅程度，现在的他就算和唐三相比也不遑多让。<br> 　　终于，体内所有冰冷气流融合为一，化为一圈淡淡的波动彻底融入体内，而背对着大部分人的奥斯卡也缓缓睁开了双眼。<br> 　　在他睁开双眼的同时，受到气机牵引，面前那名魂圣也很自然的睁开了眼睛，正当他想要出声询问时，却看到奥斯卡眼神连动。<br> 　　两人在一起合作已经有一段不短的时间了。这名魂圣立刻就意识到了些什么。没有开口，递出一个询问的目光。<br> 　　奥斯卡看看他，再看看面前已经完全僵硬的魂兽，目光停留在魂兽头部。<br> 　　魂圣的瞳孔顿时收缩了，他当然明白在眼前这种情况奥斯卡的眼神意味着什么。整个人身体渐渐绷紧，眼神也逐渐变得锐利起来。他明白，这东西一出现，眼前的团队就已经没有任何意义了。哪怕距离自己最近的那两名貌似忠诚的下属，也绝不会轻易放过眼前这东西。<br> 　　而作为团队中的最强者，无疑会在魂骨被现后受到群起而攻。<br> 　　奥斯卡的眼神再次落在了魂圣身上，这一次，他眼中的光芒已经生了变化，那是一种极其狠厉的光彩，冰冷的寒意从眼神中冒出。<br> 　　魂圣立刻就明白了他的意思，在整个团队中，也只有他们两人能够完全彼此相信了。没有时间考虑，他只能向奥斯卡轻轻的点了下头。<br> 　　长出口气，奥斯卡缓缓伸展双臂，从地上站了起来。武魂开启，两黄、两紫、两黑，六个魂环同时出现在他身上。多一个魂环就是质的飞跃，他整个人的气质已经悄然生了转变。<br> 　　“恭喜，恭喜。”猎杀小队的众人顿时被奥斯卡吸引了目光。<br> 　　奥斯卡转过身，一脸微笑的道：“这是大家的功劳。谢谢众位成全。反正我新获得的魂技将来也是帮助大家的。有没有兴趣看看？”<br> 　　对于魂师来说，将自己的魂技展现给别人看，是一种信任的表现。奥斯卡的做法无疑令在场的魂师们大为满意。当然，奥斯卡这一说，也成功的吸引了他们的注意力。魂兽的尸体分割又不急。<br> 　　奥斯卡笑道：“我这第六魂技有些奇怪，只是依靠自己的力量不行，还需要其他人帮助。浩特大哥，麻烦你。”他最后一句话就是向那位魂圣说的。一边说着，他还从自己怀中摸出一个尺长的黑匣子，快的在上面摸索着，产生出一连串机括之声。在此之前，也只有他身边的浩特，才看到过他用过这东西。<br> 　　浩特问道：“需要我怎样帮忙？”<br> 　　奥斯卡道：“我需要一滴你的血。”他选择让浩特帮忙在其他人看来再正常不过，也没有产生什么怀疑。<br> 　　浩特皱了皱眉，但还是抬起右手伸到奥斯卡面前，拇指指甲在食指上一挑，顿时割出一道伤口，一滴鲜血滚落而出。<br> 　　“老子有根镜像肠。”魂咒依旧雷人。<br> 　　奥斯卡的动作很快，身上第六魂环骤然闪亮起来，一圈黑光从他掌心处涌出，瞬间将那滴鲜血纳入其中，紧接着，他掌心处顿时涌出强烈的魂力波动，第六魂环也不断重复着扩展和收缩的过程。<br> 　　此时，所有人的目光都落在他手上，之间在那强烈的魂力波动之中，一根淡银色的香肠缓缓成形。<br> 　　奥斯卡道：“浩特大哥，请你将武魂释放出来。”<br> 　　浩特点了点头，眼中光芒一闪，整个人身上的气势顿时暴戾起来，一股浓郁的魂力波动从自身散开来，只见他整个人的身体骤然变大，全身肌肉膨胀，厚重的气息波动中，头已经变成了白色。<br> 　　两黄，三紫，两黑，七个魂环骤然释放开来，这名叫浩特的魂圣所拥有的武魂乃是雪魄魔熊，属攻防一体。拥有极其强悍的攻击和防御能力。<br> 　　奥斯卡左手伸出，快的念了两句魂咒，“老子有根粉红肠，老子有根粉红肠。”<br> 　　现在他已经是六十级的实力了，再用第四魂技自然比以前快的多，两根亢奋粉红肠就当着所有人的面出现在掌心之中。<br> 　　其他人都不知道他要干什么，再加上他本身是一名没有攻击力的食物系魂师，自然也不回有人怀疑有它。只是一脸好奇的看着。<br> 　　奥斯卡自己吞下一根粉红肠，将另一根交给浩特，“先把这个吃了，然后用出你的第七魂技。”<br> 　　浩特毫不犹豫的吞下粉红肠，同时，身上的第七魂环光芒大量。哪怕是之前面对那头镜影兽的时候，他都没有施展过的武魂真身骤然释放出来。<br> 　　在其他魂师的惊叹声中，浩特身上的衣服瞬间撑破，整个人眨眼间已经化身为一头身高达到七米，极其粗壮的巨熊。<br> 　　通体都覆盖着白色毛，一层冰霜般的冻气从体内弥漫而出，在这本就很寒冷的冰封森林中更是相得益彰。凝厚的气息仿佛令周围的空气都变成了有形一般。尤其是在奥斯卡的亢奋粉红肠增幅之下，他的双眼已经蒙上了一层红色，整个人更添几分暴戾之气。<br> 　　与此同时，奥斯卡飞快的将那根用第六魂技制造的银色香肠塞入自己口中，猛然爆喝一声，“动手。”<br> 　　铿锵的机括爆鸣声中，诸葛神弩已经喷吐出了死亡的利箭，在如此近的距离之内，再加上诸葛神弩本身恐怖的射，十六根弩箭瞬间爆出的攻击力绝对是可怕的。<br> 　　当其冲，距离最近的三名魂师已经被笼罩在十六根弩箭的攻击范围之内。这三名魂师中，两名魂王、一名魂帝。如果给他们足够的准备时间，运用出第四魂技以上的技能自然能够抵挡得住。可是，他们有准备时间么？<br> 　　唐三所制造的唐门暗器何等威力？此时更是完完全全的偷袭，刚刚解决了一只强大的魂兽，奥斯卡又得到了魂环的好处，谁能想到，他这么一个食物系魂师居然会在这个时候暴起难。<br> 　　十余蓬血雾在空气中爆开来，毫无悬念的，那三名魂师的身体已经被完全洞穿。更可怕的是，奥斯卡这诸葛神弩弩箭之上都附带有唐三亲自炼制的剧毒，见血封喉。这种毒素，是经过唐三特殊调配的，本身附着在弩箭之上绝不会因为使用过后就减退效果，每一次与血液接触，毒素都会持续凝聚。<br> 　　毒素瞬间蔓延，瞪大了充满不敢置信的双眼，那三名魂师已经缓缓软倒。而此时，吃下亢奋粉红肠的魂圣浩特也动了。施展出武魂真身的他，又经过亢奋粉红肠的提升，猛的扑了上去，两名魂王甚至还没有反应过来，就已经被他拍碎了头。<br> 　　此时，剩余的魂师还有八名，这八名魂师中四名魂王、四名魂帝。他们也是久经战阵的魂师，虽然不知道奥斯卡和浩特为什么会暴起难，但还是在第一时间反应过来，飞快的后退中释放着自己的武魂。<br> 　　奥斯卡从容不迫的重新给自己的诸葛神弩拉上机璜，不但没有退后，反而跟随着身体庞大的浩特冲了上去。<br> 　　魂帝与魂圣，虽然只是一个级别的差距，但差就差在那武魂真身之上，施展了武魂真身的浩特，宛如虎入羊群，狂躁的力量爆之中，令那八名还来不及联手的魂师根本无法抵挡，一个个魂技招呼在他身上根本无法起到任何作用，转瞬间，就又是两名魂王殒命在他手中。<br> 　　“先干掉奥斯卡那混蛋。”不知道是谁大喊一声，两名魂帝已经飞快的从旁边绕了过来冲向奥斯卡，其他已经完全反应过来的四个人则飞快形成包围，他们当然不会指望自己能够将浩特击杀，至少要先缠住他，等奥斯卡被解决后，六个人在围攻浩特，至少还有获胜的机会。<br> 　　此时他们大多也已经明白，浩特和奥斯卡突然难肯定和被击杀的那只镜影兽有关。能令他们毫无顾忌的放开杀戮，也唯有魂骨了。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

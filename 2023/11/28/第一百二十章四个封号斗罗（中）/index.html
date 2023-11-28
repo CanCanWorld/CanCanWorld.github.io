@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　而且这两个封号斗罗的目标竟然还是自己。他们的来历已经呼之欲出。除了那个地方，还有哪里会拥有如此强大的实力呢？<br> 　　独孤博的双眼已经完全变成了翡翠色，摇身一晃，现出了他那碧磷蛇皇本体。这一次，他没有再说话，而是直接朝着地面的白衣封号斗罗扑了过来。<br> 　　“老毒物，你的对手是我。”黑影闪现，一瞬间就当在了化身碧磷蛇皇的独孤博面前，碰撞带起一声铿锵。只是这一个声音，就将场地中所有魂力低于四十级的魂师震翻在地。皇家骑士团骑士们跨下的战马连悲鸣声都没出，就已经一个个瘫软在地口吐白沫。<br> 　　“鬼魅，今天你们要是杀了唐三，就等着死亡的报复吧。”独孤博已经愤怒到了极点，他怎么也想不到鬼魅和菊花关这哼哈二将居然会同时出现在这个地方。他虽然知道那里会对唐三很重视，但居然派出了两名封号斗罗，却是他万万想不到的。<br> 　　当史莱克学院参加完晋级赛前往武魂城的时候，独孤博就已经悄然隐没在一旁跟随，就是为了防备眼前的情况出现，可他怎么也想不到，作为封号斗罗的自己竟然也有无奈的时候。同时面对两名封号斗罗，而且还都是魂力等级比自己更高的封号斗罗，他根本没有任何机会。<br> 　　尤其是对手是要杀人，而他是要救人。如果换过来或许还可以。<br> 　　黑影的话令白衣封号斗罗有些恼怒，但他也知道不能再耽搁下去了。冰冷如毒蛇一般的目光冷冷的刺向唐三。而就在这一刻，紫金色的凝实光彩从唐三眼中全力喷吐而出。<br> 　　哪怕是封号斗罗这样的实力，在那紫金色光芒刺入眼中的瞬间，白衣封号斗罗的身体也不禁晃动了一下。对于史莱克七怪的魂力压制顿时消失了。<br> 　　而就在这一瞬间。戴沐白毫不犹豫的张开双臂，紧紧的抱住了对方。马红俊的凤凰啸天击第一时间动，配合着戴沐白全力施展的白虎流星雨，全部作用在那白衣封号斗罗身上。<br> 　　炫丽的彩色光芒毫不吝啬的从宁荣荣手中九宝琉璃塔内喷吐而出，四种增幅同时出现在戴沐白和马红俊身上。令他们的攻击力增强到了最大程度。<br> 　　但是，这还不足以杀伤一名封号斗罗。白衣封号斗罗眼神变的有些阴鹫，一层淡紫色的气息从他体内喷而出，马红俊的凤凰啸天击后手限制技能根本就没能挥出作用，整个人就被抛飞而出，戴沐白也绝不好受，双臂直接被震的脱臼。<br> 　　要不是白衣封号斗罗对他手下留情，单是这一下已经足以要了他的姓命。<br> 　　唐三手中的阎王帖已经准备动了，可就在他要动前的一瞬间，一层淡金色的光芒却从那白衣封号斗罗体内喷薄而出，整个人都变得虚幻起来，居然打断了唐三紫极魔瞳的锁定。他体内为了动阎王帖而凝聚的魂力剧烈的颤抖了一下，右手怎么也挥不出去。<br> 　　“死吧。”奇茸通天菊前点，拥有仙品作为武魂，这白衣封号斗罗的实力比独孤博更加强大。十片毛茸茸的花瓣飘飞而出，直奔唐三而来，那看上去飞行缓慢的花瓣，却仿佛循着天地至理一般，封死了唐三的气息和所有空隙。<br> 　　唐三悲哀的现，自己的阎王帖就算想要出手，也很难命中对手。<br> 　　毕竟，他的魂力还是太弱了，根本无法将这绝世暗器的威力挥出来。<br> 　　突然，一丝怪异的感觉出现在唐三心中，他突然现，眼前自己所看到的一切似乎被分割开来似的，那是整个空间的分割，周围的一切都变得寂静下来。他似乎已经听不到任何声音。<br> 　　十片奇茸通天菊的花瓣突然变成了粉末，四散纷飞，一个身穿白衣，高大笔挺的身影悄然挡住了他的视线。<br> 　　“剑道尘心。”白衣封号斗罗的目光第一次变得极其凝重。哪怕是在之前独孤博出现的时候，他也没有流露出过这样的表情。<br> 　　挡在唐三面前的是一名老人，一尘不染的白衣，银色丝梳理的极为整齐，他手中有一柄剑，长约三尺，没有任何装饰，通体纯银的长剑。<br> 　　他的表情很淡漠，双眼似乎看不到周围任何东西似的，只是静静的站在那里，也不开口。但他只是站在那里却依旧给人一种天地万物，唯我独尊的感觉。<br> 　　白衣封号斗罗感觉到自己的掌心有些湿润了，那是汗水。<br> 　　独孤博他不怕，那是因为到了他们这个级别，毒素想要对他们起作用是很难的。而独孤博的真正实力和他们这些拥有强大武魂的封号斗罗相比还有一丝差距。<br> 　　可是，眼前这个人却不同，号称攻击最强的封号斗罗，对他的属姓全方位克制。在已知的封号斗罗中，眼前这白衣老者绝对是最克制他的几个人之一。<br> 　　“尘心，连你也来趟这浑水么？”白衣封号斗罗色厉内荏的说道。<br> 　　这白衣老人正是七宝琉璃宗两位终极守护者之一，剑斗罗尘心。在封号斗罗这个层次中，其他人都习惯称呼他为剑道尘心。一声浸银于他那柄长剑武魂之中，论攻击力，敢于他相比的人绝对不多。<br> 　　“月关，亏你也是封号斗罗，竟然在这里欺负小孩子。还如此藏头露尾，就不怕被人耻笑么？唐三是我们七宝琉璃宗的朋友。”尘心的声音不大，但却令场上的所有战斗中除了独孤博与黑影之外的其他人都停了下来。因为他的声音宛如利刃，切割着每个人的内心。<br> 　　“这么说，你们七宝琉璃宗是真的打算和我们作对了？”白衣封号斗罗隐藏在面纱后的脸色已经变得极为难看，他知道，今天这任务恐怕玩不成了。出战两名封号斗罗竟然还没有完成这个任务，这脸面可丢大了。<br> 　　“上三门同气连枝，菊花关，难道你连这个都不知道么？”清雅的声音飘洒而出。一身朴素装束的宁风致不知道什么时候已经出现在了山包的一个凸起上。在他身边还站着天斗帝国的雪清河太子。<br> 　　七宝琉璃塔宝光闪烁，七个魂环上下浮动。虽然只是七环，但当看到宁风致的一瞬间，菊斗罗月关就已经打定了主意。<br> 　　“今天我们认栽了。不过，今天这笔帐我们会记着。鬼魅，我们走。”<br> 　　轰然巨响中，化身碧磷蛇皇的独孤博爆退，月关和鬼魅两大封号斗罗悄然隐没，黑衣人如同潮水一般退去，在退走的时候，他们还不忘带走同伴的尸体，连一件武器都没有留下。<br> 　　来得快，退的更快，只是几次眨眼的工夫，这些带来致命威胁的‘盗匪’就已经隐没于山包的另一边。<br> 　　“爸爸，你怎么来了？”宁荣荣兴奋的冲了上去，扑入宁风致怀中。这个时候，她已经忘记在其他学院面前隐藏自己的身份了。<br> 　　刚刚完成了联盟的炽火学院和神风学院学员们脸色顿时变的极其难看，火舞和风笑天对视一眼，强如他们，此时也不禁一脸的苦笑。史莱克学院中，竟然还隐藏着七宝琉璃宗宗主之女。<br> 　　还引出了四位封号斗罗的争斗。他们究竟是些什么人？<br> 　　宁风致一出现就逼退了对手，其实原因很简单，他本身的攻防能力虽然不强，但只要有他在，一名封号斗罗就相当于是两名。在他的辅助下，单是一个剑斗罗尘心就足以对付那菊斗罗和鬼斗罗了。更何况还有一个独孤博。<br> 　　宁风致搂着女儿微笑道：“我可不是来保护你们的。我受陛下重托，守护太子殿下。”<br> 　　原来，雪清河太子作为这次天斗帝国的代表，并没有带多少随从，除了十五所魂师学院以外，他也配备了一辆马车，只不过马车之中并不只他一个人。<br> 　　还有宁风致与剑斗罗尘心在内。<br> 　　身为太子，雪清河是天斗帝国的未来，雪夜大帝又岂会让他轻身犯险呢？所以恳请宁风致暗中保护。而作为七宝琉璃宗宗主，宁风致身边总会跟着一位强大的守护者。这次轮到了剑斗罗跟随，骨斗罗坐镇七宝琉璃宗。<br> 　　在之前的战斗中，他们都没有急于出现。原本在第二次金鹰魂斗罗要动手的时候，尘心就准备出手了，可谁知道半路杀出个独孤博。<br> 　　这样一来，战斗就失去了悬念。当七宝琉璃宗二人组出现的时候。已经完全压制了对手，那两个封号斗罗也都不是傻子，这才立刻带着手下退去。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

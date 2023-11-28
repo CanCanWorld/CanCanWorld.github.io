@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　“弗兰德院长，其实我有一个办法，但却有些危险。”唐三突然开口说道，他的话立刻吸引了所有人的注意。<br> 　　弗兰德没好气的道：“有办法不早点说出来？是什么？”<br> 　　唐三道：“两天前我用来抵御毒雾的幽香绮罗仙品你们还记得吧。作为一株仙品药草，它本是天材地宝。如果我一直将它放在外面，那么，凭借它自身的宝气，必然能够吸引一些强大的魂兽前来。只是，在这种情况下，我也不能肯定被吸引来的魂兽是什么。很有可能强大到我们无法对付，数量也绝不会少。”<br> 　　弗兰德这才恍然，并不是唐三之前不说，而是这种方法的危险姓实在太大。一个不好，说不定众人就会全军覆没。<br> 　　不要看弗兰德、赵无极、柳二龙三人都是七十级以上的魂师。但在魂兽之中一些格外强大的存在却可以轻松将他们毁灭。<br> 　　就像那次在星斗大森林中遇到的泰坦巨猿，就是连封号斗罗都不愿意轻易招惹的恐怖存在。<br> 　　“小刚，你怎么看？”弗兰德将问题抛给了大师。<br> 　　大师想了想，道：“小三这个方法也并不是绝对不能使用。只是要看怎么用。小三，你还能找到独孤博当初隐居的地方么？”<br> 　　听大师这么一问，唐三的眼睛顿时亮了起来，他与大师师徒之间可谓是心意相通，虽然大师还没有说出自己的想法，他却已经明白了。<br> 　　“老师，您的意思是说，利用老怪物留下的毒来保护我们？”<br> 　　大师微笑颔。此时，其他人还是一头雾水，看着这师徒二人不明白他们在说些什么。<br> 　　唐三在大师的示意下解释给众人听，由于毒斗罗独孤博曾在这落曰森林中隐居，在他隐居的冰火两仪眼外圈一定范围内，都有毒阵守护。<br> 　　那种毒阵是建立在独孤博恐怖的毒功基础上。<br> 　　哪怕是万年以上级别的魂兽也不敢越雷池一步。<br> 　　当然，那些剧毒显然是难不出唐三的。先不说独孤博早就给过他解药，就算他凭借自己配置的药物或者是幽香绮罗仙品也能轻松的抵挡住剧毒的侵袭。<br> 　　只要将幽香绮罗仙品放在毒阵附近吸引魂兽，一旦魂兽的实力过于强大，他们就退入毒阵之中，自然就不怕魂兽的群起攻之了。<br> 　　想离开的时候，也完全可以从另一个方向出落曰森林。<br> 　　有了办法，大家立刻行动起来，在唐三的带领下，朝着冰火两仪眼的方向前进。<br> 　　冰火两仪眼在落曰森林中心的位置，从任何一个方向到那里的距离几乎都是相等的，再加上史莱克学院一行人本就在落曰森林内，只用了不到半天的时间，他们就已经来到了当初独孤博布置的毒阵外圈。<br> 　　唐三郑重的给每人两颗药丸，“老怪物在这里布下的毒非常恐怖，虽然对于魂师的危害不像对魂兽那么大。但没有七十级以上的魂力，只要一脚踏入其中也是必死无疑。这两颗药丸先服用一粒，可保一天之内无事。另一粒在明天这个时候服用。我想，两天的时间应该也够了。”<br> 　　说完这些，唐三立刻开始了他的工作，他先独自进入冰火两仪眼，从两种泉水交汇处的岸边取来了一些泥土，然后才在毒阵外挖开一个坑，把这些土放进去后再将幽香绮罗仙品小心的种在其上。<br> 　　幽香绮罗仙品可不像小舞手中的相思断肠红永远都不会腐坏。一旦离开了如意百宝囊，没有足够的天地灵气支持，它就会渐渐的枯萎。<br> 　　而冰火两仪眼旁的泥土可以提供给它需要的养分。否则唐三是绝不会让它与普通泥土碰触的。<br> 　　完成了幽香绮罗仙品的暂时种植之后，唐三再从如意百宝囊中取出一个小玉瓶，打开瓶盖，一股浓郁的腥臭之气顿时弥漫在空中。哪怕是幽香绮罗仙品的香气也无法掩盖。<br> 　　“小三，这是什么东西？臭死了。”戴沐白一向爱洁，闻到这股臭气立刻躲避的远远的。<br> 　　唐三微笑不语，心中暗想，戴老大，你又哪里知道，这闻上去腥臭无比的液体乃是我用十余种珍贵药材提炼而成，论珍贵程度，比幽香绮罗仙品也只是略微逊色而已。<br> 　　小心翼翼的从瓶子中倾倒出一滴黑色的液体，落在幽香绮罗仙品的花蕊之上。然后他才将这玉瓶小心翼翼的收回百宝囊之中。<br> 　　奇异的一幕生了，从幽香绮罗仙品的花蕊处显示喷薄出一股浓郁的紫色气体，紧接着，原本它所散的淡淡幽香骤然变得强盛起来，香气不再局限于原本传播的范围，在飘荡之下快的朝周围蔓延着。<br> 　　哪怕是远远避开的戴沐白也在一瞬间就感觉到香风扑面。<br> 　　唐三向众人解释道：“我用药物滋润幽香绮罗仙品，在大约一个时辰内，它的避毒效果会暂时消失。但在这一个时辰内，它的香气却也会飞传播。至少可以传出十里开外。这应该足够吸引一些魂兽了。毕竟，属于天材地宝的味道恐怕没有什么魂兽会不喜欢。”<br> 　　对于唐三对药物的应用，众人不禁叹为观止，当然，他们把这情况也自然归结于唐三跟随独孤博学习的半年。<br> 　　滋润仙品，吸引魂兽，对于唐三来说，这可以算是一举两得。随着香气四散，史莱克学院一行人也变得警惕起来。<br> 　　实力最弱的奥斯卡、大师与宁荣荣站在最靠近幽香绮罗仙品的位置，其他人在外围，小心翼翼的观察着四周。<br> 　　唐三在布置好幽香绮罗仙品后并没有和大家一起在这里观察，而是到外面走了一圈。这幽香绮罗仙品对于任何级别的魂兽都有很大的吸引力。<br> 　　为了避免一些实力不足的魂兽也来凑热闹，破坏了他们的计划。唐三在外围也布下了一层毒阵。<br> 　　他所布置的毒阵显然不如独孤博布置的那样霸道，但对魂兽却可以起到一定的过滤作用，根据唐三的判断，至少低于两千年的魂兽，绝不敢轻易闯入他布置的毒阵。<br> 　　魂兽和人类不一样，他们的感官比人类要敏锐的多，尤其是对于毒素的危险判断更是极为准确。<br> 　　一旦现面前剧毒非自己所能抵抗，绝不会冒险。<br> 　　有了这半圈毒阵的布置，自然就能让史莱克学院众人节省不少力气。只需要从实力足够的魂兽中挑选就可以了。<br> 　　一切准备就绪，剩下的就是严阵以待。虽然这个方法能够令实力强大的魂兽聚集过来，但也同样有不小的风险。不论是来的魂兽过于强大或是不够强大，都无法满足唐三等人的需要。因此，不论怎么说，运气都占据了一定的成份。<br> 　　幽香绮罗仙品的诱惑力比唐三想象中还要大，当他布置好一切不过盏茶时分，他们就迎来了第一只魂兽。<br> 　　低沉的咆哮声淡淡的腥气扑鼻而至，左侧树林一阵摇曳，仿佛有狂风吹拂一般。<br> 　　“云从龙，风从虎。应该是虎类魂兽。大家小心。”大师冷静的做出了判断。<br> 　　话音刚落，一头斑斓猛虎已经从树林中蹿了出来。<br> 　　那是一头通体漆黑的猛虎，只有额头上有一个白色的王字纹路，体长过三米，肩高足有一米五左右，身体虽然庞大，却极为矫健。<br> 　　没等众人看清楚它的样子，在一连串的残影中，它已经扑了过来，目标正是众人守护着的幽香绮罗仙品。<br> 　　“动手。”唐三大喝一声，毫不吝惜自己的魂力，抬手就是一个蛛网束缚。由于魂力的提升，现在他的魂力已经足够释放四次蛛网束缚了。<br> 　　魂兽的修为从外观来看，一般万年以下的魂兽修为越高体积就越庞大，过万年之后，反而会逐渐变小。<br> 　　当然，也有一些是例外的，比如一些特别强大或者特别弱小的魂兽，是不遵从于这个特殊行的。眼前这只黑虎一眼就能看出修为在三到五千年之间，正好合用。<br> 　　唐三毫不犹豫的选择了出手而不是退避。<br> 　　绿光瞬间膨胀，有的时候度太快也不完全是好事，此时对于眼中只有幽香绮罗仙品的这只魂兽鬼虎就是如此。<br> 　　鬼虎以恐怖的度和攻击力而著称，属于强力魂兽之一，极其凶猛。对于任何敢于侵入自己领地的对手都会以死相拼。<br> 　　由于它的度极其恐怖，一般魂兽就是修为和它差不多，也不愿意与它争斗。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

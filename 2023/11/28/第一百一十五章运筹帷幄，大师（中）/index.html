@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　身体再次腾跃，雷丝随之而动，追逐着她那修长的娇躯。人在半空之中，小舞的身体突然折了下来，以腰部为中心，做出了一个人体几乎无法达到的动作，竟是硬生生的距离雷丝只有数寸之处闪了过来。<br> 　　此时，上面的雷网已经罩下，小舞的身体还没有落地，眼看着她就闪躲不开了。可就在这个时候，小舞头部猛的后仰，长长的蝎子辫抽击在地面上。就利用那一点反弹力，将自己的身体再次送出数米。延缓了被雷网笼罩的时间。而这点时间，也正好能够让她那倒翻的身体落到地面上。<br> 　　双臂撑住地面，腰弓动。但这一次，小舞却并不是向外躲闪。她的身体宛如炮弹一般，直接朝着雷网冲了出去。<br> 　　双腿崩的笔直，此时的她，就像一支离弦长箭一般。令人吃惊的是，小舞身体弹出的一刻，她的身体正好与那雷网保持垂直位置。她选择穿越的位置，也正好是雷网中一个略大的空隙。<br> 　　嘶啦一声，小舞的身体应声而过，竟然就那么从雷网中穿了出去，但她的身上也亮起了一连串的蓝色电光。<br> 　　此时，比赛场地外的唐三已经站了起来，双手攥紧成拳。场上的局面明显不是他所能判断的了。按照原本的计划，小舞在坚持到这个时候，已经应该认输了才对。<br> 　　连唐三都想不到小舞会如此果决的选择从对手的第三魂技中穿越，雷动自然也更想不到了。他那雷网被小舞穿越后直接落在地面上消失不见。此时小舞身在空中，雷动的第三魂技消失，正是旧力刚去，新力未生的尴尬时刻。<br> 　　如果小舞此时是全盛状态，说不定就能抓住这个机会迅接近对手一击制胜。可事实上，她现在什么也做不了。就连身体也是像自由落体一般朝地面坠落。<br> 　　雷网是成功穿越了，而且是承受了最小的打击。但是，雷网上附带的雷电效果还是令魂力不足的小舞完全陷入了麻痹之中，娇躯剧烈的颤抖着。已经无法控制，更不用说去抓住机会动攻击了。<br> 　　雷动猛的吸了口气，看到小舞身体坠落的样子，他自然知道是自己的雷网所致，缓过一口气，两根雷丝再次从掌心中喷吐而出，朝着小舞的身体缠绕而去。只要用雷丝彻底麻痹住对手，这场比赛他就赢了。<br> 　　落地、弹起。雷动的判断很好，但小舞给出的，却是截然不同的答案。就在她身体即将坠地的一瞬间，麻痹的感觉终于驱除，双手用力拍击地面，腰弓技能再次动，身体顺利弹起，正好从两根雷丝上越过，毫不停留的直奔雷动扑去。<br> 　　雷动大吃一惊，怎么会这样。雷网的麻痹效果不应该这么短才对。<br> 　　是的，雷动的第三魂技限制能力确实很强，但不要忘记，先前小舞在穿越他那雷网的时候，是选择最弱的地方，而那时候雷动完全没有预判到她的动作，自然无法让魂力完全倾泻。<br> 　　覆盖的面积越大，也就意味着在一定范围内的攻击力量越小。尽管是雷属姓武魂，也同样无法脱真理。正是因为如此，小舞承受的雷电攻击，远不像雷动判断的那么多。也正是因为如此，她才能在身体落地之前的一瞬间再次弹身而起。<br> 　　精确的判断力，这是明眼人给出的解释。可实际上，小舞虽然简单的计算过，但能够取得这样的效果，心中还是暗叫一声侥幸。<br> 　　两人之间的距离快拉近着。小舞的身体每一次接触地面，都会诡异的改变着方向，哪怕身在空中，她那柔若无骨的身体也能做出种种非人的柔软动作规避雷丝的阻挡攻击。<br> 　　看着越来越近的小舞，雷动的眼神中明显多了一丝慌乱。只要是关注过史莱克学院比赛的人就不会忘记被小舞近身的那些魂师是什么下场。雷动自然也不例外。<br> 　　无奈之下，雷动身上的第四魂环终于亮了起来。此时，再布置雷网已经来不及了，他能想到，又能立刻击败对手的，也只有这第四魂技。<br> 　　强烈的蓝光从雷动双臂备用而出，背后的八根蓝色长腿弹起，八道雷光喷吐而出，与他双臂之中释放的雷光融为一体。一个直径三米，粗如手臂的圆环呈现在雷动面前。<br> 　　这正是雷动的第四魂技，锁神环。就像唐三的第四魂技蓝银囚笼一样，锁神环是无法闪躲的。只有凭借魂力硬扛一途。<br> 　　蓝光一闪，小舞那诡异腾跃的身影顿时停了下来。全身已经完全陷入麻痹之中，直径三米的锁神环此时已经收缩到只有她腰部粗细，将小舞的身体牢牢的箍在其中。<br> 　　一道道蓝色闪电围绕着小舞的身体律动着。令小舞的面庞上充满了痛苦之色，俏脸变得一片苍白。<br> 　　“我们认输。”大师的声音及时响起。<br> 　　锁神环光芒倾泻而下，融入地面之中。在小舞即将倒地前的一瞬间，唐三已经飞快的冲到她身边，抱住了她的身体。<br> 　　小舞的身体很烫，在雷电的刺激下，还在微微的痉挛着。看着她那双眼紧闭的样子，唐三说不出的心疼。<br> 　　抬头向对手看去，雷动也因为先后使用了第三、第四两个魂技，脸色变的有些苍白。<br> 　　如果不是大师不允许唐三参加这场比赛，此时他真想立刻登台，替小舞找回这个场子。<br> 　　抱起小舞，唐三一步步向场地外走去，而代表史莱克学院第五个出场的戴沐白也缓步走入比赛场地。两人在身体交错而过的那一瞬间，戴沐白的耳朵动了一下。目光与唐三碰撞，向他有力的点了下头。<br> 　　戴沐白走的度并不快，但每一步都是那样的沉稳。双眼之中，邪眸双瞳闪烁着妖异的光彩，凝视着他的对手。<br> 　　看着面无表情，向自己走来的戴沐白，不知道为什么，雷动的心突然有些抽搐的感觉。似乎有些喘不过气来似的。<br> 　　邪眸白虎戴沐白，武魂：白虎，魂力：四十四级。强攻系战魂师。史莱克学院战队队长。<br> 　　一系列的资料在雷动心中闪过。他知道，这场比赛自己是不可能获得胜利的。之前在面对小舞的时候，他已经消耗了太多的魂力。而戴沐白的强势，在之前的比赛中早已经展露无疑。他明白，自己现在能做的，就是像小舞在面对自己时那样，尽量消耗对手的魂力，给自己的伙伴，也是雷霆战队的队长最后出场创造胜利条件。<br> 　　史莱克学院现在还有三个生力军，实力又都是四十级以上，这场比赛，雷霆学院想要获胜的难度可想而知。但他们却绝对不会放弃。晋级赛只是总决赛的试金石，如果在这时候弱了气势，那么，到了总决赛也不用打了。<br> 　　淡淡的光芒闪烁，唐三脸上流露出一丝冰冷的神色，双手在胸前合拢，眼中光芒每一次山手都会另空气变得有些凝重。小舞静静的躺在他身边，头枕在他的大腿上，绛珠的恢复权杖正释放着光芒祝她疗伤。<br> 　　在刚才与戴沐白错身而过的时候，他以传音入密的方法对戴沐白说了一句话，大哥，替小舞报仇。<br> 　　唐三平时很少这样称呼戴沐白，从他的声音中，戴沐白自然能够感受到唐三内心的激动。为了小舞，唐三本来就是什么都有可能做出来的。戴沐白心中暗叹一声，看着面前不远处的雷动，伤了小舞，算你倒霉吧。<br> 　　“比赛开始。”晋级赛的赛制决定场上选手不能有休息的时间。当戴沐白踏入指定位置的时候，比赛开始。<br> 　　“哼。”一声闷哼从戴沐白口中响起，浓郁的白色魂力顿时从他体内喷吐而出，四个魂环强势出现，在令人牙酸的骨骼噼啪声中，戴沐白身形暴涨，武魂白虎护体完成。<br> 　　没有任何迟疑的，戴沐白在武魂附体的一瞬间，就已经迈开大步，朝着他的对手迎面冲了过去。<br> 　　雷动瞳孔收缩，他知道，现在这个时候，自己的关键是能挡住戴沐白多久。他从戴沐白的邪眸之中，分明看出了蔑视的光芒。我也是四十三级的魂师，比你不过低了一级而已。就算你的武魂先天要比我好，也不能如此轻视我。<br> 　　在短暂的权衡之下，雷动身上的第四魂环直接亮了起来。他的魂力被小舞消耗掉了过五成，他知道，如果自己再用几个低等魂技之后，恐怕连释放一次第四魂技的魂力都不够了。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

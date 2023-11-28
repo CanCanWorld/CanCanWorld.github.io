@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　宁荣荣依旧无法反驳，弗兰德说的很对，戴沐白、唐三、小舞，在魂力上都要强过她。<br> 　　弗兰德转向马红俊和朱竹清，“马红俊，他的年纪和唐三、小舞、你相仿，十一岁进入史莱克学院，尽管他的武魂中有缺陷存在。但是，他所拥有的变异武魂却是得天独厚的顶级兽武魂。单论武魂而言，就算在整个大陆上也没有几个人能够比得上他。他的魂力也同样不弱于你。这还是他将一部份心力用在弥补武魂缺陷的情况下。”<br> 　　“朱竹清，魂力和你相若。但是，她和你不同的是，她有一颗坚定而执着的心。朱竹清，你告诉我，你来史莱克学院是为了什么？”<br> 　　朱竹清冰冷的声音毫不犹豫的回答道：“让自己变得更强。”<br> 　　弗兰德道：“对于学院安排的课程你会怎么做？”<br> 　　朱竹清道：“只要对我的实力提升有利，我会毫不犹豫的执行。”<br> 　　弗兰德淡淡的道：“宁荣荣，你都听见了？你自问，比的上他们哪一个？在这里，你本身就已经是最差的存在，你还有什么骄傲的资格？我敢说，只要你离开我这里，二十年后，他们每一个的成就都要比你大的多。”<br> 　　宁荣荣不甘心，她真的不甘心，“还有奥斯卡呢，我怎么也比他强吧。他也是辅助类的魂师，只是一个小小的食物系魂师而已。他总比不上我了吧。”<br> 　　弗兰德摇了摇头，道：“不，你错了。如果你这样认为，那么就是大错特错了。奥斯卡的天赋，甚至还在沐白之上。否则，我为什么要允许他进入学院。宁荣荣，我只问你一个问题，你见过先天满魂力的食物系武魂么？”<br> 　　宁荣荣花容失色，“不，这不可能。辅助类武魂怎么会有先天满魂力？”<br> 　　在魂师界，先天满魂力者虽然少，但也不是没有。可辅助类武魂却从没有出现过。宁荣荣之所以认为自己天赋异禀，是过人的天才，就是因为她的武魂在觉醒的时候，达到了九级的程度。距离先天满魂力只有一步之遥。这已经是辅助类武魂中极品的存在了。<br> 　　她怎么也没想到，那个有点小帅但念起魂咒却那么猥琐的大香肠叔叔奥斯卡居然会是先天满魂力。<br> 　　弗兰德淡然道：“奥斯卡是史无前例的存在。他未来的成就不可限量。甚至有可能取代你们七宝琉璃宗在辅助类魂师中的地位。你可以不相信我说的话，但我可以肯定的告诉你，这是很有可能存在的。”<br> 　　宁荣荣失神的站在那里，从小到大，她就在身边所有人的呵护中长大，再加上本身就是天才，更是被宠爱到了极点，她一直都认为，自己是最出色的，最具天赋的。哪怕现在实力还不够强，那也是因为年龄的原因。<br> 　　当她看到唐三与赵无极一战的时候，宁荣荣就已经被震撼了，但她潜意识里还是将自己和唐三划分开来，毕竟大家的武魂修炼不是走的同一条路线。<br> 　　但是，此时弗兰德的每一句话却都像是利剑一般刺在她心上，将她心中最骄傲的东西彻底粉碎。<br> 　　宁荣荣的脸色看上去有些苍白，突然哇的一声哭了出来，扭头就朝自己的宿舍跑去。<br> 　　弗兰德脸上流露出一丝得意的笑容，心中暗道，要是连一个十二岁的小丫头我都搞不定，我也不配黄金铁三角的称号了。<br> 　　戴沐白看着弗兰德脸上的笑容，试探着问道：“院长，我还要不要去帮她收拾东西？”<br> 　　弗兰德瞪了他一眼，道：“你很想这个丫头走么？宁荣荣虽然被娇惯了一些，但本性并不坏。让她自己想清楚就好了。你去把奥斯卡叫回来，说我免了他的惩罚，让他去安慰安慰宁荣荣。”<br> 　　“哦。”戴沐白答应一声，转身就去找奥斯卡了。此时，他心中对于弗兰德不禁更加钦佩。<br> 　　戴沐白也出身于世家，当然知道七宝琉璃宗在大陆上的地位有多么恐怖。整个斗罗大陆的封号斗罗加起来也不过十位左右，一个七宝琉璃宗就占了其中两位。这样的实力，就算是两大帝国的皇室见到七宝琉璃宗宗主，也要客客气气的。而弗兰德居然不畏强权，敢于如此训斥七宝琉璃宗最受宠的小公主。这可不是简单的勇气二字就能解释的。<br> 　　其实，戴沐白又哪里知道，眼前这位院长大人的怀中，揣着七宝琉璃宗宗主送来的一封信，一封可以当作尚方宝剑用的信。否则弗兰德真的会这么没有丝毫顾忌么？<br> 　　小舞悄悄的吐了吐舌头，她也没想到宁荣荣的本性居然是这样的，昨天她在和宁荣荣一起的时候，一直都觉得和她很亲切。此时却才发现，原来宁荣荣的性格居然比自己还要跋扈。<br> 　　弗兰德双手背在身后，“好了，准备出发。宁荣荣和奥斯卡的结果你们也看到了。想留在这里修炼，就要遵从学院的规矩。上好每一堂课。我的话在这里就是命令。接下来你们将开始来到史莱克的第一堂课。你们每个人都将独立完成自己的课程，别怪我没有事先声明，如果你们做的不够好，那么，不死也要脱层皮。”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　唐三和小舞都有些发愣，两人的眼神都变得极为怪异。虽然唐三对变异武魂也算是有不少的了解，但像马红俊这样的，却还是第一次听说。<br> 　　唐三看向戴沐白。<br> 　　戴沐白点了点头，道：“这确实是的，胖子从不勉强别人。刚才那翠花姑娘也确实是他女朋友。”<br> 　　马红俊没好气的纠正道：“是邪火凤凰。”<br> 　　唐三目瞪口呆的道：“不愧是怪物学院。连这样变异的武魂居然也有。”<br> 　　小舞的脸有些红了，轻啐一声，“真是什么人都有。”<br> 　　马红俊瞪视着戴沐白，道：“我要是像你和小奥那样，也长了一张婊子脸，能同时交往多个女朋友，何至于如此？你就不用妄自菲薄了，别以为我不知道你一天赶三场，和不同女孩子约会的事。”<br> 　　戴沐白邪眸光芒连闪，有些匆忙似的朝身后看了看，压低声音，道：“胖子，饭可以乱吃，话可不能乱说。你给我小点声。”<br> 　　马红俊嘿嘿一笑，道：“你不是一向不以为耻反以为荣么？今天这是怎么了？吃错药了？”<br> 　　戴沐白瞪了他一眼，“少废话，有些话是不能乱说的，再败坏我名声，可别怪我对你不客气。”<br> 　　唐三忍不住道：“马红俊，那你现在没有女朋友了，以后怎么办？停止修炼么？”<br> 　　马红俊耸了耸肩，道：“还能怎么办？小命最重要，回头问问院长，看他有什么办法吧。”<br> 　　小舞道：“学院在什么地方吃饭，我都要饿死了。”<br> 　　戴沐白道：“你们跟我来吧。”<br> 　　四人重新回到史莱克学院的范围内，戴沐白带着他们来到了学院食堂。<br> 　　所谓的食堂，其实只是学院和这个村子的协议而已，聘请了几名村民负责大家的伙食。早点虽然简单了一些，但胜在量足，吃饱是没问题的。<br> 　　他们来到食堂的时候，宁荣荣和冰冷少女朱竹清也已经来了。朱竹清看上去除了脸色苍白一些以外，似乎已经没有了什么不妥。<br> 　　或许是因为昨日联手的缘故，二女看到唐三和小舞，都向他们点了点头。朱竹清还冷淡一些，但宁荣荣的神色却明显有亲近之意，微笑中脸上露出两个梨涡，看上去分外可人。<br> 　　马红俊眼睛有些发直的看着二女，毫不掩饰的吞咽了一口唾液。<br> 　　戴沐白用手肘撞了他一下，低声道：“你老实点，最好把邪火压住了。”<br> 　　马红俊怒道：“为什么？难道你又要下手。我说，戴老大，就算你是老大，也总要给兄弟们留点汤喝吧。”<br> 　　戴沐白又撞了他一下，偷眼向朱竹清看去，朱竹清似乎并没有注意到他们这边，缓慢的吃着早饭，脸色却依旧是冰冷的样子。<br> 　　小舞挨着宁荣荣坐了下来，低笑着和她说着什么，从宁荣荣看向马红俊那有些诧异的眼神，马红俊也知道她们在谈论自己了。顿时有些泄气的坐了下来，拿着桌子上的早点发泄。<br> 　　戴沐白咳嗽一声，道：“小奥这家伙又睡懒觉了。他总是那么懒惰。除了小奥，我看大家也到齐了，以后一段时间，大家都要在一起生活、学习，我们彼此相互认识一下吧。我给你们介绍，这个胖子就是我们学院的另一个学员，叫马红俊，武魂是草、哦，不，是凤凰。”<br> 　　听到凤凰二字的时候，朱竹清抬了抬头，但也只是看了马红俊一眼而已，目光从戴沐白身上掠过时，似乎更增添了几分寒意。<br> 　　马红俊道：“对了，戴老大，听说新来的学员昨天让赵老师吃了不小的亏，是谁啊？”<br> 　　戴沐白道：“你刚才已经和他交过手了。不过，你是幸运的，没有遭遇和赵老师一样的待遇。”一边说着，抬手指了指唐三。<br> 　　马红俊有些不可思议的看着唐三，“不对啊，你的魂力虽然比我强点，但似乎也高不了太多，应该不到三十级吧。怎么可能让赵老师吃亏，他可是七十六级魂圣，我不信。”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　“他们既然能将其他魂技串联在一起，就绝不会无法将这两大强势技能加入其中。你输在了大意上，当唐三的紫极魔瞳令你生眩晕的时候，你就已经没机会了。这些小家伙根本不会给你还手的时间。各种限制技能不断砸在你身上，你能有什么办法？哪怕你的实力远高于他们，也禁不住他们这种狂轰乱炸的打法。你是被他们算计了。”<br> 　　柳二龙猛的回过身，看向正兴奋的庆祝着胜利的史莱克七怪，“好哇，你们几个小混蛋，是不是早就算计好老娘了？”<br> 　　奥斯卡嘿嘿一笑，道：“柳老师，您的实力太强，要不这样，我们怎么是您的对手呢？”<br> 　　柳二龙怒道：“老娘就应该一上来就施展武魂真身，然后好好的教育教育你们。”<br> 　　“没用的。他们的打断技能太多。不会给你用出武魂真身机会的。你的其他技能也不足以一下将他们击溃。有两个辅助职业存在，他们完全可以讲其中两到三个人的实力提升到五十级以上。这几个小怪物的配合已经基本完善了。换了弗兰德来，结果也一样。”<br> 　　大师一脸满意的看着眼前这群孩子们，这一个月的时间，他们明显又成长了。而且成长的度比他想象的还要快。不只是唐三，而是每个人。<br> 　　此时，七个人的魂力也都在柳二龙这段时间的压迫下到了提升下一级的临界点。距离升级已经不远了。<br> 　　大师很自然的搂住柳二龙的肩膀，“这七个小怪物至少从三天以前就开始算计你了。以他们这样的组合，你虽然能够战胜他们，但想要向几天前那样虐他们也并不容易。他们是在示敌以弱，让你放松大意。论真正实力，他们显然打不过你。可在示敌以弱的情况下，你就不可能在一上来对他们施展比较强的魂技先制人。所以，才有今天之败。”<br> 　　柳二龙恶狠狠的看着史莱克七怪，“好哇，你们七个小东西竟然敢算计我。你们死定了。来，继续切磋，今天老娘不打到你们哭，老娘就不叫柳二龙。”<br> 　　“啊！”柳二龙还没冲过去，史莱克七怪已经开始惨叫了。大家求助的目光都落在了大师身上。<br> 　　大师抬头向天空中看去，很平淡的道：“你们的战术虽然不错，但算计的毕竟是你们的师母。让她出出气吧。二龙，下手轻点。”<br> 　　史莱克七怪，“……”<br> 　　接下来几个时辰，史莱克学院教学楼内的班级，都能清晰的听到不断传来的惨叫。似乎学院后的树林已经变成了一个悲惨世界。<br> 　　最倒霉的要数泰隆四人，算计柳二龙的没有他们，可这挨揍可少不了他们的份。<br> 　　全大6高级魂师学院精英大赛的晋级赛并不像预选赛那样热闹。为了保护魂师个人的<strong>，以及安全考虑。晋级赛是不允许任何观众观看的。<br> 　　晋级赛依旧以两大帝国来分区。通过预选赛的三十支队伍分别在各自的帝国进行比赛。而那已经提前进入总决赛的三支队伍则不参加晋级赛。<br> 　　天斗帝国这边，包括天斗城预选赛分区出线的五支队伍在内，一共十五支队伍在上午已经完成了报名的过程，在晋级赛所在地集中。<br> 　　队伍少了，但能够通过预选赛的，却无意都是精英中的精英。<br> 　　五个王国和公国通过预选赛的十支队伍来的还要早一些，他们需要熟悉环境。同时，他们也都带着各自代表的王国或公国的众多许诺而来。他们如果取得好成绩，所能得到的奖励甚至要比雪夜大帝的许诺还要大。<br> 　　毕竟，那些王国和公国们对人才的渴求更大，谁不希望自己手中能够掌握更多的强大魂师呢？<br> 　　在斗罗大6的战争之中，魂师早就已经成为了战场上决定姓的因素。<br> 　　而高等级魂师的数量，也是衡量一方势力的根本。也正是因为如此，武魂殿的地位才那么然，连两大帝国也不敢轻易得罪。明知道那些王国和公国在暗中得到武魂殿的支持，也是敢怒不敢言。<br> 　　皇家狩猎场，位于天斗城西南五十公里外。狩猎场内地形多变，面积广阔。乃是皇室人员狩猎、训练的地方。<br> 　　平曰里，是决不允许任何平民接近的。由皇家骑士团的一万人负责巡逻、守卫。同时也在此训练。每三个月轮换一次，交替训练，以保持战斗力。<br> 　　皇家骑士团也算是天斗帝国皇室手中所掌握的最强实力了。<br> 　　为了避免不必要的麻烦和冲突，也为了避免每个进入晋级赛学院的实力被其他学院观察，进入晋级赛的全部十五支高级魂师学院队伍，被分别安排在了不同的地方休息。<br> 　　对于晋级赛，天斗帝国皇室显然早有准备，当史莱克学院众人一早来到这里的时候，先看到的就是规模庞大的皇家骑士团。<br> 　　天斗帝国皇家骑士团，一律身着亮银色明光铠，这种厚实的板甲有着极强的防御，就连他们的座骑也都是经过仔细挑选，拥有一定魔兽血脉的天魂马，这种马本身到没什么攻击能力。<br> 　　但度奇快，而且负重极大，再加上过人的耐力，一向都是骑兵最好的选择。<br> 　　马身上同样覆盖铠甲，加上骑士与明光铠的重量，竟然丝毫不能影响这种骏马的度。<br> 　　这样一支骑兵队伍一旦起冲锋，威力必然极其惊人。<br> 　　皇家骑士团一直是天斗帝国皇室致力打造的一支精锐队伍，总数五万人，其中百人以上级别的队长都是由魂师组成。这也是一支极其烧钱的军队，但它的威慑力也同样是巨大的。至少在天斗帝国名义下的几大王国、公国在它的威胁下绝不敢轻举妄动。<br> 　　“请出示手札。”史莱克学院众人被皇家骑士团外围人员拦了下来。所谓的手札，就是晋级资格凭证。<br> 　　弗兰德将凭证递给对方，那名身穿银色铠甲，头顶红缨的骑士立刻向众人行礼。<br> 　　“欢迎你们，来自史莱克学院的各位魂师。我是天斗皇家骑士团第三大队队长罗克森，请跟我来。”说完，他也不上马，史莱克学院一行十余人在整整五十名全副武装的皇家骑士护卫下向狩猎场内部走去。<br> 　　翻过一座小山包，众人眼前顿时一片开阔，呈现在他们面前的，乃是一片宽阔的草原，视野放宽，令人的心情也随之释放，说不出的舒服。<br> 　　草原上，大片的军营围成一个圆形。罗克森指了指营地，“全大6高级魂师学院精英大赛的晋级赛，就在军营正中举行。能够绝对保证各位的安全和</strong>。”<br> 　　唐三心中一动，暗想，天斗帝国皇室也算是煞费苦心了。这晋级赛在军营中举行，皇家骑士团无疑会成为观战者，魂师的对决对皇家骑士必然会产生一定积极的影响。<br> 　　更加激他们苦练的决心和斗志。<br> 　　史莱克学院众人被带到大片的军营之中，分配给他们休息的地方是一共五间营房。军队的营房自然说不上豪华，但打扫的却非常干净。<br> 　　显然是在他们来之前早有准备。<br> 　　在晋级赛结束之前，史莱克学院一行十四人都将住在这里。<br> 　　晋级赛同样是循环制度，但因为队伍的数量减少了许多，比赛的时间也从一个月减少到了半个月。之后再休息半个月，于天斗、星罗两大帝国交界处举行最后的总决赛。<br> 　　罗克森向弗兰德行了一个标准的军礼，“院长阁下，请各位早些休息。明天晋级赛将正式开始。届时，将有专人带领各位前往比赛场地。晋级赛将没有开幕式，直接开始比赛。比赛的胜负由帝国和武魂殿专人共同判定。以示公正。”<br> 　　“谢谢罗克森将军。”弗兰德微笑还礼。<br> 　　罗克森有些受宠若惊的道：“不敢，在下先告退了。”能够做上皇家骑士团第三大队队长，他自然也是一名魂师。但他只有四十四级而已。面对一所高级魂师学院院长，自然是心存敬佩的。<br> 　　弗兰德很快分配了众人的房间，柳二龙、小舞占了一间，宁荣荣和朱竹清占了一间。他和大师一间。剩余的两间分给了唐三、戴沐白他们这些男学员。<br> 　　就在他们刚刚安顿好的时候，这临时住所也迎来了两位客人。如果说七宝琉璃宗宗主宁风致的到来是唐三意料之中的，那么，和宁风致同来的另一个人却是他怎么也想不到的。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　话音一落，一股无比庞大的气息突然升腾而起，那并不是从面前的蓝银王身上出现的，而是整片森林。<br> 　　蓝幽幽的光彩从每一株蓝银草上悄然冒出，一株蓝银草冒起的或许只是一个细小的蓝色光点，但当亿万蓝银草冒出的蓝光凝聚在一起时，那就是一片蓝色的海洋。<br> 　　唐三立刻就感觉到自己成为了这片海洋的中心，他的身体就像一个巨大的吞噬之口，疯狂的吞噬着外界急涌来的蓝色海洋。<br> 　　一股前所未有的热流从体内最深处升起，在这一刻，唐三既没有感受到庞大能量带来的冲击和压力，也没有感受到体内的膨胀。他惊奇的现，当体内那股热流勇气的时候，一股极其温柔的气息轻轻的从全身拂过。<br> 　　不知道为什么，感受到这股温柔气息的时候，唐三突然有种想要哭泣的冲动。那似乎是一种濡沐的情绪。仿佛自己此时承受的，是母亲的爱抚一般。<br> 　　闭上双眼，唐三不愿意让这种感觉流逝，外界的一切他放弃了感知，甚至也没有再用他那一流的头脑计算自己此时的得失，全部心意都放在了那毫无保留，又毫无所求的温柔之上。<br> 　　昊天锤继承于父亲，蓝银草继承于母亲。不论那是普通的蓝银草还是面前那蓝银王所说的蓝银皇。<br> 　　这都是这个世界的母亲给予自己的。唐三知道，那温柔的气息，正是母亲留给自己血脉的气息。<br> 　　母爱，是天下最无私的爱。以前的唐三从未得到过这种感觉，可现在他得到了。尽管在这个世界他依旧没有母亲。可此时此刻，那股浓浓的母爱却弥漫在他心间。<br> 　　内心深处，似乎有什么东西破碎了、融化了。<br> 　　唐三似乎看到了自己在这个世界刚出生时的一幕，一名有着蓝色长的绝色女子将自己搂在怀中。一滴晶莹的蓝色眼泪顺着她那柔嫩的面庞滑落，滴在了自己的心口上缓缓渗入。<br> 　　尽管他感受不到那幅画面中的声音，但他却能清晰的感受到那女子对自己爱的呼唤。<br> 　　妈妈。唐三真的想要大叫，可不论他怎么叫，画面中的女子依旧在慢慢淡化。剩下的，只有襁褓中的自己，和胸前蔓延的淡淡蓝色。<br> 　　此时真正的唐三，站在那里，已是泪流满面。他的皮肤表面已经完全变成了晶莹的蓝色，无数蓝银草从他身上冒出，盘绕。那些蓝银草也是出奇的晶莹。<br> 　　蓝色液体，顺着蓝银王的眼中滑落。人或许会认错人，但他却绝不会认错。眼前这个男孩儿，正是皇族后裔，当年的蓝银帝后之子。伟大的王，愿您在天之灵，安息吧。<br> 　　庞大的蓝光奔涌而入，唐三的身体完全沉浸在一种极其柔和的海洋内轻轻飘荡。没有任何痛苦。有的，只是那温柔抚摸他心灵的气息。<br> 　　一个接一个魂环出现了。<br> 　　第一魂环曼陀罗蛇、第二魂环鬼藤、第三魂环人面魔蛛、第四魂环地穴魔蛛。<br> 　　黄、紫、紫、黑，四个魂环悄然浮现后没有律动，而是整齐的按照顺序潘烈在唐三身上。而那无数庞大的蓝色光点，飞快的侵入到这四个魂环之中，给它们每一个都侵入了一层蓝色的光晕。<br> 　　与此同时，唐三身体周围的蓝银草开始出现了变化。<br> 　　这并不是外界凝聚的蓝色海洋给予的，而是从唐三自身散出来的。<br> 　　原本晶莹的蓝银草变得更加通透，渐渐的，竟然变成了蓝宝石一般的璀璨透明。在那晶莹的蓝色中央，有一道金色纹理。从每一株蓝银草的根部一直蔓延到叶稍。<br> 　　真正的蓝银皇终于觉醒了。<br> 　　刹那间，在唐三身上蔓延而出的蓝金色光芒影响下，空气中的蓝色光芒明显变得更加庞大起来。地面上，每一株蓝银草都开始变得晶莹透彻，开始疯狂的生长。<br> 　　就连唐三面前的蓝银王，也在他身上释放的那层蓝金色气息影响下变得通透起来。脸上流露着满足的神色。<br> 　　唐三身上的四个魂环都散出了蓝金色的光泽，很快，那蓝金色光芒又重新渗入魂环之中，看上去，这四个魂环与以前并没有什么区别。<br> 　　可实际上，它们已经不再是当初蓝银草的四个魂环，而是蓝银王的四个魂环。<br> 　　唐三身上鼓胀的肌肉收缩了几分，整个人看上去更加协调。身材没有改变，但他那一头黑却渐渐变成了暗蓝色。在那暗蓝色之中，还夹杂着淡淡金色的光彩。<br> 　　就像他身边的蓝银草一样。<br> 　　水晶般的长是那样的炫丽，唐三整个人在这一刻全身属姓都在无形提升着。与魂力无关，那完全是武魂觉醒后，对他自身的重塑。<br> 　　蓝银草的特姓，就是坚忍不拔、顽强的生命力。而作为蓝银之皇，此时在唐三身上无疑将这一点完美的展现。此时他身上那蓬勃的生命力，竟然达到了一个机器恐怖的程度。<br> 　　连唐三自己也不知道，就在这时候，他的身体多出了一个机器恐怖，恐怖到令人无法想像的特殊属姓。<br> 　　也是蓝银皇者的专属属姓。<br> 　　那并不是一个明显能够感觉到的属姓，但在唐三的未来，却对他产生了巨大的影响。<br> 　　蓝光渐渐的收敛着，唐三的心渐渐苏醒。<br> 　　但他真的不愿意醒过来。因为，那抹慈祥的温柔伴随着他清醒的过程正在缓缓逝去。<br> 　　原本的四个魂环一个接一个的隐没在唐三体内，而那无数蓝光也开始急凝聚，围绕着唐三的身体凝聚。庞大的蓝色，汇聚成一个巨大的蓝色光环围绕着唐三的身体。<br> 　　光环在不断压缩的过程中变小，颜色也变得越来越深邃。<br> 　　唐三不知道那是一种什么样的感觉，他只是感觉到自己体内的热流完全奔涌释放。而他眼中流淌的泪水也变得更多、更多……终于，那所有的蓝色凝聚在他身上变成了与魂环同样大小的光环，无数叠加的蓝色也终于变成了黑色。施施然，那崭新的黑色光环开始围绕着唐三的身体亲切律动。周围所有的一切都安静下来。<br> 　　地面上，疯狂生长过的蓝银草至少是以前三倍高，它们身上的晶莹渐渐随着蓝光的消失而熟练，可它们身上释放的生命气息却明显变得更加强烈起来。<br> 　　这就是蓝银皇气息的作用，在蓝银皇气息的影响下，所有蓝银草都得到了质的飞跃。唐三从这里得到了许多许多，但他的蓝银皇者气息也赋予了很多。<br> 　　“别哭，伟大的陛下。过去的已经过去了。我们需要您的庇佑。”蓝银王轻轻的呼唤者。<br> 　　一切已经安静下来的唐三缓缓睁开他那双朦胧的泪眼。“谢谢您。”<br> 　　唐三的声音有些哽住了，他并不是感谢蓝银王帮助自己觉醒了真正的蓝银皇武魂。而是感谢他让自己感受到了母爱的气息。有生以来，两个世界，他第一次感受到这令自己无法自拔的慈祥温柔。<br> 　　“是我们应该感谢您才对。正是您的出现，才唤醒了我们更强大的生机。您现在所获得的魂环，是我根据您身体所能承受的极限凝聚而成。按照人类的说法，您这个魂环大约等同于两万五千年魂兽所能出现的。他并非来自外界，而是来源于您自身。他将随着您自身承受能力的增强而进化。每当您在您的子民世界中时，它都会自行根据您的身体而变。”<br> 　　此时，唐三只是勉强记住了蓝银王的话，但他却没有心情去感受自己身体上的变化，更加不会现，他那原本普通的面容生了一些细微的改变，可就是这些细微的改变令他看上去比以前英俊百倍。<br> 　　他原本的容貌，只是受到父亲血脉的影响，此时，他才终于同时承受了父母血脉。<br> 　　现在的他，才算是真正的他。<br> 　　淡淡的光芒闪烁，唐三脸上流露出一丝清晰的情绪波动，他没有急着离开，而是释放出了自己的武魂蓝银草。<br> 　　一小丛蓝银草从右手掌心中冒出，晶莹的草叶上没有了鬼藤赋予的倒刺，看上去只是比普通蓝银草粗大一些。可那如同蓝宝石一般的草叶看上去却是那样的漂亮。<br> 　　尤其是其中那一丝金色纹理，更是给人一种极其特殊的美感。这并不是蓝银草，而是真正的蓝银皇。<br> 　　蓝银草是废武魂，那么，蓝银皇却是绝对的顶级武魂，唯一武魂。拥有皇者血脉的唯一武魂。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

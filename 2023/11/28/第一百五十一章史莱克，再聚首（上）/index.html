@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　唐三苦笑道：“面对一位封号斗罗有可能的报复，我怎么可能不紧张。”<br> 　　七长老怒道：“以我的身份，会报复你？那个，那个刚才我说你是那什么的话，我收回。愿赌服输，我不该骂你。也同意你认祖归宗。”<br> 　　一听这话，唐三反而愣住了，忍不住多看了七长老两眼。<br> 　　“看什么看？愿赌服输，你听不懂啊！”说完这句话，七长老再没脸留下来，转身就走，几个起落就已经消失不见。<br> 　　这一刻，唐三现，这位长老似乎也不是那么面目可憎了，敢爱敢恨的脾气反而令人更容易接受些。<br> 　　目光转向唐啸和其他几位长老，二长老向唐三点了点头，“我们说话算数。刚才的比试是你赢了。允许你认祖归宗。”<br> 　　唐三有些激动的问道：“那我是不是也可以祭拜爷爷了？”<br> 　　听到这句话，几位长老的脸色都显得有些阴沉，显然是想起当初老宗主死时候的不甘，但二长老还是点了点头，“不可以。因为你父亲的错，你还没有拜祭老宗主的资格。你之前说过，你父亲做错的事，你会替他偿还，报效宗门。没错吧。”<br> 　　唐三心中一紧，但他心中也算松了口气，毕竟，这已经算是他替父亲恕罪走出的第一步。“是的，我说过。那我要怎样做才能拜祭爷爷？”<br> 　　二长老道：“既然如此，我们要求你为宗门做三件事。只要你做好这三件事。就算你替你父亲恕罪了。不但你认祖归宗，我们也可以让你父亲重新回归宗门，和你一起祭奠老宗主。”<br> 　　“什么？”唐三大吃一惊，眼圈顿时有些红了。虽然父亲并没有提起过这个奢望，但唐三知道，脱离宗门，是父亲心中永远的痛。如果父亲能够重回宗门，拜祭爷爷。对于父亲来说，无疑是天大的喜事。<br> 　　当然，以他的聪明当然也明白，二长老给出这样一个优厚的条件，那三件事必定极为艰难。但是，他现在根本没有选择的余地。<br> 　　为了父亲，也为了昊天宗，他都责无旁贷。<br> 　　“好，我答应。”唐三深吸口气，收敛着自己的情绪，他需要更加冷静的分析。看了看旁边面无表情的唐啸，唐啸却并没有任何表示，显然是认同了二长老的做法。<br> 　　二长老淡然一笑，道：“这三件事对你目前来说还不可能完成。我们给你的期限也很长。第一件事，你必须要在十年之内，魂力突破八十级。”<br> 　　十年提升二十级，对于低等级魂师来说，如果拼命努力或许不难。但二长老的要求是从六十级到八十级，这二十级的跨度却有些太大了。<br> 　　很多魂师，终其一生也难以达到这样的高度。更何况是短短十年时间了。唐三今年二十岁，十年后，他就是三十岁，三十岁突破八十级，在整个魂师界，绝对是骇人听闻的一件事。<br> 　　“好，我相信能做到。”唐三毫不犹豫的答应了。他已经完成了太多不可能完成的事，也不在乎这一件。<br> 　　二长老满意的点了点头，唐三眼中流露出那份执着的信念令他很欣赏。<br> 　　“第二件事，十年之内，我要你带回一颗武魂殿封号斗罗的人头。不论你用什么方法，我们只要结果。”<br> 　　唐三瞳孔一阵收缩，击杀一名封号斗罗？深吸口气，他再次坚定的点下了头。<br> 　　二长老的目光此时也变得凝聚起来，凝声说道：“第三件事，我要求你在第八魂环时获得一个十万年魂环。”<br> 　　“什么？”如果说前两件事还有可能完成的话，那么，二长老让唐三做的这第三件事却给他一种天方夜谭的感觉。<br> 　　十万年魂环又岂是那么容易获得的。在唐三已知的封号斗罗中，也只有自己的父亲和武魂殿教皇比比东各有一个十万年魂环而已。而且父亲的十万年魂环还是来自于母亲。<br> 　　先不说猎杀十万年魂兽有多么困难，单是寻找一只十万年魂兽就已经极为困难了。更何况还是第八魂技。<br> 　　二长老沉声道：“你的第四魂环就已经是万年级别，第五魂环更是至少过了三万年。等你到第八魂环的时候，以你的身体强度，吸收一个十万年魂环应该毫无问题。在获得这个魂环的过程中，除了宗门不会帮你之外，你可以借助任何外力。我们要的只是结果。你有十年的时间。十年后，我们希望能够在这里看到你。并且完成了这三件事。如果你能完成，你父亲归还宗门的两块魂骨也是你的。你不是想帮宗门重铸辉煌么？我现在就可以答应你，如果你完成了这三件事，那么，你就是下一任宗主。只有坐上这个位置，你才能真正带领昊天宗再现当年的风采。”<br> 　　唐三的目光凝固了，他知道，自己根本没有讨价还价的余地，先不说这些长老们不会让自己讨价还价，自己要说出那样的话，也会让他们看轻。<br> 　　“好，我会做到的。”唐三几乎是咬着牙说出这句话。他必须做到这三件事，为了父亲、为了自己，也为了宗门。<br> 　　……天斗城，史莱克学院。<br> 　　与五年前一样，史莱克学院的外表并没有什么大的改变，但内部设施却更加完备了。五年时间过去了，这里已经成为了天斗帝国地位尊崇的高级魂师学院。<br> 　　自从五年前史莱克七怪在全大6高级魂师学院精英大赛大放异彩，先后击溃众多强敌，尤其是在最后时刻力败武魂殿学院战队的黄金一代后，史莱克学院就已经名声大噪。<br> 　　风头之劲，甚至已经凌驾于天斗皇家学院之上。<br> 　　当得胜的消息传回后，雪夜大帝立刻兑现了自己的承诺，对史莱克七怪加以分封，可惜的是，七怪都没有回到学院，也让天斗帝国皇室不得不放弃拉拢之心。尽管如此，雪夜大帝也看到了史莱克学院出众的教学能力。<br> 　　尤其是在七宝琉璃宗宗主宁风致的提醒下明白了大师对于史莱克学院的重要姓。<br> 　　为了能够留住大师，雪夜大帝亲自来到史莱克学院求见，他没有利诱，凭借自己的真诚，终于感动了大师。<br> 　　大师答应，暂时在天斗城定居，但却不会离开史莱克学院。雪夜大帝册封大师为帝国魂师总长，授伯爵头衔。在需要的时候，会将帝国皇室所属魂师派入史莱克学院接受大师的指导。<br> 　　同时，帝国专项拨款，对史莱克学院进行了扩建。<br> 　　本来雪夜大帝是打算让史莱克学院和天斗皇家学院合并的，院长依旧由弗兰德担任，但却被弗兰德和大师婉言谢绝了。<br> 　　他们可不希望史莱克学院的学员被那些贵族所沾染。<br> 　　史莱克学院的入学没有任何后门可走，完全凭借实力，在这一点，弗兰德得到了雪夜大帝全力支持。有着如此深厚的背景。<br> 　　史莱克学院自然不会有任何麻烦。<br> 　　五年来，展的欣欣向荣。虽然没有再出史莱克七怪那样惊才绝艳的小怪物，但也算是功成名就，出了不少实力不俗的年轻魂师。给天斗帝国皇室增添了一批新生代魂师。<br> 　　唐三在月轩的时候，被唐月华禁足，后来学习完毕，又急于去见父亲，那一年，他也只是偷偷从月轩跑出来过一次，见了大师，向自己的老师报了平安，当时他也只是和大师说了几句话就立刻回了月轩。<br> 　　阳光普照，碧空万里无云。<br> 　　柔和的暖风带着些许灼热笼罩着史莱克学院。能够看到不少身穿那特殊绿色校服的学员们在学院内穿梭。<br> 　　曾经饱受诟病的屎绿色校服现在已经成为了史莱克学院的标志姓服饰。年轻的魂师们都以能够穿上这样的校服为荣。<br> 　　此时，正是曰正当中，一男一女两个人来到了史莱克学院门前。<br> 　　他们看上去都是二十岁左右的年纪，青年年纪略大，少女看上去要小一些。那青年有着一头金色长，狂放不羁的披散在背后，眸生双瞳，脸上带着些许激动的神色，正站在那里盯视着史莱克学院大门匾额上那特殊的怪物雕刻。<br> 　　少女一脸冰冷，极其火爆、完美的身材与她脸上的寒意形成鲜明对比，更给人以强烈的吸引力。与青年的一身黑衣相反，她穿着白色连衣长裙，遮盖住了全身绝大部分雪白的肌肤。<br> 　　金青年叹息一声，“时间过的真快，转眼就是五年了。不知道他们都怎么样了。”<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

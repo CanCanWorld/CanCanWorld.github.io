@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　曼陀罗蛇很快蹿过了黄色烟雾，但它却并没有被催眠成功，本身就是毒物中的翘楚，它对毒素的抗性远比一般魂兽要强，此时只是速度略微减缓了一些。<br> 　　罗三炮的‘三炮’都放过了，身体明显缩小了很多，此时再给它吃萝卜补充都来不及了。<br> 　　两个魂环重新回到大师身上，全身魂力光芒隐现，速度提升到极限，一手拉着唐三，星丸跳跃般飞速前行。希望能够逃脱曼陀罗蛇的追击。<br> 　　大师对曼陀罗蛇的习性很清楚，这种凶残的魂兽有一个缺点，那就是没耐性，如果一段时间不能捕捉到目标猎物，它会很容易放弃。<br> 　　但是，今天他们所遇到的这条曼陀罗蛇却是格外执着，不知道是否因为被罗三炮的屁和雄黄粉激怒了，锲而不舍的追向大师和唐三，速度奇快无比。眼看就已经越来越近了。<br> 　　“三炮，挡它一下。”在大师的命令下，罗三炮胖乎乎的身体翻身朝曼陀罗蛇冲了过去。试图用身体来阻挡它的前进。<br> 　　但这条曼陀罗蛇不但速度奇快无比，反应也是异常敏锐，身体一晃，绕开了罗三炮的撞击，同时在它身上咬了一口。<br> 　　“啰啰——”罗三炮惨叫一声，身体就朝地面掉去。大师双手一挥，罗三炮的身体顿时化为一道紫光，重新融入到他体内。<br> 　　大师心中此时已是一片惨然，一生的过往不断在脑海中回荡。他很想问问上天，为什么自己这一生就如此倒霉呢？为什么？这究竟是为什么？甚至还连累了唐三这个孩子。<br> 　　就在大师已经近乎绝望，甚至感觉到曼陀罗蛇毒牙上的寒意时，突然，他发现自己牵着的唐三动了动，扭头看时，只见唐三左手在腰间二十四桥明月夜上一摸，紧接着头也不回的向身后甩去。<br> 　　一根粗壮的白萝卜疾飞而出，噗的一声，竟然恰好撞击在曼陀罗蛇的身上，令本来已经近在咫尺，可以发动攻击的魂兽骤然停滞了一下，重新被拉开几分距离。<br> 　　听声辨位在唐门只是最粗浅的能力而已，唐三自然是会的，接下来的一幕，令大师心中充满了震撼。只见唐三的左手不断在腰间拂过后后甩，一根接一根白萝卜不断射出，虽然力道不足以伤害到曼陀罗蛇，但却总能在曼陀罗蛇即将追上他们的时候阻挡住它的身体。<br> 　　好准的手法。<br> 　　大师发现，唐三每一次甩出白萝卜的时候，左手都是拇指内扣，掌心向下，另外四指并拢前伸。动作简洁有效。而唐三的小脸上虽然也有几分惊慌之色，但却似乎并不恐惧。<br> 　　如果是在唐三的前一世，任何江湖中人都能叫得出这种手法的名字，正是唐门暗器中，入门级的手法，甩手箭。利用手臂甩动的惯性发出暗器。这种手法最为直接，虽然说不上精妙，但在此时却是极为有效的。<br> 　　二十斤白萝卜虽然不少，但唐三用甩手箭将其扔出的速度也不慢，一会儿的工夫，二十四桥明月夜中的存货已经告罄。<br> 　　此时已经到了生死存亡的关键时刻，唐三很清楚被这样一条体积庞大，看上去力量、速度、毒性俱佳的魂兽缠上有什么后果。此时已经不是隐藏实力的时候。<br> 　　他突然松开握住大师的手，身体在空中一转，左手一抬，一道黑芒已经悄无声息的电射而出。辛苦打造的袖箭终于第一次出手了。<br> 　　唐三的双眼此时已经完全变成了紫色，凭借着紫极魔瞳的效果，他能够清晰的看到曼陀罗蛇的每一个动作。<br> 　　曼陀罗蛇的反应比唐三想象中还要快，那一根袖箭是射向曼陀罗蛇左眼的，只见它那蹿起在空中的身体飞快的扭曲了一下，蛇头一低，竟然躲开了要害。但袖箭速度实在太快，还是射在了他身上。<br> 　　铛的一声脆响，沙罗曼蛇坚硬的蛇鳞上溅起一连串的火花。剧烈的疼痛令它再次发出一声呱呱怪叫。<br> 　　唐三心中暗叫可惜，袖箭依靠机括发出，速度、力量都没问题。但就是不够巧妙。只能直来直去的攻击对手。这也是机括类暗器的通病。不过，曼陀罗蛇的防御也令他吃了一惊，要知道，他的袖箭虽然只有三根，但可都是由铁母打造而成的，机括弹射力又极强。却依旧没能真正伤害到眼前这头魂兽。<br> 　　曼陀罗蛇被彻底激怒了，身上的鳞片同时亮了起来，墨绿色的鳞片上覆盖着一层淡淡的黄光，速度骤然增加，几乎只是一瞬间就已经扑到了唐三面前。<br> 　　唐三突然松手，大师却已经惯性的奔出了十余米，这一切都是电光火石之间发生的，此时再想救唐三已经来不及了。<br> 　　关键时刻，唐三的心反而变得极为冷静。玄天功功运全身，这种正宗上乘道家内功此时令他进入了心如止水的境界。眼看着曼陀罗蛇大张的蛇吻，丝毫没有慌张。右手一翻，大师给他的那柄短剑已经翻入掌心之中。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

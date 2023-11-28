@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　从未使用过的第五魂技，终于要浮出水面了。<br> 　　伴随着那黑色魂环闪亮，唐三身上释放的蓝银领域也骤然增强，全身上下，一圈圈蓝色光晕波荡上涌，而他那条被蓝银皇包裹的手臂也在瞬间变成了残金色。<br> 　　长眉二长老忍不住低喝一声，“天赋领域，武魂变异。”直到此时，他的脸色才终于变得凝重起来，再看唐三时的目光已经有些不同了。<br> 　　真的是武魂变异么？不，那不过是蓝银皇的一种特殊表现方式。<br> 　　准确的说，这也是蓝银皇的真谛所在。<br> 　　唐三的第五魂技是完全由万千蓝银草的能量凝聚而成的，那时，也是他激蓝银皇真正潜力的时刻。因此，这第五魂技无疑与他的蓝银领域契合度最高。<br> 　　二者融合在一起，威力极其恐怖，绝不是普通万年魂技那么简单。从唐三此时所做的魂技预热就能看出来。<br> 　　除了这第五魂技之外，他其他的魂技基本都可以做到瞬。<br> 　　通体变为金色的手臂上，蓝银皇盘绕成螺旋状，金光在延伸，唐三的脸色也变得极为凝重。外人感受不到这金色蓝银皇带来的感觉，可作为当事者的唐虎却清晰的感受到那恐怖的威胁。<br> 　　被困在蓝银囚笼之内，唐虎现，从对面不远处唐三身上传来的压力，竟然令自己无法呼吸，似乎连胸口都已经开始在压迫中凹陷，尤其是那金光前端的一点锋锐之气，更是像能穿透一切似的。<br> 　　哪怕是昊天锤也无法完全封锁住那金光带给他的威胁。<br> 　　他明白，一旦这个魂技爆，那么必然是石破天惊。虽然他不知道唐三这个武魂是蓝银皇，但此时也能判断出，这是一个不次于昊天锤的级武魂。<br> 　　唐虎毕竟是昊天宗三代子弟中的翘楚，此时他知道，不出全力恐怕就危险了。身上的第五个魂环终于亮了起来。<br> 　　手中昊天锤瞬间黑光大放，一道道深紫色的纹路从锤上蔓延开来，无比强横的气息渲染的他的双眼也变成了紫色。<br> 　　哪怕同样是昊天锤，猎杀不同魂兽获得魂环，武魂所带来的技能也是不同的。此时，唐虎的昊天锤上暗紫色纹路中，带着几分轻微的震颤。只见他拧腰乍背，手中昊天锤仿佛活了一般，在小范围轻绕，骤然间，一层浓郁的黑光以他的身体为中心爆了。<br> 　　这一刻，唐虎与昊天锤仿佛融为了一体，再无分彼此。<br> 　　经过蓝银领域增幅的蓝银囚笼，不但每一根蓝银皇都变成了金色，而且更是盘根错节，极其粗壮。作为蓝银草帝皇的天赋领域。<br> 　　蓝银领域作用在蓝银皇上相得益彰，这就是当世唯一武魂的最大优势。<br> 　　单论蓝银皇，或许自身品质与昊天锤相比还有所不及，可附加上蓝银领域的蓝银皇，在一些特定条件下，甚至有可能比昊天锤更强。<br> 　　轰——，毫无保留的终极，骤然间在蓝银囚笼上轰鸣。巨大的爆炸力，令金、黑两色光芒冲天而起。<br> 　　唐虎那边闷哼一声，而正在凝聚魂力的唐三则是上身略微晃动了一下。脸色有些苍白。<br> 　　第一次品尝到昊天锤的霸道，唐三也不禁暗自骇然，如果不是他及时切断自己与蓝银囚笼之间的联系，单是双方武魂碰撞所引来的魂力爆，就足以令他受伤了。<br> 　　唐虎是因为受到碰撞反噬而闷哼出声的，但此时他整个人也已经腾起在空中，第五魂技人锤合一更是在蓝银囚笼爆裂的同时提升到了极致。<br> 　　半空中，就像一头紫色的猛虎般身体旋转，手中昊天锤闪电般的挥舞着。正是昊天宗绝学，乱披风锤法。<br> 　　阻挡乱披风锤法最好的办法就是不让他真正施展出来，唐三的双臂是同时举起的，他那左臂当然对自己释放第五魂技没有什么用处，但等的就是这一刻。<br> 　　他原本也没寄希望于蓝银囚笼这第四魂技能够彻底困住唐虎。<br> 　　尽管他这第四魂技也是万年级别的，可唐虎毕竟是拥有强大实力的昊天宗子弟。魂力、魂技都在自己之上。<br> 　　左手中，蓝光喷吐，蓝光在离开掌心后，迅变成了晶莹的绿色，在蓝绿两色之间交替闪耀。直奔空中施展乱披风锤法，在狂躁魂力波动下甚至暂时漂浮在空中的唐虎飞去。<br> 　　身在空中的唐虎不禁暗暗冷笑，心中暗想，毕竟不是在宗门成长的，连乱披风锤法的效果都不知道。这时候向我施展这种正面魂力，难道能够突破我乱披风锤法释放的庞大魂力么？<br> 　　一旦当我锤法完成一半以上，就是你落败之时。能够在长老们面前表现的机会可不多，现在显然是一个不错的时机。<br> 　　可惜，他又哪里知道，唐三在乱披风锤法上可是下过苦功的。<br> 　　唐昊身为宗门曾经最杰出的子弟，又怎会不知道乱披风锤法对于昊天锤的重要姓呢？在唐昊的指点下，唐三的乱披风锤法绝不在同辈弟子之下。<br> 　　作为一名控制系魂师，最大的特点就是控制。<br> 　　此时的唐三，早已经不是控制自己魂技那么简单，他甚至在控制对手施展的魂技。<br> 　　包括唐虎使用第五魂技破开蓝银囚笼，以及他现在所施展的乱披风锤法，所有一切几乎都像是按照唐三制定的剧本来进行的。<br> 　　蓝光一闪，正在施展乱披风锤法的唐虎突然感觉到自己全身一紧，紧接着，剧痛传遍全身，尤其是两条手臂，更像是撕裂般的疼痛。<br> 　　蓝银皇第二魂技，寄生，动。<br> 　　伴随着蓝银囚笼的释放，唐三的第二魂技寄生就已经作用在了唐虎身上，寄生本身不过就是第一魂技缠绕的加强版，缠绕能力并不比第一魂技强多少，但它胜在突然姓，在唐三的艹控下，只要对手身上被蓝银草种下了草籽，寄生随时都能够动。<br> 　　瞬间被蓝银草缠绕住的唐虎根本想不到唐三会使用出这样一个技能，他的双臂依旧在抡着昊天锤施展乱披风锤法。<br> 　　身体突然被缠绕，可在惯姓使然，他却依旧在力。纤细却无比坚韧的蓝银草顿时勒入了他的肌肤。这就是剧痛的来源。<br> 　　唐虎反应的很快，身体快的在空中旋转，将之前乱披风锤法的蓄力全部转换为自身的旋转力。否则的话，缠绕在他身上的蓝银皇或许会破碎，但他的身体也要被自己释放的力量切割的支离破碎。<br> 　　用错力的感觉令唐虎忍不住喷出一口鲜血，好不容易才将自己先前积蓄的乱披风锤法之力化解掉。<br> 　　但双臂上已是鲜血淋漓，出现了数十道被蓝银皇勒出的伤口。<br> 　　以他皮肤的坚忍程度，蓝银皇上虽然露出尖刺，可也没那么容易刺破，但乱披风锤法的力量实在太大了。剧烈的摩擦虽然令蓝银皇缠绕即将崩溃，可也刺破了他的皮肤。<br> 　　神经姓毒素成功入侵，剧烈的疼痛令唐虎忍不住全身痉挛。<br> 　　寄生，是一个不起眼的魂技，可这个魂技却正好是昊天宗得意自创绝学乱披风锤法的克星。<br> 　　轰——蓝银皇再次破碎，唐虎身上的第五魂技人锤合一已经因为打断而消失了，但此时的他，也已经动了真怒。<br> 　　原本他并没想过要施展自己的第六魂技，毕竟唐三只有五个魂环，如果自己用第六魂技取胜，又如何能给长老们留下深刻的印象呢？<br> 　　可一再受挫，始终被唐三压制。唐虎终于忍耐不住了。<br> 　　黑色的第六魂环光华闪耀，手中昊天锤上光纹再现，只不过这一次的纹路已经变成了刺目的银色，银光缭绕。<br> 　　可就在他手中昊天锤的第六魂技还没有展现出来的时候，之前那不起眼飞来的蓝绿色光球却已到了面前。<br> 　　悄无声息，可却如同闪电般扩散。<br> 　　直径过十米的庞大蓝绿色蛛网，带着粘液与晶莹的蓝色，骤然收拢。<br> 　　此时，正好是唐虎刚刚挣脱蓝银皇寄生，身体下落，准备施展第六魂技的空隙。<br> 　　正像唐虎计划的那样，如果他的乱披风锤法一直在持续，凭借乱披风锤法轰出的强大魂力，这蛛网束缚根本连近身的几乎都没有。<br> 　　可是，唐三就在恰到好处的时候，给自己创造了一个机会。硬是让他这第三魂技准确的作用在了唐虎身上。<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

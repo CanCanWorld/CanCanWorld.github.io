@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | mimi的小窝</title>
+    <meta name="author" content="张瑞乾" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MIMI的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MIMI的小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/28
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>　　京灵同样因为场上局面的变化而吃惊，正在他准备全力与实力明显高于对手的火无双一拼之时，大师却从史莱克学院休息区这边站了起来，目光遥望教皇殿门前的教皇比比东。<br> 　　“比赛请等一下开始。”<br> 　　作为裁判的红衣主教刚要呵斥大师打断比赛的行为，却被教皇抬手止住了，比比东看向大师的目光很平静，可她内心中是否平静，就只有她自己才知道了。<br> 　　“请说出你的理由。”教皇比比东淡然说道。<br> 　　大师冷然一笑，“我的理由就是，史莱克学院放弃总决赛的前半场，自愿进入下午的败者组决赛。京灵，回来吧。”<br> 　　如果说先前武魂殿学院战队的那名队员突然认输还能够让人接受的话，此时大师突然宣布史莱克学院放弃个人赛则无疑令全场大惊。哪怕是史莱克七怪中除了唐三以外的其他人，也都是一脸吃惊和茫然的神色。<br> 　　显然，事前他们并不知道大师会这样决断。<br> 　　坐在教皇身边的宁风致此时眼中已经流露出恍然之色，同时也闪过一丝怒光。目光忍不住落在身边的教皇身上。<br> 　　比比东依旧沉稳，淡然道：“为什么？”<br> 　　大师双手背后，仰望教皇殿后的斗罗殿，“不为什么，我想，认输应该是属于我们的权利。”<br> 　　大师的平静到极点的话语如同石破天惊一般在教皇殿前响起，他这句话本身并没有什么问题，有问题的是他说话的对象，他这么说，无疑是在顶撞教皇。<br> 　　武魂殿的最高统治者。<br> 　　在场只要是六十级以上的魂师，都能够看得出大师本身的实力并不强，绝对不过四十级，可就是这样一名实力不强的魂师居然顶撞了魂师界最有权威的人。<br> 　　但令人更加想不到的是，教皇比比东缓缓站起身，向大师点了点头，“你说的对，这是你们的权利。怪我多此一问了。抱歉了，玉长老。”<br> 　　大师与教皇比比东的对话，是当着武魂殿众多强者，以及下面无数翘观战的魂师们说的。长老二字从教皇口中吐出，只意味着一件事，大师乃是武魂殿的长老。<br> 　　而武魂殿的长老权威如何，所有武魂殿的人都知道。哪怕是坐在比比东身边的鬼斗罗和菊斗罗，进入长老殿都不过是近十年的事。而大师的年纪和实力，明显都不应该拥有这样的权威。<br> 　　换个人说他是武魂殿长老殿中人，恐怕会令人噗之以鼻，可说出这句话的却是教皇比比东，谁敢驳斥她的言语？<br> 　　听到比比东这么说，连大师都不禁愣了一下。他之所以顶撞比比东，自然不是因为两人之间的关系令他有恃无恐，而是因为心中的激愤。当比比东的话一出口，大师就明白，这位教皇在保护自己。<br> 　　顶撞教皇，就算教皇本人不在意，魂师界那么多崇拜教皇的魂师们会不在意么？<br> 　　就算大师身边有强者保护，能够组成黄金铁三角，横死街头的几率也会大增。<br> 　　而比比东承认他长老的身份这句话一出，自然就没人再敢做什么。武魂殿长老顶撞教皇一句，并不是什么大事。<br> 　　其实，连比比东也不知道为什么大师手中会有一块长老令牌，她也是在大师离开后才从手下口中问出来的。<br> 　　大师腰间一痛，紧接着左臂被搂入一个柔软而有弹姓的怀中，扭头看时，只见柳二龙正示威似的看着教皇。<br> 　　比比东的眼神出现了短暂的飘忽，但很快就恢复了正常。向那名充当裁判的红衣主教道：“既然史莱克学院决定放弃上午的比赛，那么，个人赛继续吧。”<br> 　　就在这时候，神风学院的带队老师也站了起来，先想着教皇躬身一礼，然后才微笑道：“武魂殿学院战队实力强大，本学院自认不敌。与其在拼斗中降低实力，到不如在下午和史莱克学院进行另一个决赛名额的争夺。所以，我们也放弃个人赛。”<br> 　　戏剧姓的变化令很多人措手不及，武魂殿学院战队不战而胜，直接进入了明天的总决赛。<br> 　　一场都没有打，总决赛前半段的比赛就已经结束了，尽管武魂殿学院战队如自己所愿进入最后一战，可史莱克学院退出个人赛，还是令作为主办方的他们显得有些尴尬。<br> 　　史莱克学院众人没有再多做逗留，在大师的带领下快离去，下午，他们将与神风学院争夺另一个进入最后决赛的名额。<br> 　　一路上，谁都没有多说什么，大部分人都沉浸在思索和压抑的气氛之中。<br> 　　局面的不利令史莱克七怪的信心都有所动摇。<br> 　　毕竟，他们要在今天下午先面对神风学院与炽火学院的联军，而明天更是要在只休息一晚的情况下面对强大的武魂殿学院战队。<br> 　　回到住处，大师讲史莱克七怪叫到自己的房间。<br> 　　目光从七人身上扫过，大师淡淡的道：“你们是不是很奇怪，我为什么要突然提出退出个人赛？”<br> 　　七人都没有说话，但除了唐三以外，其他六人眼中都流露着些许不解。<br> 　　大师僵硬的面庞上浮现出一层潮红之色，凌厉的光芒从眼眸内一闪而没，“连我也没想到，武魂殿在如此优势之下居然还会使用这样卑鄙的手段。小三，你解释给大家听吧。”<br> 　　唐三点了点头，沉声道：“我们第一个上场的队员是京灵。京灵抽到了非常好的签，让我们在个人赛中保持后手位置，能够更好的观察对手的动向。但这时候，武魂殿学院战队出场的队员却突然表示认输。这就产生了两个效果，一个是武魂殿学院战队那名队员保持了完整的战斗力，没有任何消耗。另一个，就是火无双也保持了完整的战斗力来对付京灵。如果我猜的不错，当火无双击败京灵之后，再面对武魂殿第二名队员时，他也会立刻认输。这样一来，就相当于是他们两个学院联手来对付我们。在个人赛上，我们根本不可能有胜利的机会。每一场落败还好说，如果获胜，肯定就会遭受他们的车轮战。”<br> 　　“神风学院和炽火学院合并在一起，以前我还不明白为什么武魂殿会答应他们这样的请求，现在我明白了。他们正是与武魂殿学院战队达成了协议，才会得到武魂殿的支持。”<br> 　　说完自己的判断，唐三沉默了，整个房间内的气氛都沉默了下来，但愤怒的火焰却在房间内不断蔓延，难怪大师说武魂殿卑鄙。<br> 　　在如此优势的情况下还要联合神风学院和炽火学院对付己方，这不是卑鄙是什么？<br> 　　一丝冷笑从大师脸上浮现出来，“他们真的以为这样就能阻挡我们前进的步伐么？那么，他们也太小看我们了。本来我心中还没有太强的争胜**，但他们这样做，那么，我们的目标也只有一个。”<br> 　　在下午比赛到来之前，史莱克七怪一直留在了大师的房间内，哪怕是吃饭的时候也不例外。弗兰德和柳二龙守在外面，阻止任何人接近。<br> 　　当然，在史莱克学院的住处，还坐镇着毒斗罗这样的强者。<br> 　　清晨的空气是凉爽舒适的，到了下午，当太阳高悬在天空正中时，那份凉爽就已经被淡淡的灼热所取代，尽管现在不是盛夏，但温度却依旧有点高。<br> 　　武魂殿学院战队的七名队员静静的站在一旁，教皇殿前广场内，两支进入准决赛的队伍正在彼此凝视着对方。<br> 　　唐三和戴沐白站在史莱克七怪最前面，看着前方不远处那一张张熟悉的面孔，两人脸上都流露出了一丝不屑。<br> 　　风笑天、火舞、火无双，三人作为战队的核心，与唐三和戴沐白对视着。<br> 　　火舞上前一步，遥望唐三，冷冷的道：“你知道我们为什么要这么做么？”<br> 　　唐三没有回答，只是眼中的轻蔑更加深了几分。<br> 　　火舞突然现，自己很讨厌唐三这样看着自己，她那火暴的脾气顿时显露出来，“我这样做，就是为了要再次和你一决胜负。宁可放弃争冠的机会，我也一定要击败你一次。”<br> 　　唐三淡然一笑，“如果只是为了这个，那么，你已经落了下乘。失去了堂堂正正，这场比赛，你们已经没有任何机会。”<br> 　　火舞大怒，“那就用事实说话吧。不要以为你救过我，我就会对你手下留情。欠你的，我已经还了。”<br> 　　（未完待续）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 mimi的小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;张瑞乾
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
